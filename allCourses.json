@@ -1,0 +1,6302 @@
+[
+  {
+    "code": "CSC 101",
+    "title": "Introduction to Computer",
+    "units": 3
+  },
+  {
+    "code": "MTH 101",
+    "title": "Calculus I",
+    "units": 3
+  },
+  {
+    "code": "PHY 101",
+    "title": "Introduction to physics",
+    "units": 3
+  },
+  {
+    "code": "GST 101",
+    "title": "Use of English",
+    "units": 2
+  },
+  {
+    "code": "CHM 101",
+    "title": "General Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CSC 103",
+    "title": "Introduction to Algorithms",
+    "units": 2
+  },
+  {
+    "code": "CSC 104",
+    "title": "Digital Logic Design",
+    "units": 3
+  },
+  {
+    "code": "CSC 102",
+    "title": "Introduction to Computer 2",
+    "units": 2
+  },
+  {
+    "code": "MTH 102",
+    "title": "Linear Algebra",
+    "units": 3
+  },
+  {
+    "code": "PHY 102",
+    "title": "Electromagnetic Waves",
+    "units": 3
+  },
+  {
+    "code": "GST 102",
+    "title": "Philosophy and Logic",
+    "units": 2
+  },
+  {
+    "code": "CHM 102",
+    "title": "Applied Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CSC 105",
+    "title": "Computer Programming I",
+    "units": 3
+  },
+  {
+    "code": "CSC 106",
+    "title": "Data Structures",
+    "units": 3
+  },
+  {
+    "code": "CSC 201",
+    "title": "Introduction to Computer Programming",
+    "units": 3
+  },
+  {
+    "code": "MTH 201",
+    "title": "Discrete Mathematics",
+    "units": 3
+  },
+  {
+    "code": "CSC 202",
+    "title": "Object-Oriented Programming",
+    "units": 3
+  },
+  {
+    "code": "CSC 203",
+    "title": "Computer Organization",
+    "units": 3
+  },
+  {
+    "code": "CSC 204",
+    "title": "Operating Systems",
+    "units": 3
+  },
+  {
+    "code": "GST 201",
+    "title": "Entrepreneurship Studies",
+    "units": 2
+  },
+  {
+    "code": "CSC 205",
+    "title": "Artificial Intelligence Fundamentals",
+    "units": 3
+  },
+  {
+    "code": "CSC 206",
+    "title": "Assembly Programming",
+    "units": 3
+  },
+  {
+    "code": "CSC 207",
+    "title": "Computer Networks",
+    "units": 3
+  },
+  {
+    "code": "MTH 202",
+    "title": "Probability and Statistics",
+    "units": 3
+  },
+  {
+    "code": "CSC 208",
+    "title": "Software Engineering Fundamentals",
+    "units": 3
+  },
+  {
+    "code": "CSC 209",
+    "title": "Web Programming",
+    "units": 3
+  },
+  {
+    "code": "CSC 210",
+    "title": "Database Management Systems",
+    "units": 3
+  },
+  {
+    "code": "CSC 211",
+    "title": "Human-Computer Interaction",
+    "units": 3
+  },
+  {
+    "code": "CSC 301",
+    "title": "C Programming",
+    "units": 3
+  },
+  {
+    "code": "CSC 302",
+    "title": "Artificial Intelligence",
+    "units": 3
+  },
+  {
+    "code": "CSC 303",
+    "title": "Compiler Design",
+    "units": 3
+  },
+  {
+    "code": "CSC 304",
+    "title": "Embedded Systems",
+    "units": 3
+  },
+  {
+    "code": "CSC 305",
+    "title": "Parallel Computing",
+    "units": 3
+  },
+  {
+    "code": "CSC 306",
+    "title": "Cryptography & Cybersecurity",
+    "units": 3
+  },
+  {
+    "code": "CSC 307",
+    "title": "Mobile App Development",
+    "units": 3
+  },
+  {
+    "code": "CSC 308",
+    "title": "Data Analysis",
+    "units": 3
+  },
+  {
+    "code": "CSC 309",
+    "title": "Machine Learning",
+    "units": 3
+  },
+  {
+    "code": "CSC 310",
+    "title": "Cloud Computing",
+    "units": 3
+  },
+  {
+    "code": "CSC 311",
+    "title": "Big Data Processing",
+    "units": 3
+  },
+  {
+    "code": "CSC 312",
+    "title": "Game Development",
+    "units": 3
+  },
+  {
+    "code": "CSC 313",
+    "title": "Blockchain Technology",
+    "units": 3
+  },
+  {
+    "code": "CSC 314",
+    "title": "Quantum Computing",
+    "units": 3
+  },
+  {
+    "code": "CSC 401",
+    "title": "Computer Architecture",
+    "units": 3
+  },
+  {
+    "code": "CSC 402",
+    "title": "Software Project Management",
+    "units": 3
+  },
+  {
+    "code": "CSC 403",
+    "title": "Advanced Algorithms",
+    "units": 3
+  },
+  {
+    "code": "CSC 404",
+    "title": "Distributed Computing",
+    "units": 3
+  },
+  {
+    "code": "CSC 405",
+    "title": "Computer Graphics",
+    "units": 3
+  },
+  {
+    "code": "CSC 406",
+    "title": "Cloud Security",
+    "units": 3
+  },
+  {
+    "code": "CSC 407",
+    "title": "IoT Systems",
+    "units": 3
+  },
+  {
+    "code": "CSC 408",
+    "title": "System Design",
+    "units": 3
+  },
+  {
+    "code": "CSC 409",
+    "title": "Big Data Analytics",
+    "units": 3
+  },
+  {
+    "code": "CSC 410",
+    "title": "Computer Vision",
+    "units": 3
+  },
+  {
+    "code": "CSC 411",
+    "title": "Software Testing & QA",
+    "units": 3
+  },
+  {
+    "code": "CSC 412",
+    "title": "Computational Theory",
+    "units": 3
+  },
+  {
+    "code": "CSC 413",
+    "title": "High Performance Computing",
+    "units": 3
+  },
+  {
+    "code": "CSC 414",
+    "title": "Cybersecurity & Ethical Hacking",
+    "units": 3
+  },
+  {
+    "code": "CSC 501",
+    "title": "Soft Computing",
+    "units": 3
+  },
+  {
+    "code": "CSC 502",
+    "title": "Advanced Artificial Intelligence",
+    "units": 3
+  },
+  {
+    "code": "CSC 503",
+    "title": "Blockchain & Cryptographic Systems",
+    "units": 3
+  },
+  {
+    "code": "CSC 504",
+    "title": "Parallel & Distributed Systems",
+    "units": 3
+  },
+  {
+    "code": "CSC 505",
+    "title": "Virtual Reality & Augmented Reality",
+    "units": 3
+  },
+  {
+    "code": "CSC 506",
+    "title": "Quantum Computing Fundamentals",
+    "units": 3
+  },
+  {
+    "code": "CSC 507",
+    "title": "Advanced Web Systems & APIs",
+    "units": 3
+  },
+  {
+    "code": "CSC 508",
+    "title": "Database Design",
+    "units": 3
+  },
+  {
+    "code": "CSC 509",
+    "title": "AI Ethics & Policy",
+    "units": 3
+  },
+  {
+    "code": "CSC 510",
+    "title": "Cloud Computing & DevOps",
+    "units": 3
+  },
+  {
+    "code": "CSC 511",
+    "title": "Machine Learning Deployment",
+    "units": 3
+  },
+  {
+    "code": "CSC 512",
+    "title": "Neural Networks & Deep Learning",
+    "units": 3
+  },
+  {
+    "code": "CSC 513",
+    "title": "Computational Linguistics",
+    "units": 3
+  },
+  {
+    "code": "CSC 514",
+    "title": "Final Year Project & Research",
+    "units": 6
+  },
+  {
+    "code": "MTH 101",
+    "title": "Calculus I",
+    "units": 3
+  },
+  {
+    "code": "MTH 102",
+    "title": "Linear Algebra",
+    "units": 3
+  },
+  {
+    "code": "MTH 103",
+    "title": "Trigonometry",
+    "units": 3
+  },
+  {
+    "code": "CSC 101",
+    "title": "Introduction to Computer",
+    "units": 3
+  },
+  {
+    "code": "STA 101",
+    "title": "Introduction to Statistics",
+    "units": 3
+  },
+  {
+    "code": "MTH 201",
+    "title": "Discrete Mathematics",
+    "units": 3
+  },
+  {
+    "code": "MTH 105",
+    "title": "Mathematical Logic",
+    "units": 3
+  },
+  {
+    "code": "MTH 102",
+    "title": "Linear Algebra",
+    "units": 3
+  },
+  {
+    "code": "MTH 107",
+    "title": "Differential Equations",
+    "units": 3
+  },
+  {
+    "code": "STA 102",
+    "title": "Probability & Statistics",
+    "units": 3
+  },
+  {
+    "code": "MTH 108",
+    "title": "Numerical Methods",
+    "units": 3
+  },
+  {
+    "code": "MTH 109",
+    "title": "Geometry",
+    "units": 3
+  },
+  {
+    "code": "MTH 110",
+    "title": "Mathematical Thinking",
+    "units": 2
+  },
+  {
+    "code": "PHY 101",
+    "title": "Introduction to physics",
+    "units": 3
+  },
+  {
+    "code": "MTH 201",
+    "title": "Discrete Mathematics",
+    "units": 3
+  },
+  {
+    "code": "MTH 202",
+    "title": "Probability and Statistics",
+    "units": 3
+  },
+  {
+    "code": "MTH 203",
+    "title": "Vector Calculus",
+    "units": 3
+  },
+  {
+    "code": "MTH 204",
+    "title": "Graph Theory",
+    "units": 3
+  },
+  {
+    "code": "MTH 205",
+    "title": "Number Theory",
+    "units": 3
+  },
+  {
+    "code": "MTH 206",
+    "title": "Mathematical Modeling",
+    "units": 3
+  },
+  {
+    "code": "MTH 207",
+    "title": "Computational Mathematics",
+    "units": 3
+  },
+  {
+    "code": "MTH 208",
+    "title": "Complex Analysis",
+    "units": 3
+  },
+  {
+    "code": "MTH 209",
+    "title": "Partial Differential Equations",
+    "units": 3
+  },
+  {
+    "code": "MTH 210",
+    "title": "Mathematical Optimization",
+    "units": 3
+  },
+  {
+    "code": "MTH 211",
+    "title": "Linear Programming",
+    "units": 3
+  },
+  {
+    "code": "MTH 212",
+    "title": "Differential Geometry",
+    "units": 3
+  },
+  {
+    "code": "MTH 213",
+    "title": "Cryptography",
+    "units": 3
+  },
+  {
+    "code": "MTH 214",
+    "title": "Game Theory",
+    "units": 3
+  },
+  {
+    "code": "MTH 301",
+    "title": "Advanced Calculus",
+    "units": 3
+  },
+  {
+    "code": "MTH 302",
+    "title": "Functional Analysis",
+    "units": 3
+  },
+  {
+    "code": "MTH 303",
+    "title": "Applied Mathematics",
+    "units": 3
+  },
+  {
+    "code": "MTH 304",
+    "title": "Mathematical Physics",
+    "units": 3
+  },
+  {
+    "code": "MTH 305",
+    "title": "Statistical Inference",
+    "units": 3
+  },
+  {
+    "code": "MTH 306",
+    "title": "Set Theory",
+    "units": 3
+  },
+  {
+    "code": "MTH 307",
+    "title": "Combinatorics",
+    "units": 3
+  },
+  {
+    "code": "MTH 308",
+    "title": "Operational Research",
+    "units": 3
+  },
+  {
+    "code": "MTH 309",
+    "title": "Topology",
+    "units": 3
+  },
+  {
+    "code": "MTH 310",
+    "title": "Stochastic Processes",
+    "units": 3
+  },
+  {
+    "code": "MTH 311",
+    "title": "Mathematical Finance",
+    "units": 3
+  },
+  {
+    "code": "MTH 312",
+    "title": "Actuarial Mathematics",
+    "units": 3
+  },
+  {
+    "code": "MTH 313",
+    "title": "Probability Theory",
+    "units": 3
+  },
+  {
+    "code": "MTH 314",
+    "title": "Computational Statistics",
+    "units": 3
+  },
+  {
+    "code": "MTH 401",
+    "title": "Tensor Analysis",
+    "units": 3
+  },
+  {
+    "code": "MTH 402",
+    "title": "Advanced Differential Equations",
+    "units": 3
+  },
+  {
+    "code": "MTH 403",
+    "title": "Advanced Geometry",
+    "units": 3
+  },
+  {
+    "code": "MTH 404",
+    "title": "Fluid Mechanics",
+    "units": 3
+  },
+  {
+    "code": "MTH 405",
+    "title": "Data Analytics",
+    "units": 3
+  },
+  {
+    "code": "MTH 406",
+    "title": "Measure Theory",
+    "units": 3
+  },
+  {
+    "code": "MTH 407",
+    "title": "Biostatistics",
+    "units": 3
+  },
+  {
+    "code": "MTH 408",
+    "title": "Numerical Analysis II",
+    "units": 3
+  },
+  {
+    "code": "MTH 409",
+    "title": "Chaos & Nonlinear Systems",
+    "units": 3
+  },
+  {
+    "code": "MTH 410",
+    "title": "Dynamical Systems",
+    "units": 3
+  },
+  {
+    "code": "MTH 411",
+    "title": "Applied Mathematical Computing",
+    "units": 3
+  },
+  {
+    "code": "MTH 412",
+    "title": "Mathematical Economics",
+    "units": 3
+  },
+  {
+    "code": "MTH 413",
+    "title": "Quantum Mathematics",
+    "units": 3
+  },
+  {
+    "code": "MTH 414",
+    "title": "Research Seminar",
+    "units": 3
+  },
+  {
+    "code": "MTH 501",
+    "title": "Advanced Algebraic Structures",
+    "units": 3
+  },
+  {
+    "code": "MTH 502",
+    "title": "Machine Learning Mathematics",
+    "units": 3
+  },
+  {
+    "code": "MTH 503",
+    "title": "Mathematical Data Science",
+    "units": 3
+  },
+  {
+    "code": "MTH 504",
+    "title": "Differential Forms",
+    "units": 3
+  },
+  {
+    "code": "MTH 505",
+    "title": "Probability Models",
+    "units": 3
+  },
+  {
+    "code": "MTH 506",
+    "title": "Advanced Topology",
+    "units": 3
+  },
+  {
+    "code": "MTH 507",
+    "title": "Scientific Computing",
+    "units": 3
+  },
+  {
+    "code": "MTH 508",
+    "title": "Cryptographic Algorithms",
+    "units": 3
+  },
+  {
+    "code": "MTH 509",
+    "title": "Mathematical Physics II",
+    "units": 3
+  },
+  {
+    "code": "MTH 510",
+    "title": "Computational Mechanics",
+    "units": 3
+  },
+  {
+    "code": "MTH 511",
+    "title": "Thesis & Project",
+    "units": 6
+  },
+  {
+    "code": "MTH 512",
+    "title": "Mathematical Modeling in AI",
+    "units": 3
+  },
+  {
+    "code": "MTH 513",
+    "title": "Game Theory II",
+    "units": 3
+  },
+  {
+    "code": "MTH 514",
+    "title": "Research & Presentation",
+    "units": 3
+  },
+  {
+    "code": "CYS 101",
+    "title": "Introduction to Cyber Security",
+    "units": 3
+  },
+  {
+    "code": "CYS 102",
+    "title": "Fundamentals of Computing",
+    "units": 3
+  },
+  {
+    "code": "CYS 103",
+    "title": "Cryptography Basics",
+    "units": 3
+  },
+  {
+    "code": "CYS 104",
+    "title": "Logic Design",
+    "units": 2
+  },
+  {
+    "code": "CYS 105",
+    "title": "Web Security",
+    "units": 3
+  },
+  {
+    "code": "CYS 106",
+    "title": "Python Programming",
+    "units": 3
+  },
+  {
+    "code": "CYS 107",
+    "title": "Data Protection Laws",
+    "units": 2
+  },
+  {
+    "code": "CYS 108",
+    "title": "Linux Security",
+    "units": 3
+  },
+  {
+    "code": "CYS 109",
+    "title": "Cyber Threats & Attacks",
+    "units": 3
+  },
+  {
+    "code": "CYS 110",
+    "title": "Network Fundamentals",
+    "units": 3
+  },
+  {
+    "code": "CYS 111",
+    "title": "Cyber Ethics",
+    "units": 2
+  },
+  {
+    "code": "CYS 112",
+    "title": "Database Security",
+    "units": 3
+  },
+  {
+    "code": "CYS 113",
+    "title": "Software Vulnerability Analysis",
+    "units": 3
+  },
+  {
+    "code": "CYS 114",
+    "title": "Mobile Security",
+    "units": 2
+  },
+  {
+    "code": "CYS 201",
+    "title": "Penetration Testing",
+    "units": 3
+  },
+  {
+    "code": "CYS 202",
+    "title": "Applied Cryptography",
+    "units": 3
+  },
+  {
+    "code": "CYS 203",
+    "title": "System Security",
+    "units": 3
+  },
+  {
+    "code": "CYS 204",
+    "title": "Cyber Intelligence",
+    "units": 3
+  },
+  {
+    "code": "CYS 205",
+    "title": "Programming for Security",
+    "units": 3
+  },
+  {
+    "code": "CYS 206",
+    "title": "Secure Coding",
+    "units": 3
+  },
+  {
+    "code": "CYS 207",
+    "title": "Social Engineering Defense",
+    "units": 2
+  },
+  {
+    "code": "CYS 208",
+    "title": "Malware Analysis",
+    "units": 3
+  },
+  {
+    "code": "CYS 209",
+    "title": "Digital Forensics",
+    "units": 3
+  },
+  {
+    "code": "CYS 210",
+    "title": "Secure Web Development",
+    "units": 3
+  },
+  {
+    "code": "CYS 211",
+    "title": "Operating System Security",
+    "units": 3
+  },
+  {
+    "code": "CYS 212",
+    "title": "Ethical Hacking",
+    "units": 3
+  },
+  {
+    "code": "CYS 213",
+    "title": "Security Auditing",
+    "units": 3
+  },
+  {
+    "code": "CYS 214",
+    "title": "Internet Security Protocols",
+    "units": 2
+  },
+  {
+    "code": "CYS 301",
+    "title": "Intrusion Detection Systems",
+    "units": 3
+  },
+  {
+    "code": "CYS 302",
+    "title": "Secure Network Architecture",
+    "units": 3
+  },
+  {
+    "code": "CYS 303",
+    "title": "Blockchain Security",
+    "units": 3
+  },
+  {
+    "code": "CYS 304",
+    "title": "Wireless Security",
+    "units": 3
+  },
+  {
+    "code": "CYS 305",
+    "title": "Incident Response",
+    "units": 3
+  },
+  {
+    "code": "CYS 306",
+    "title": "AI in Cyber Security",
+    "units": 3
+  },
+  {
+    "code": "CYS 307",
+    "title": "Cyber Security Operations",
+    "units": 3
+  },
+  {
+    "code": "CYS 308",
+    "title": "Ethical AI Security",
+    "units": 3
+  },
+  {
+    "code": "CYS 309",
+    "title": "Cloud Security",
+    "units": 3
+  },
+  {
+    "code": "CYS 310",
+    "title": "Big Data Security",
+    "units": 3
+  },
+  {
+    "code": "CYS 311",
+    "title": "Risk Management in IT",
+    "units": 3
+  },
+  {
+    "code": "CYS 312",
+    "title": "Cyber Warfare",
+    "units": 3
+  },
+  {
+    "code": "CYS 313",
+    "title": "Cyber Security Policies",
+    "units": 3
+  },
+  {
+    "code": "CYS 314",
+    "title": "Advanced Security Analytics",
+    "units": 3
+  },
+  {
+    "code": "CYS 401",
+    "title": "Advanced Ethical Hacking",
+    "units": 3
+  },
+  {
+    "code": "CYS 402",
+    "title": "Reverse Engineering Malware",
+    "units": 3
+  },
+  {
+    "code": "CYS 403",
+    "title": "Zero Trust Security Models",
+    "units": 3
+  },
+  {
+    "code": "CYS 404",
+    "title": "Hardware Security",
+    "units": 3
+  },
+  {
+    "code": "CYS 405",
+    "title": "Advanced Digital Forensics",
+    "units": 3
+  },
+  {
+    "code": "CYS 406",
+    "title": "Security Algorithms",
+    "units": 3
+  },
+  {
+    "code": "CYS 407",
+    "title": "Quantum Security",
+    "units": 3
+  },
+  {
+    "code": "CYS 408",
+    "title": "Red Team & Blue Team Operations",
+    "units": 3
+  },
+  {
+    "code": "CYS 409",
+    "title": "Security Compliance",
+    "units": 3
+  },
+  {
+    "code": "CYS 410",
+    "title": "Penetration Testing II",
+    "units": 3
+  },
+  {
+    "code": "CYS 411",
+    "title": "AI-Driven Threat Analysis",
+    "units": 3
+  },
+  {
+    "code": "CYS 412",
+    "title": "Privacy Engineering",
+    "units": 3
+  },
+  {
+    "code": "CYS 413",
+    "title": "Research & Defense Strategies",
+    "units": 3
+  },
+  {
+    "code": "CYS 414",
+    "title": "Final Year Project",
+    "units": 6
+  },
+  {
+    "code": "CYS 501",
+    "title": "Security Leadership & Governance",
+    "units": 3
+  },
+  {
+    "code": "CYS 502",
+    "title": "Cyber Security Research Methods",
+    "units": 3
+  },
+  {
+    "code": "CYS 503",
+    "title": "Cryptanalysis",
+    "units": 3
+  },
+  {
+    "code": "CYS 504",
+    "title": "Advanced Offensive Security",
+    "units": 3
+  },
+  {
+    "code": "CYS 505",
+    "title": "Cyber-Physical Systems Security",
+    "units": 3
+  },
+  {
+    "code": "CYS 506",
+    "title": "Secure AI Models",
+    "units": 3
+  },
+  {
+    "code": "CYS 507",
+    "title": "Cloud Forensics",
+    "units": 3
+  },
+  {
+    "code": "CYS 508",
+    "title": "Data Security in Machine Learning",
+    "units": 3
+  },
+  {
+    "code": "CYS 509",
+    "title": "Software Security & Bug Bounties",
+    "units": 3
+  },
+  {
+    "code": "CYS 510",
+    "title": "Cyber-Resilience Engineering",
+    "units": 3
+  },
+  {
+    "code": "CYS 511",
+    "title": "Dissertation & Research Presentation",
+    "units": 6
+  },
+  {
+    "code": "CYS 512",
+    "title": "International Cyber Security Laws",
+    "units": 3
+  },
+  {
+    "code": "CYS 513",
+    "title": "Cyber Security Simulation Labs",
+    "units": 3
+  },
+  {
+    "code": "CYS 514",
+    "title": "Capstone Project",
+    "units": 3
+  },
+  {
+    "code": "STA 101",
+    "title": "Introduction to Statistics",
+    "units": 3
+  },
+  {
+    "code": "MTH 101",
+    "title": "Calculus I",
+    "units": 3
+  },
+  {
+    "code": "STA 102",
+    "title": "Probability & Statistics",
+    "units": 3
+  },
+  {
+    "code": "STA 103",
+    "title": "Data Collection Methods",
+    "units": 2
+  },
+  {
+    "code": "MTH 105",
+    "title": "Mathematical Logic",
+    "units": 3
+  },
+  {
+    "code": "STA 104",
+    "title": "Statistical Computing",
+    "units": 3
+  },
+  {
+    "code": "MTH 103",
+    "title": "Trigonometry",
+    "units": 3
+  },
+  {
+    "code": "STA 105",
+    "title": "Sampling Techniques",
+    "units": 3
+  },
+  {
+    "code": "STA 106",
+    "title": "Regression Analysis",
+    "units": 3
+  },
+  {
+    "code": "MTH 102",
+    "title": "Linear Algebra",
+    "units": 3
+  },
+  {
+    "code": "MTH 201",
+    "title": "Discrete Mathematics",
+    "units": 3
+  },
+  {
+    "code": "CSC 101",
+    "title": "Introduction to Computer",
+    "units": 3
+  },
+  {
+    "code": "STA 107",
+    "title": "Applied Geometry",
+    "units": 3
+  },
+  {
+    "code": "STA 108",
+    "title": "Time Series Analysis Basics",
+    "units": 3
+  },
+  {
+    "code": "STA 201",
+    "title": "Advanced Probability",
+    "units": 3
+  },
+  {
+    "code": "STA 202",
+    "title": "Statistical Theory",
+    "units": 3
+  },
+  {
+    "code": "STA 203",
+    "title": "Nonparametric Methods",
+    "units": 3
+  },
+  {
+    "code": "STA 204",
+    "title": "Experimental Design",
+    "units": 3
+  },
+  {
+    "code": "STA 205",
+    "title": "Data Visualization",
+    "units": 3
+  },
+  {
+    "code": "MTH 314",
+    "title": "Computational Statistics",
+    "units": 3
+  },
+  {
+    "code": "MTH 310",
+    "title": "Stochastic Processes",
+    "units": 3
+  },
+  {
+    "code": "STA 208",
+    "title": "Applied Regression Models",
+    "units": 3
+  },
+  {
+    "code": "MTH 407",
+    "title": "Biostatistics",
+    "units": 3
+  },
+  {
+    "code": "STA 210",
+    "title": "Database Analytics",
+    "units": 3
+  },
+  {
+    "code": "STA 211",
+    "title": "Survey Sampling Techniques",
+    "units": 3
+  },
+  {
+    "code": "STA 212",
+    "title": "Bayesian Analysis",
+    "units": 3
+  },
+  {
+    "code": "STA 213",
+    "title": "Statistical Consulting",
+    "units": 3
+  },
+  {
+    "code": "STA 214",
+    "title": "Actuarial Science Basics",
+    "units": 3
+  },
+  {
+    "code": "STA 301",
+    "title": "Applied Data Science",
+    "units": 3
+  },
+  {
+    "code": "STA 302",
+    "title": "Spatial Statistics",
+    "units": 3
+  },
+  {
+    "code": "STA 303",
+    "title": "Reliability Analysis",
+    "units": 3
+  },
+  {
+    "code": "MTH 305",
+    "title": "Statistical Inference",
+    "units": 3
+  },
+  {
+    "code": "STA 305",
+    "title": "Machine Learning for Statistics",
+    "units": 3
+  },
+  {
+    "code": "STA 306",
+    "title": "Multivariate Analysis",
+    "units": 3
+  },
+  {
+    "code": "STA 307",
+    "title": "Financial Statistics",
+    "units": 3
+  },
+  {
+    "code": "STA 308",
+    "title": "Statistical Computing & AI",
+    "units": 3
+  },
+  {
+    "code": "STA 309",
+    "title": "Econometrics",
+    "units": 3
+  },
+  {
+    "code": "STA 310",
+    "title": "Risk Analytics",
+    "units": 3
+  },
+  {
+    "code": "STA 311",
+    "title": "Survival Analysis",
+    "units": 3
+  },
+  {
+    "code": "STA 312",
+    "title": "Data Mining Techniques",
+    "units": 3
+  },
+  {
+    "code": "STA 313",
+    "title": "Applied Probability Models",
+    "units": 3
+  },
+  {
+    "code": "STA 314",
+    "title": "Advanced Regression",
+    "units": 3
+  },
+  {
+    "code": "STA 401",
+    "title": "Statistical Modeling",
+    "units": 3
+  },
+  {
+    "code": "STA 402",
+    "title": "Big Data Analysis",
+    "units": 3
+  },
+  {
+    "code": "STA 403",
+    "title": "Quantum Statistics",
+    "units": 3
+  },
+  {
+    "code": "STA 404",
+    "title": "Operations Research",
+    "units": 3
+  },
+  {
+    "code": "MTH 507",
+    "title": "Scientific Computing",
+    "units": 3
+  },
+  {
+    "code": "STA 406",
+    "title": "Mathematical Statistics II",
+    "units": 3
+  },
+  {
+    "code": "STA 407",
+    "title": "Business Intelligence Analytics",
+    "units": 3
+  },
+  {
+    "code": "STA 408",
+    "title": "High-Dimensional Data Analysis",
+    "units": 3
+  },
+  {
+    "code": "STA 409",
+    "title": "Predictive Analytics",
+    "units": 3
+  },
+  {
+    "code": "STA 410",
+    "title": "Actuarial Risk Management",
+    "units": 3
+  },
+  {
+    "code": "STA 411",
+    "title": "Statistical Programming",
+    "units": 3
+  },
+  {
+    "code": "STA 412",
+    "title": "Sports Analytics",
+    "units": 3
+  },
+  {
+    "code": "STA 413",
+    "title": "Research Seminars",
+    "units": 3
+  },
+  {
+    "code": "STA 414",
+    "title": "Simulation & Modeling",
+    "units": 3
+  },
+  {
+    "code": "STA 501",
+    "title": "Deep Learning for Statistics",
+    "units": 3
+  },
+  {
+    "code": "STA 502",
+    "title": "Data Engineering",
+    "units": 3
+  },
+  {
+    "code": "STA 503",
+    "title": "Artificial Intelligence Analytics",
+    "units": 3
+  },
+  {
+    "code": "STA 504",
+    "title": "Environmental Statistics",
+    "units": 3
+  },
+  {
+    "code": "STA 505",
+    "title": "Optimization Methods",
+    "units": 3
+  },
+  {
+    "code": "STA 506",
+    "title": "Advanced Biostatistics",
+    "units": 3
+  },
+  {
+    "code": "STA 507",
+    "title": "Computational Bayesian Statistics",
+    "units": 3
+  },
+  {
+    "code": "STA 508",
+    "title": "Research & Dissertation",
+    "units": 6
+  },
+  {
+    "code": "STA 509",
+    "title": "Advanced Risk Modeling",
+    "units": 3
+  },
+  {
+    "code": "STA 510",
+    "title": "Probabilistic Graphical Models",
+    "units": 3
+  },
+  {
+    "code": "STA 511",
+    "title": "Data Ethics & Security",
+    "units": 3
+  },
+  {
+    "code": "STA 512",
+    "title": "NLP for Data Science",
+    "units": 3
+  },
+  {
+    "code": "STA 513",
+    "title": "Final year project",
+    "units": 6
+  },
+  {
+    "code": "STA 514",
+    "title": "Statistical Capstone Project",
+    "units": 3
+  },
+  {
+    "code": "CHM 101",
+    "title": "General Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 102",
+    "title": "Applied Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 103",
+    "title": "Physical Chemistry I",
+    "units": 3
+  },
+  {
+    "code": "CHM 104",
+    "title": "Organic Chemistry I",
+    "units": 3
+  },
+  {
+    "code": "CHM 105",
+    "title": "Analytical Chemistry I",
+    "units": 3
+  },
+  {
+    "code": "CHM 106",
+    "title": "Laboratory Techniques I",
+    "units": 2
+  },
+  {
+    "code": "MTH 101",
+    "title": "Calculus I",
+    "units": 3
+  },
+  {
+    "code": "CHM 107",
+    "title": "General Chemistry II",
+    "units": 3
+  },
+  {
+    "code": "CHM 108",
+    "title": "Inorganic Chemistry II",
+    "units": 3
+  },
+  {
+    "code": "CHM 109",
+    "title": "Physical Chemistry II",
+    "units": 3
+  },
+  {
+    "code": "CHM 110",
+    "title": "Organic Chemistry II",
+    "units": 3
+  },
+  {
+    "code": "CHM 111",
+    "title": "Analytical Chemistry II",
+    "units": 3
+  },
+  {
+    "code": "CHM 112",
+    "title": "Laboratory Techniques II",
+    "units": 2
+  },
+  {
+    "code": "PHY 101",
+    "title": "Introduction to physics",
+    "units": 3
+  },
+  {
+    "code": "CHM 201",
+    "title": "Advanced Inorganic Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 202",
+    "title": "Quantum Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 203",
+    "title": "Organic Reaction Mechanisms",
+    "units": 3
+  },
+  {
+    "code": "CHM 204",
+    "title": "Spectroscopic Methods",
+    "units": 3
+  },
+  {
+    "code": "CHM 205",
+    "title": "Polymer Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 206",
+    "title": "Computational Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 207",
+    "title": "Industrial Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 208",
+    "title": "Coordination Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 209",
+    "title": "Thermodynamics",
+    "units": 3
+  },
+  {
+    "code": "CHM 210",
+    "title": "Natural Products Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 211",
+    "title": "Chromatographic Techniques",
+    "units": 3
+  },
+  {
+    "code": "CHM 212",
+    "title": "Environmental Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 213",
+    "title": "Nuclear Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 214",
+    "title": "Research Methodology",
+    "units": 2
+  },
+  {
+    "code": "CHM 301",
+    "title": "Organometallic Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 302",
+    "title": "Chemical Kinetics",
+    "units": 3
+  },
+  {
+    "code": "CHM 303",
+    "title": "Heterocyclic Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 304",
+    "title": "Electrochemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 305",
+    "title": "Pharmaceutical Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 306",
+    "title": "Surface Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 307",
+    "title": "Food Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 308",
+    "title": "Bioinorganic Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 309",
+    "title": "Statistical Thermodynamics",
+    "units": 3
+  },
+  {
+    "code": "CHM 310",
+    "title": "Medicinal Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 311",
+    "title": "Instrumental Analysis",
+    "units": 3
+  },
+  {
+    "code": "CHM 312",
+    "title": "Petroleum Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 313",
+    "title": "Nanochemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 314",
+    "title": "Chemical Literature",
+    "units": 2
+  },
+  {
+    "code": "CHM 401",
+    "title": "Advanced Physical Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 402",
+    "title": "Solid State Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 403",
+    "title": "Asymmetric Synthesis",
+    "units": 3
+  },
+  {
+    "code": "CHM 404",
+    "title": "Advanced Analytical Techniques",
+    "units": 3
+  },
+  {
+    "code": "CHM 405",
+    "title": "Green Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 406",
+    "title": "Computational Drug Design",
+    "units": 3
+  },
+  {
+    "code": "CHM 407",
+    "title": "Polymer Technology",
+    "units": 3
+  },
+  {
+    "code": "CHM 408",
+    "title": "Materials Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 409",
+    "title": "Chemical Biology",
+    "units": 3
+  },
+  {
+    "code": "CHM 410",
+    "title": "Forensic Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 411",
+    "title": "Catalysis",
+    "units": 3
+  },
+  {
+    "code": "CHM 412",
+    "title": "Industrial Process Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 413",
+    "title": "Research Project I",
+    "units": 3
+  },
+  {
+    "code": "CHM 414",
+    "title": "Special Topics in Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 501",
+    "title": "Advanced Quantum Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 502",
+    "title": "Supramolecular Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 503",
+    "title": "Chemical Toxicology",
+    "units": 3
+  },
+  {
+    "code": "CHM 504",
+    "title": "Advanced Spectroscopy",
+    "units": 3
+  },
+  {
+    "code": "CHM 505",
+    "title": "Computational Materials Science",
+    "units": 3
+  },
+  {
+    "code": "CHM 506",
+    "title": "Pharmaceutical Analysis",
+    "units": 3
+  },
+  {
+    "code": "CHM 507",
+    "title": "Research Project II",
+    "units": 3
+  },
+  {
+    "code": "CHM 508",
+    "title": "Chemical Process Design",
+    "units": 3
+  },
+  {
+    "code": "CHM 509",
+    "title": "Advanced Polymer Science",
+    "units": 3
+  },
+  {
+    "code": "CHM 510",
+    "title": "Industrial Safety & Management",
+    "units": 3
+  },
+  {
+    "code": "CHM 511",
+    "title": "Thesis",
+    "units": 6
+  },
+  {
+    "code": "CHM 512",
+    "title": "Emerging Technologies in Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 513",
+    "title": "Professional Ethics",
+    "units": 2
+  },
+  {
+    "code": "CHM 514",
+    "title": "Seminar",
+    "units": 2
+  },
+  {
+    "code": "PHY 101",
+    "title": "Introduction to physics",
+    "units": 3
+  },
+  {
+    "code": "PHY 102",
+    "title": "Electromagnetic Waves",
+    "units": 3
+  },
+  {
+    "code": "PHY 103",
+    "title": "Heat and Thermodynamics",
+    "units": 3
+  },
+  {
+    "code": "PHY 104",
+    "title": "Properties of Matter",
+    "units": 3
+  },
+  {
+    "code": "PHY 105",
+    "title": "Practical Physics I",
+    "units": 2
+  },
+  {
+    "code": "MTH 101",
+    "title": "Calculus I",
+    "units": 3
+  },
+  {
+    "code": "CHM 101",
+    "title": "General Chemistry",
+    "units": 3
+  },
+  {
+    "code": "PHY 106",
+    "title": "General Physics II",
+    "units": 3
+  },
+  {
+    "code": "PHY 107",
+    "title": "Electricity and Magnetism",
+    "units": 3
+  },
+  {
+    "code": "PHY 108",
+    "title": "Waves and Optics",
+    "units": 3
+  },
+  {
+    "code": "PHY 109",
+    "title": "Modern Physics",
+    "units": 3
+  },
+  {
+    "code": "PHY 110",
+    "title": "Practical Physics II",
+    "units": 2
+  },
+  {
+    "code": "MTH 102",
+    "title": "Linear Algebra",
+    "units": 3
+  },
+  {
+    "code": "STA 101",
+    "title": "Introduction to Statistics",
+    "units": 3
+  },
+  {
+    "code": "PHY 201",
+    "title": "Classical Mechanics",
+    "units": 3
+  },
+  {
+    "code": "PHY 202",
+    "title": "Electromagnetic Theory I",
+    "units": 3
+  },
+  {
+    "code": "PHY 203",
+    "title": "Quantum Mechanics I",
+    "units": 3
+  },
+  {
+    "code": "PHY 204",
+    "title": "Mathematical Methods in Physics I",
+    "units": 3
+  },
+  {
+    "code": "PHY 205",
+    "title": "Electronics I",
+    "units": 3
+  },
+  {
+    "code": "PHY 206",
+    "title": "Practical Physics III",
+    "units": 2
+  },
+  {
+    "code": "CSC 201",
+    "title": "Introduction to Computer Programming",
+    "units": 3
+  },
+  {
+    "code": "PHY 207",
+    "title": "Thermal Physics",
+    "units": 3
+  },
+  {
+    "code": "PHY 208",
+    "title": "Electromagnetic Theory II",
+    "units": 3
+  },
+  {
+    "code": "PHY 209",
+    "title": "Quantum Mechanics II",
+    "units": 3
+  },
+  {
+    "code": "PHY 210",
+    "title": "Mathematical Methods in Physics II",
+    "units": 3
+  },
+  {
+    "code": "PHY 211",
+    "title": "Electronics II",
+    "units": 3
+  },
+  {
+    "code": "PHY 212",
+    "title": "Practical Physics IV",
+    "units": 2
+  },
+  {
+    "code": "STA 201",
+    "title": "Advanced Probability",
+    "units": 3
+  },
+  {
+    "code": "PHY 301",
+    "title": "Nuclear Physics",
+    "units": 3
+  },
+  {
+    "code": "PHY 302",
+    "title": "Solid State Physics I",
+    "units": 3
+  },
+  {
+    "code": "PHY 303",
+    "title": "Atomic and Molecular Physics",
+    "units": 3
+  },
+  {
+    "code": "PHY 304",
+    "title": "Advanced Quantum Mechanics",
+    "units": 3
+  },
+  {
+    "code": "PHY 305",
+    "title": "Plasma Physics",
+    "units": 3
+  },
+  {
+    "code": "PHY 306",
+    "title": "Practical Physics V",
+    "units": 2
+  },
+  {
+    "code": "PHY 307",
+    "title": "Astrophysics",
+    "units": 3
+  },
+  {
+    "code": "PHY 308",
+    "title": "Particle Physics",
+    "units": 3
+  },
+  {
+    "code": "PHY 309",
+    "title": "Solid State Physics II",
+    "units": 3
+  },
+  {
+    "code": "PHY 310",
+    "title": "Optics and Laser Physics",
+    "units": 3
+  },
+  {
+    "code": "PHY 311",
+    "title": "Advanced Electromagnetism",
+    "units": 3
+  },
+  {
+    "code": "PHY 312",
+    "title": "Practical Physics VI",
+    "units": 2
+  },
+  {
+    "code": "PHY 313",
+    "title": "Biophysics",
+    "units": 3
+  },
+  {
+    "code": "CHM 214",
+    "title": "Research Methodology",
+    "units": 2
+  },
+  {
+    "code": "PHY 401",
+    "title": "Quantum Field Theory",
+    "units": 3
+  },
+  {
+    "code": "PHY 402",
+    "title": "Condensed Matter Physics",
+    "units": 3
+  },
+  {
+    "code": "PHY 403",
+    "title": "Cosmology",
+    "units": 3
+  },
+  {
+    "code": "PHY 404",
+    "title": "Advanced Nuclear Physics",
+    "units": 3
+  },
+  {
+    "code": "PHY 405",
+    "title": "Nanophysics",
+    "units": 3
+  },
+  {
+    "code": "PHY 406",
+    "title": "Practical Physics VII",
+    "units": 2
+  },
+  {
+    "code": "PHY 407",
+    "title": "Medical Physics",
+    "units": 3
+  },
+  {
+    "code": "PHY 408",
+    "title": "General Relativity",
+    "units": 3
+  },
+  {
+    "code": "PHY 409",
+    "title": "Semiconductor Physics",
+    "units": 3
+  },
+  {
+    "code": "PHY 410",
+    "title": "Advanced Astrophysics",
+    "units": 3
+  },
+  {
+    "code": "CHM 413",
+    "title": "Research Project I",
+    "units": 3
+  },
+  {
+    "code": "PHY 412",
+    "title": "Advanced Computational Physics",
+    "units": 3
+  },
+  {
+    "code": "PHY 413",
+    "title": "Environmental Physics",
+    "units": 3
+  },
+  {
+    "code": "PHY 414",
+    "title": "Special Topics in Physics",
+    "units": 3
+  },
+  {
+    "code": "PHY 501",
+    "title": "String Theory",
+    "units": 3
+  },
+  {
+    "code": "CSC 314",
+    "title": "Quantum Computing",
+    "units": 3
+  },
+  {
+    "code": "PHY 503",
+    "title": "Advanced Condensed Matter",
+    "units": 3
+  },
+  {
+    "code": "PHY 504",
+    "title": "High Energy Physics",
+    "units": 3
+  },
+  {
+    "code": "PHY 505",
+    "title": "Advanced Mathematical Physics",
+    "units": 3
+  },
+  {
+    "code": "CHM 507",
+    "title": "Research Project II",
+    "units": 3
+  },
+  {
+    "code": "PHY 507",
+    "title": "Physics Education",
+    "units": 3
+  },
+  {
+    "code": "PHY 508",
+    "title": "Advanced Quantum Field Theory",
+    "units": 3
+  },
+  {
+    "code": "PHY 509",
+    "title": "Experimental Techniques",
+    "units": 3
+  },
+  {
+    "code": "CHM 511",
+    "title": "Thesis",
+    "units": 6
+  },
+  {
+    "code": "PHY 511",
+    "title": "Emerging Physics Technologies",
+    "units": 3
+  },
+  {
+    "code": "PHY 512",
+    "title": "Physics Entrepreneurship",
+    "units": 2
+  },
+  {
+    "code": "CHM 514",
+    "title": "Seminar",
+    "units": 2
+  },
+  {
+    "code": "CHM 513",
+    "title": "Professional Ethics",
+    "units": 2
+  },
+  {
+    "code": "BIO 101",
+    "title": "General Biology I",
+    "units": 3
+  },
+  {
+    "code": "BIO 102",
+    "title": "Cell Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 103",
+    "title": "Genetics I",
+    "units": 3
+  },
+  {
+    "code": "BIO 104",
+    "title": "Plant Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 105",
+    "title": "Practical Biology I",
+    "units": 2
+  },
+  {
+    "code": "CHM 101",
+    "title": "General Chemistry",
+    "units": 3
+  },
+  {
+    "code": "MTH 101",
+    "title": "Calculus I",
+    "units": 3
+  },
+  {
+    "code": "BIO 106",
+    "title": "General Biology II",
+    "units": 3
+  },
+  {
+    "code": "BIO 107",
+    "title": "Animal Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 108",
+    "title": "Ecology",
+    "units": 3
+  },
+  {
+    "code": "BIO 109",
+    "title": "Microbiology I",
+    "units": 3
+  },
+  {
+    "code": "BIO 110",
+    "title": "Practical Biology II",
+    "units": 2
+  },
+  {
+    "code": "CHM 102",
+    "title": "Applied Chemistry",
+    "units": 3
+  },
+  {
+    "code": "PHY 101",
+    "title": "Introduction to physics",
+    "units": 3
+  },
+  {
+    "code": "BIO 201",
+    "title": "Genetics II",
+    "units": 3
+  },
+  {
+    "code": "BIO 202",
+    "title": "Plant Physiology",
+    "units": 3
+  },
+  {
+    "code": "BIO 203",
+    "title": "Animal Physiology",
+    "units": 3
+  },
+  {
+    "code": "BIO 204",
+    "title": "Microbiology II",
+    "units": 3
+  },
+  {
+    "code": "BIO 205",
+    "title": "emistry I",
+    "units": 3
+  },
+  {
+    "code": "BIO 206",
+    "title": "Practical Biology III",
+    "units": 2
+  },
+  {
+    "code": "MTH 407",
+    "title": "Biostatistics",
+    "units": 3
+  },
+  {
+    "code": "BIO 207",
+    "title": "Evolutionary Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 208",
+    "title": "Molecular Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 209",
+    "title": "Parasitology",
+    "units": 3
+  },
+  {
+    "code": "BIO 210",
+    "title": "Biochemistry II",
+    "units": 3
+  },
+  {
+    "code": "BIO 211",
+    "title": "Practical Biology IV",
+    "units": 2
+  },
+  {
+    "code": "BIO 212",
+    "title": "Entomology",
+    "units": 3
+  },
+  {
+    "code": "CSC 201",
+    "title": "Introduction to Computer Programming",
+    "units": 3
+  },
+  {
+    "code": "BIO 301",
+    "title": "Cell and Molecular Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 302",
+    "title": "Immunology",
+    "units": 3
+  },
+  {
+    "code": "BIO 303",
+    "title": "Plant Taxonomy",
+    "units": 3
+  },
+  {
+    "code": "BIO 304",
+    "title": "Animal Behavior",
+    "units": 3
+  },
+  {
+    "code": "BIO 305",
+    "title": "Biotechnology I",
+    "units": 3
+  },
+  {
+    "code": "BIO 306",
+    "title": "Practical Biology V",
+    "units": 2
+  },
+  {
+    "code": "BIO 307",
+    "title": "Environmental Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 308",
+    "title": "Developmental Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 309",
+    "title": "Virology",
+    "units": 3
+  },
+  {
+    "code": "BIO 310",
+    "title": "Plant Pathology",
+    "units": 3
+  },
+  {
+    "code": "BIO 311",
+    "title": "Biotechnology II",
+    "units": 3
+  },
+  {
+    "code": "BIO 312",
+    "title": "Practical Biology VI",
+    "units": 2
+  },
+  {
+    "code": "CHM 214",
+    "title": "Research Methodology",
+    "units": 2
+  },
+  {
+    "code": "BIO 314",
+    "title": "Conservation Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 401",
+    "title": "Genomics",
+    "units": 3
+  },
+  {
+    "code": "BIO 402",
+    "title": "Proteomics",
+    "units": 3
+  },
+  {
+    "code": "BIO 403",
+    "title": "Advanced Immunology",
+    "units": 3
+  },
+  {
+    "code": "BIO 404",
+    "title": "Advanced Biotechnology",
+    "units": 3
+  },
+  {
+    "code": "BIO 405",
+    "title": "Practical Biology VII",
+    "units": 2
+  },
+  {
+    "code": "BIO 406",
+    "title": "Bioinformatics",
+    "units": 3
+  },
+  {
+    "code": "BIO 407",
+    "title": "Toxicology",
+    "units": 3
+  },
+  {
+    "code": "BIO 408",
+    "title": "Cancer Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 409",
+    "title": "Stem Cell Biology",
+    "units": 3
+  },
+  {
+    "code": "CHM 413",
+    "title": "Research Project I",
+    "units": 3
+  },
+  {
+    "code": "BIO 411",
+    "title": "Advanced Molecular Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 412",
+    "title": "Neurobiology",
+    "units": 3
+  },
+  {
+    "code": "BIO 413",
+    "title": "Special Topics in Biology",
+    "units": 3
+  },
+  {
+    "code": "PHY 313",
+    "title": "Biophysics",
+    "units": 3
+  },
+  {
+    "code": "BIO 501",
+    "title": "Advanced Genomics",
+    "units": 3
+  },
+  {
+    "code": "BIO 502",
+    "title": "Synthetic Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 503",
+    "title": "Pharmacology",
+    "units": 3
+  },
+  {
+    "code": "CHM 507",
+    "title": "Research Project II",
+    "units": 3
+  },
+  {
+    "code": "BIO 505",
+    "title": "Advanced Bioinformatics",
+    "units": 3
+  },
+  {
+    "code": "BIO 506",
+    "title": "Biological Data Science",
+    "units": 3
+  },
+  {
+    "code": "BIO 507",
+    "title": "Bioethics",
+    "units": 2
+  },
+  {
+    "code": "CHM 511",
+    "title": "Thesis",
+    "units": 6
+  },
+  {
+    "code": "BIO 509",
+    "title": "Biological Entrepreneurship",
+    "units": 2
+  },
+  {
+    "code": "BIO 510",
+    "title": "Advanced Stem Cell Technology",
+    "units": 3
+  },
+  {
+    "code": "BIO 511",
+    "title": "Emerging Biological Technologies",
+    "units": 3
+  },
+  {
+    "code": "BIO 512",
+    "title": "Professional Practice",
+    "units": 2
+  },
+  {
+    "code": "CHM 514",
+    "title": "Seminar",
+    "units": 2
+  },
+  {
+    "code": "BIO 514",
+    "title": "Biological Conservation Strategies",
+    "units": 3
+  },
+  {
+    "code": "INF 101",
+    "title": "Introduction to Information Systems",
+    "units": 3
+  },
+  {
+    "code": "INF 102",
+    "title": "Computer Fundamentals",
+    "units": 3
+  },
+  {
+    "code": "INF 103",
+    "title": "Programming Fundamentals",
+    "units": 3
+  },
+  {
+    "code": "MTH 201",
+    "title": "Discrete Mathematics",
+    "units": 3
+  },
+  {
+    "code": "INF 105",
+    "title": "Business Processes",
+    "units": 3
+  },
+  {
+    "code": "INF 106",
+    "title": "Practical Computing I",
+    "units": 2
+  },
+  {
+    "code": "GST 101",
+    "title": "Use of English",
+    "units": 2
+  },
+  {
+    "code": "INF 107",
+    "title": "Database Concepts",
+    "units": 3
+  },
+  {
+    "code": "INF 108",
+    "title": "Web Technologies",
+    "units": 3
+  },
+  {
+    "code": "INF 109",
+    "title": "Systems Analysis",
+    "units": 3
+  },
+  {
+    "code": "INF 110",
+    "title": "Statistics for IS",
+    "units": 3
+  },
+  {
+    "code": "INF 111",
+    "title": "Practical Computing II",
+    "units": 2
+  },
+  {
+    "code": "INF 112",
+    "title": "Organizational Behavior",
+    "units": 3
+  },
+  {
+    "code": "GST 102",
+    "title": "Philosophy and Logic",
+    "units": 2
+  },
+  {
+    "code": "CSC 106",
+    "title": "Data Structures",
+    "units": 3
+  },
+  {
+    "code": "CSC 202",
+    "title": "Object-Oriented Programming",
+    "units": 3
+  },
+  {
+    "code": "CSC 210",
+    "title": "Database Management Systems",
+    "units": 3
+  },
+  {
+    "code": "CSC 207",
+    "title": "Computer Networks",
+    "units": 3
+  },
+  {
+    "code": "INF 205",
+    "title": "Business Information Systems",
+    "units": 3
+  },
+  {
+    "code": "INF 206",
+    "title": "Practical Computing III",
+    "units": 2
+  },
+  {
+    "code": "INF 207",
+    "title": "Accounting for IS",
+    "units": 3
+  },
+  {
+    "code": "INF 208",
+    "title": "Web Application Development",
+    "units": 3
+  },
+  {
+    "code": "INF 209",
+    "title": "Systems Design",
+    "units": 3
+  },
+  {
+    "code": "CSC 211",
+    "title": "Human-Computer Interaction",
+    "units": 3
+  },
+  {
+    "code": "INF 211",
+    "title": "Information Security",
+    "units": 3
+  },
+  {
+    "code": "INF 212",
+    "title": "Practical Computing IV",
+    "units": 2
+  },
+  {
+    "code": "INF 213",
+    "title": "E-Commerce",
+    "units": 3
+  },
+  {
+    "code": "INF 214",
+    "title": "Research Methods",
+    "units": 2
+  },
+  {
+    "code": "INF 301",
+    "title": "Enterprise Systems",
+    "units": 3
+  },
+  {
+    "code": "INF 302",
+    "title": "Software Engineering",
+    "units": 3
+  },
+  {
+    "code": "INF 303",
+    "title": "Data Mining",
+    "units": 3
+  },
+  {
+    "code": "CSC 310",
+    "title": "Cloud Computing",
+    "units": 3
+  },
+  {
+    "code": "INF 305",
+    "title": "Practical Computing V",
+    "units": 2
+  },
+  {
+    "code": "INF 306",
+    "title": "IT Project Management",
+    "units": 3
+  },
+  {
+    "code": "INF 307",
+    "title": "Business Intelligence",
+    "units": 3
+  },
+  {
+    "code": "INF 308",
+    "title": "Mobile Application Development",
+    "units": 3
+  },
+  {
+    "code": "INF 309",
+    "title": "IT Governance",
+    "units": 3
+  },
+  {
+    "code": "CSC 409",
+    "title": "Big Data Analytics",
+    "units": 3
+  },
+  {
+    "code": "INF 311",
+    "title": "Practical Computing VI",
+    "units": 2
+  },
+  {
+    "code": "INF 312",
+    "title": "IT Service Management",
+    "units": 3
+  },
+  {
+    "code": "INF 313",
+    "title": "Emerging Technologies",
+    "units": 3
+  },
+  {
+    "code": "CHM 513",
+    "title": "Professional Ethics",
+    "units": 2
+  },
+  {
+    "code": "INF 401",
+    "title": "IT Strategy",
+    "units": 3
+  },
+  {
+    "code": "INF 402",
+    "title": "Enterprise Architecture",
+    "units": 3
+  },
+  {
+    "code": "INF 403",
+    "title": "Information Systems Audit",
+    "units": 3
+  },
+  {
+    "code": "INF 404",
+    "title": "Practical Computing VII",
+    "units": 2
+  },
+  {
+    "code": "CHM 413",
+    "title": "Research Project I",
+    "units": 3
+  },
+  {
+    "code": "INF 406",
+    "title": "Digital Transformation",
+    "units": 3
+  },
+  {
+    "code": "CSC 313",
+    "title": "Blockchain Technology",
+    "units": 3
+  },
+  {
+    "code": "INF 408",
+    "title": "Knowledge Management",
+    "units": 3
+  },
+  {
+    "code": "INF 409",
+    "title": "IT Entrepreneurship",
+    "units": 3
+  },
+  {
+    "code": "CHM 507",
+    "title": "Research Project II",
+    "units": 3
+  },
+  {
+    "code": "INF 411",
+    "title": "Special Topics in IS",
+    "units": 3
+  },
+  {
+    "code": "INF 412",
+    "title": "Cybersecurity Management",
+    "units": 3
+  },
+  {
+    "code": "INF 413",
+    "title": "Artificial Intelligence in Business",
+    "units": 3
+  },
+  {
+    "code": "INF 414",
+    "title": "Capstone Project",
+    "units": 3
+  },
+  {
+    "code": "INF 501",
+    "title": "Advanced IT Strategy",
+    "units": 3
+  },
+  {
+    "code": "INF 502",
+    "title": "Data Governance",
+    "units": 3
+  },
+  {
+    "code": "INF 503",
+    "title": "IT Innovation",
+    "units": 3
+  },
+  {
+    "code": "MTH 414",
+    "title": "Research Seminar",
+    "units": 3
+  },
+  {
+    "code": "INF 505",
+    "title": "Digital Business Models",
+    "units": 3
+  },
+  {
+    "code": "INF 506",
+    "title": "IT Leadership",
+    "units": 3
+  },
+  {
+    "code": "INF 507",
+    "title": "Global IT Management",
+    "units": 3
+  },
+  {
+    "code": "CHM 511",
+    "title": "Thesis",
+    "units": 6
+  },
+  {
+    "code": "INF 509",
+    "title": "IT Policy and Law",
+    "units": 3
+  },
+  {
+    "code": "INF 510",
+    "title": "Advanced Research Methods",
+    "units": 3
+  },
+  {
+    "code": "INF 511",
+    "title": "Professional Development",
+    "units": 2
+  },
+  {
+    "code": "INF 512",
+    "title": "Emerging Trends in IS",
+    "units": 3
+  },
+  {
+    "code": "CHM 514",
+    "title": "Seminar",
+    "units": 2
+  },
+  {
+    "code": "INF 514",
+    "title": "Capstone Project II",
+    "units": 3
+  },
+  {
+    "code": "BTH 101",
+    "title": "Introduction to Biotechnology",
+    "units": 3
+  },
+  {
+    "code": "BCH 205",
+    "title": "Biochemistry I",
+    "units": 3
+  },
+  {
+    "code": "BIO 109",
+    "title": "Microbiology I",
+    "units": 3
+  },
+  {
+    "code": "BIO 103",
+    "title": "Genetics I",
+    "units": 3
+  },
+  {
+    "code": "CHM 101",
+    "title": "General Chemistry",
+    "units": 3
+  },
+  {
+    "code": "PHY 101",
+    "title": "Introduction to physics",
+    "units": 3
+  },
+  {
+    "code": "STA 101",
+    "title": "Introduction to Statistics",
+    "units": 3
+  },
+  {
+    "code": "BIO 102",
+    "title": "Cell Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 210",
+    "title": "Biochemistry II",
+    "units": 3
+  },
+  {
+    "code": "BIO 204",
+    "title": "Microbiology II",
+    "units": 3
+  },
+  {
+    "code": "BIO 201",
+    "title": "Genetics II",
+    "units": 3
+  },
+  {
+    "code": "CHM 107",
+    "title": "General Chemistry II",
+    "units": 3
+  },
+  {
+    "code": "PHY 102",
+    "title": "Electromagnetic Waves",
+    "units": 3
+  },
+  {
+    "code": "BTH 108",
+    "title": "Introduction to Biotechnology2",
+    "units": 3
+  },
+  {
+    "code": "BIO 301",
+    "title": "Cell and Molecular Biology",
+    "units": 3
+  },
+  {
+    "code": "BTH 203",
+    "title": "Bioprocess Engineering",
+    "units": 3
+  },
+  {
+    "code": "CHM 110",
+    "title": "Organic Chemistry II",
+    "units": 3
+  },
+  {
+    "code": "BIO 205",
+    "title": "emistry I",
+    "units": 3
+  },
+  {
+    "code": "BTH 207",
+    "title": "Plant Biotechnology",
+    "units": 3
+  },
+  {
+    "code": "STA 201",
+    "title": "Advanced Probability",
+    "units": 3
+  },
+  {
+    "code": "BTH 209",
+    "title": "Environmental Biotechnology",
+    "units": 3
+  },
+  {
+    "code": "BIO 202",
+    "title": "Plant Physiology",
+    "units": 3
+  },
+  {
+    "code": "BIO 204",
+    "title": "Microbiology II",
+    "units": 3
+  },
+  {
+    "code": "CHE 202",
+    "title": "Physical Chemistry",
+    "units": 3
+  },
+  {
+    "code": "BTH 206",
+    "title": "Food Biotechnology",
+    "units": 3
+  },
+  {
+    "code": "CSC 201",
+    "title": "Introduction to Computer Programming",
+    "units": 3
+  },
+  {
+    "code": "STA 506",
+    "title": "Advanced Biostatistics",
+    "units": 3
+  },
+  {
+    "code": "BIO 210",
+    "title": "Biochemistry II",
+    "units": 3
+  },
+  {
+    "code": "BIO 301",
+    "title": "Cell and Molecular Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 303",
+    "title": "Plant Taxonomy",
+    "units": 3
+  },
+  {
+    "code": "BIO 305",
+    "title": "Biotechnology I",
+    "units": 3
+  },
+  {
+    "code": "BIO 502",
+    "title": "Synthetic Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 309",
+    "title": "Virology",
+    "units": 3
+  },
+  {
+    "code": "STA 301",
+    "title": "Applied Data Science",
+    "units": 3
+  },
+  {
+    "code": "BIO 311",
+    "title": "Biotechnology II",
+    "units": 3
+  },
+  {
+    "code": "BIO 302",
+    "title": "Immunology",
+    "units": 3
+  },
+  {
+    "code": "BIO 304",
+    "title": "Animal Behavior",
+    "units": 3
+  },
+  {
+    "code": "BIO 306",
+    "title": "Practical Biology V",
+    "units": 2
+  },
+  {
+    "code": "BIO 308",
+    "title": "Developmental Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 310",
+    "title": "Plant Pathology",
+    "units": 3
+  },
+  {
+    "code": "STA 302",
+    "title": "Spatial Statistics",
+    "units": 3
+  },
+  {
+    "code": "BIO 312",
+    "title": "Practical Biology VI",
+    "units": 2
+  },
+  {
+    "code": "BIO 411",
+    "title": "Advanced Molecular Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 403",
+    "title": "Advanced Immunology",
+    "units": 3
+  },
+  {
+    "code": "BIO 405",
+    "title": "Practical Biology VII",
+    "units": 2
+  },
+  {
+    "code": "BIO 407",
+    "title": "Toxicology",
+    "units": 3
+  },
+  {
+    "code": "BIO 409",
+    "title": "Stem Cell Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 411",
+    "title": "Advanced Molecular Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 413",
+    "title": "Special Topics in Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 402",
+    "title": "Proteomics",
+    "units": 3
+  },
+  {
+    "code": "BIO 404",
+    "title": "Advanced Biotechnology",
+    "units": 3
+  },
+  {
+    "code": "BIO 406",
+    "title": "Bioinformatics",
+    "units": 3
+  },
+  {
+    "code": "BIO 505",
+    "title": "Advanced Bioinformatics",
+    "units": 3
+  },
+  {
+    "code": "BIO 410",
+    "title": "Systems Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 412",
+    "title": "Neurobiology",
+    "units": 3
+  },
+  {
+    "code": "BIO 414",
+    "title": "Clinical Trials and Biotech Drugs",
+    "units": 3
+  },
+  {
+    "code": "BIO 501",
+    "title": "Advanced Genomics",
+    "units": 3
+  },
+  {
+    "code": "BIO 503",
+    "title": "Pharmacology",
+    "units": 3
+  },
+  {
+    "code": "BIO 403",
+    "title": "Advanced Immunology",
+    "units": 3
+  },
+  {
+    "code": "BIO 507",
+    "title": "Bioethics",
+    "units": 2
+  },
+  {
+    "code": "BIO 509",
+    "title": "Biological Entrepreneurship",
+    "units": 2
+  },
+  {
+    "code": "BIO 511",
+    "title": "Emerging Biological Technologies",
+    "units": 3
+  },
+  {
+    "code": "BIO 513",
+    "title": "Personalized Medicine",
+    "units": 3
+  },
+  {
+    "code": "BIO 502",
+    "title": "Synthetic Biology",
+    "units": 3
+  },
+  {
+    "code": "BIO 504",
+    "title": "Industry Internship",
+    "units": 6
+  },
+  {
+    "code": "BIO 506",
+    "title": "Biological Data Science",
+    "units": 3
+  },
+  {
+    "code": "BIO 508",
+    "title": "Therapeutic Biotechnology",
+    "units": 3
+  },
+  {
+    "code": "BIO 510",
+    "title": "Advanced Stem Cell Technology",
+    "units": 3
+  },
+  {
+    "code": "BIO 512",
+    "title": "Professional Practice",
+    "units": 2
+  },
+  {
+    "code": "BIO 514",
+    "title": "Biological Conservation Strategies",
+    "units": 3
+  },
+  {
+    "code": "BCH 101",
+    "title": "Introduction to Biochemistry",
+    "units": 3
+  },
+  {
+    "code": "BCH 102",
+    "title": "General Chemistry for Biochemists",
+    "units": 3
+  },
+  {
+    "code": "BIO 102",
+    "title": "Cell Biology",
+    "units": 3
+  },
+  {
+    "code": "BCH 104",
+    "title": "Practical Biochemistry I",
+    "units": 2
+  },
+  {
+    "code": "PHY 101",
+    "title": "Introduction to physics",
+    "units": 3
+  },
+  {
+    "code": "MTH 101",
+    "title": "Calculus I",
+    "units": 3
+  },
+  {
+    "code": "BCH 105",
+    "title": "Organic Chemistry for Biochemists",
+    "units": 3
+  },
+  {
+    "code": "BIO 208",
+    "title": "Molecular Biology",
+    "units": 3
+  },
+  {
+    "code": "BCH 107",
+    "title": "Practical Biochemistry II",
+    "units": 2
+  },
+  {
+    "code": "MTH 407",
+    "title": "Biostatistics",
+    "units": 3
+  },
+  {
+    "code": "CHE 202",
+    "title": "Physical Chemistry",
+    "units": 3
+  },
+  {
+    "code": "BIO 101",
+    "title": "General Biology I",
+    "units": 3
+  },
+  {
+    "code": "BCH 201",
+    "title": "Metabolism I",
+    "units": 3
+  },
+  {
+    "code": "BCH 202",
+    "title": "Enzymology",
+    "units": 3
+  },
+  {
+    "code": "BCH 203",
+    "title": "Practical Biochemistry III",
+    "units": 2
+  },
+  {
+    "code": "CHM 201",
+    "title": "Advanced Inorganic Chemistry",
+    "units": 3
+  },
+  {
+    "code": "BIO 201",
+    "title": "Genetics II",
+    "units": 3
+  },
+  {
+    "code": "STA 506",
+    "title": "Advanced Biostatistics",
+    "units": 3
+  },
+  {
+    "code": "BCH 204",
+    "title": "Metabolism II",
+    "units": 3
+  },
+  {
+    "code": "BCH 205",
+    "title": "Biochemistry I",
+    "units": 3
+  },
+  {
+    "code": "BCH 206",
+    "title": "Practical Biochemistry IV",
+    "units": 2
+  },
+  {
+    "code": "CHM 110",
+    "title": "Organic Chemistry II",
+    "units": 3
+  },
+  {
+    "code": "BIO 202",
+    "title": "Plant Physiology",
+    "units": 3
+  },
+  {
+    "code": "PHY 313",
+    "title": "Biophysics",
+    "units": 3
+  },
+  {
+    "code": "BCH 301",
+    "title": "Advanced Metabolism",
+    "units": 3
+  },
+  {
+    "code": "BCH 302",
+    "title": "Biochemical Techniques",
+    "units": 3
+  },
+  {
+    "code": "BCH 303",
+    "title": "Practical Biochemistry V",
+    "units": 2
+  },
+  {
+    "code": "BCH 304",
+    "title": "Nutritional Biochemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 301",
+    "title": "Organometallic Chemistry",
+    "units": 3
+  },
+  {
+    "code": "BIO 208",
+    "title": "Molecular Biology",
+    "units": 3
+  },
+  {
+    "code": "BCH 305",
+    "title": "Clinical Biochemistry",
+    "units": 3
+  },
+  {
+    "code": "BIO 302",
+    "title": "Immunology",
+    "units": 3
+  },
+  {
+    "code": "BCH 307",
+    "title": "Practical Biochemistry VI",
+    "units": 2
+  },
+  {
+    "code": "BIO 407",
+    "title": "Toxicology",
+    "units": 3
+  },
+  {
+    "code": "BIO 302",
+    "title": "Immunology",
+    "units": 3
+  },
+  {
+    "code": "STA 301",
+    "title": "Applied Data Science",
+    "units": 3
+  },
+  {
+    "code": "BCH 401",
+    "title": "Advanced Enzymology",
+    "units": 3
+  },
+  {
+    "code": "BCH 402",
+    "title": "Biotechnology",
+    "units": 3
+  },
+  {
+    "code": "BCH 403",
+    "title": "Practical Biochemistry VII",
+    "units": 2
+  },
+  {
+    "code": "BIO 503",
+    "title": "Pharmacology",
+    "units": 3
+  },
+  {
+    "code": "BCH 405",
+    "title": "Research Methods in Biochemistry",
+    "units": 3
+  },
+  {
+    "code": "BIO 411",
+    "title": "Advanced Molecular Biology",
+    "units": 3
+  },
+  {
+    "code": "BCH 406",
+    "title": "Advanced Clinical Biochemistry",
+    "units": 3
+  },
+  {
+    "code": "BIO 202",
+    "title": "Plant Physiology",
+    "units": 3
+  },
+  {
+    "code": "BCH 408",
+    "title": "Practical Biochemistry VIII",
+    "units": 2
+  },
+  {
+    "code": "BCH 409",
+    "title": "Biochemical Toxicology",
+    "units": 3
+  },
+  {
+    "code": "BIO 406",
+    "title": "Bioinformatics",
+    "units": 3
+  },
+  {
+    "code": "STA 401",
+    "title": "Statistical Modeling",
+    "units": 3
+  },
+  {
+    "code": "BIO 404",
+    "title": "Advanced Biotechnology",
+    "units": 3
+  },
+  {
+    "code": "BCH 502",
+    "title": "Advanced Nutritional Biochemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 413",
+    "title": "Research Project I",
+    "units": 3
+  },
+  {
+    "code": "BCH 504",
+    "title": "Pharmacogenomics",
+    "units": 3
+  },
+  {
+    "code": "BCH 505",
+    "title": "Advanced Toxicology",
+    "units": 3
+  },
+  {
+    "code": "BIO 505",
+    "title": "Advanced Bioinformatics",
+    "units": 3
+  },
+  {
+    "code": "CHM 507",
+    "title": "Research Project II",
+    "units": 3
+  },
+  {
+    "code": "BCH 507",
+    "title": "Biochemical Engineering",
+    "units": 3
+  },
+  {
+    "code": "BCH 508",
+    "title": "Advanced Pharmacology",
+    "units": 3
+  },
+  {
+    "code": "BCH 509",
+    "title": "Industrial Biochemistry",
+    "units": 3
+  },
+  {
+    "code": "BIO 410",
+    "title": "Systems Biology",
+    "units": 3
+  },
+  {
+    "code": "STA 501",
+    "title": "Deep Learning for Statistics",
+    "units": 3
+  },
+  {
+    "code": "AGP 101",
+    "title": "Introduction to Geophysics",
+    "units": 3
+  },
+  {
+    "code": "PHY 101",
+    "title": "Introduction to physics",
+    "units": 3
+  },
+  {
+    "code": "MTH 101",
+    "title": "Calculus I",
+    "units": 3
+  },
+  {
+    "code": "CHM 101",
+    "title": "General Chemistry",
+    "units": 3
+  },
+  {
+    "code": "GST 101",
+    "title": "Use of English",
+    "units": 2
+  },
+  {
+    "code": "AGP 102",
+    "title": "Earth Materials",
+    "units": 3
+  },
+  {
+    "code": "PHY 106",
+    "title": "General Physics II",
+    "units": 3
+  },
+  {
+    "code": "MTH 102",
+    "title": "Linear Algebra",
+    "units": 3
+  },
+  {
+    "code": "CHM 107",
+    "title": "General Chemistry II",
+    "units": 3
+  },
+  {
+    "code": "GST 102",
+    "title": "Philosophy and Logic",
+    "units": 2
+  },
+  {
+    "code": "AGP 201",
+    "title": "Geophysical Field Methods",
+    "units": 3
+  },
+  {
+    "code": "PHY 107",
+    "title": "Electricity and Magnetism",
+    "units": 3
+  },
+  {
+    "code": "MTH 102",
+    "title": "Linear Algebra",
+    "units": 3
+  },
+  {
+    "code": "CHE 202",
+    "title": "Physical Chemistry",
+    "units": 3
+  },
+  {
+    "code": "MTH 202",
+    "title": "Probability and Statistics",
+    "units": 3
+  },
+  {
+    "code": "AGP 202",
+    "title": "Seismology",
+    "units": 3
+  },
+  {
+    "code": "CHM 209",
+    "title": "Thermodynamics",
+    "units": 3
+  },
+  {
+    "code": "MTH 107",
+    "title": "Differential Equations",
+    "units": 3
+  },
+  {
+    "code": "CHM 102",
+    "title": "Applied Chemistry",
+    "units": 3
+  },
+  {
+    "code": "GST 201",
+    "title": "Entrepreneurship Studies",
+    "units": 2
+  },
+  {
+    "code": "AGP 301",
+    "title": "Geophysical Data Processing",
+    "units": 3
+  },
+  {
+    "code": "PHY 301",
+    "title": "Nuclear Physics",
+    "units": 3
+  },
+  {
+    "code": "MTH 108",
+    "title": "Numerical Methods",
+    "units": 3
+  },
+  {
+    "code": "CHM 201",
+    "title": "Advanced Inorganic Chemistry",
+    "units": 3
+  },
+  {
+    "code": "STA 301",
+    "title": "Applied Data Science",
+    "units": 3
+  },
+  {
+    "code": "AGP 302",
+    "title": "Gravity and Magnetic Methods",
+    "units": 3
+  },
+  {
+    "code": "PHY 302",
+    "title": "Solid State Physics I",
+    "units": 3
+  },
+  {
+    "code": "MTH 208",
+    "title": "Complex Analysis",
+    "units": 3
+  },
+  {
+    "code": "CHM 212",
+    "title": "Environmental Chemistry",
+    "units": 3
+  },
+  {
+    "code": "CHM 214",
+    "title": "Research Methodology",
+    "units": 2
+  },
+  {
+    "code": "AGP 401",
+    "title": "Petroleum Geophysics",
+    "units": 3
+  },
+  {
+    "code": "PHY 401",
+    "title": "Quantum Field Theory",
+    "units": 3
+  },
+  {
+    "code": "MTH 209",
+    "title": "Partial Differential Equations",
+    "units": 3
+  },
+  {
+    "code": "CHM 207",
+    "title": "Industrial Chemistry",
+    "units": 3
+  },
+  {
+    "code": "STA 401",
+    "title": "Statistical Modeling",
+    "units": 3
+  },
+  {
+    "code": "AGP 402",
+    "title": "Geophysical Instrumentation",
+    "units": 3
+  },
+  {
+    "code": "PHY 402",
+    "title": "Condensed Matter Physics",
+    "units": 3
+  },
+  {
+    "code": "MTH 402",
+    "title": "Advanced Differential Equations",
+    "units": 3
+  },
+  {
+    "code": "CHM 205",
+    "title": "Polymer Chemistry",
+    "units": 3
+  },
+  {
+    "code": "GST 402",
+    "title": "Seminar Presentation",
+    "units": 2
+  },
+  {
+    "code": "AGP 501",
+    "title": "Advanced Seismology",
+    "units": 3
+  },
+  {
+    "code": "PHY 311",
+    "title": "Advanced Electromagnetism",
+    "units": 3
+  },
+  {
+    "code": "MTH 501",
+    "title": "Advanced Algebraic Structures",
+    "units": 3
+  },
+  {
+    "code": "CHM 501",
+    "title": "Advanced Quantum Chemistry",
+    "units": 3
+  },
+  {
+    "code": "STA 401",
+    "title": "Statistical Modeling",
+    "units": 3
+  },
+  {
+    "code": "AGP 502",
+    "title": "Geophysical Research Project",
+    "units": 6
+  },
+  {
+    "code": "PHY 304",
+    "title": "Advanced Quantum Mechanics",
+    "units": 3
+  },
+  {
+    "code": "MTH 206",
+    "title": "Mathematical Modeling",
+    "units": 3
+  },
+  {
+    "code": "CHM 502",
+    "title": "Supramolecular Chemistry",
+    "units": 3
+  },
+  {
+    "code": "INF 414",
+    "title": "Capstone Project",
+    "units": 3
+  },
+  {
+    "code": "SGF 101",
+    "title": "Introduction to Surveying",
+    "units": 3
+  },
+  {
+    "code": "MTH 101",
+    "title": "Calculus I",
+    "units": 3
+  },
+  {
+    "code": "PHY 101",
+    "title": "Introduction to physics",
+    "units": 3
+  },
+  {
+    "code": "CHM 101",
+    "title": "General Chemistry",
+    "units": 3
+  },
+  {
+    "code": "GST 101",
+    "title": "Use of English",
+    "units": 2
+  },
+  {
+    "code": "SGF 102",
+    "title": "Surveying Instruments",
+    "units": 3
+  },
+  {
+    "code": "SGF 103",
+    "title": "Plane Surveying",
+    "units": 3
+  },
+  {
+    "code": "MTH 102",
+    "title": "Linear Algebra",
+    "units": 3
+  },
+  {
+    "code": "PHY 106",
+    "title": "General Physics II",
+    "units": 3
+  },
+  {
+    "code": "CHM 102",
+    "title": "Applied Chemistry",
+    "units": 3
+  },
+  {
+    "code": "GST 102",
+    "title": "Philosophy and Logic",
+    "units": 2
+  },
+  {
+    "code": "SGF 104",
+    "title": "Introduction to Geoinformatics",
+    "units": 3
+  },
+  {
+    "code": "SGF 201",
+    "title": "Geodetic Surveying I",
+    "units": 3
+  },
+  {
+    "code": "SGF 202",
+    "title": "Cartography",
+    "units": 3
+  },
+  {
+    "code": "MTH 102",
+    "title": "Linear Algebra",
+    "units": 3
+  },
+  {
+    "code": "PHY 102",
+    "title": "Electromagnetic Waves",
+    "units": 3
+  },
+  {
+    "code": "GST 201",
+    "title": "Entrepreneurship Studies",
+    "units": 2
+  },
+  {
+    "code": "SGF 203",
+    "title": "Remote Sensing I",
+    "units": 3
+  },
+  {
+    "code": "SGF 204",
+    "title": "Geodetic Surveying II",
+    "units": 3
+  },
+  {
+    "code": "SGF 205",
+    "title": "Photogrammetry I",
+    "units": 3
+  },
+  {
+    "code": "MTH 107",
+    "title": "Differential Equations",
+    "units": 3
+  },
+  {
+    "code": "CHM 209",
+    "title": "Thermodynamics",
+    "units": 3
+  },
+  {
+    "code": "SGF 206",
+    "title": "Geoinformatics Applications",
+    "units": 3
+  },
+  {
+    "code": "SGF 207",
+    "title": "Surveying Computations",
+    "units": 3
+  },
+  {
+    "code": "SGF 301",
+    "title": "Advanced Geodetic Surveying",
+    "units": 3
+  },
+  {
+    "code": "SGF 302",
+    "title": "Photogrammetry II",
+    "units": 3
+  },
+  {
+    "code": "SGF 303",
+    "title": "Hydrographic Surveying",
+    "units": 3
+  },
+  {
+    "code": "SGF 304",
+    "title": "Geoinformatics Systems",
+    "units": 3
+  },
+  {
+    "code": "SGF 305",
+    "title": "Environmental Surveying",
+    "units": 3
+  },
+  {
+    "code": "SGF 306",
+    "title": "Surveying Law and Ethics",
+    "units": 3
+  },
+  {
+    "code": "SGF 307",
+    "title": "Advanced Remote Sensing",
+    "units": 3
+  },
+  {
+    "code": "SGF 308",
+    "title": "Land Surveying",
+    "units": 3
+  },
+  {
+    "code": "SGF 309",
+    "title": "GIS Applications",
+    "units": 3
+  },
+  {
+    "code": "SGF 310",
+    "title": "Surveying Software Tools",
+    "units": 3
+  },
+  {
+    "code": "CHM 214",
+    "title": "Research Methodology",
+    "units": 2
+  },
+  {
+    "code": "SGF 312",
+    "title": "Advanced Cartography",
+    "units": 3
+  },
+  {
+    "code": "SGF 401",
+    "title": "Advanced Hydrographic Surveying",
+    "units": 3
+  },
+  {
+    "code": "SGF 402",
+    "title": "Satellite Geodesy",
+    "units": 3
+  },
+  {
+    "code": "SGF 403",
+    "title": "Land Administration",
+    "units": 3
+  },
+  {
+    "code": "SGF 404",
+    "title": "Surveying Project I",
+    "units": 3
+  },
+  {
+    "code": "SGF 405",
+    "title": "Advanced GIS",
+    "units": 3
+  },
+  {
+    "code": "SGF 406",
+    "title": "Surveying Data Analysis",
+    "units": 3
+  },
+  {
+    "code": "SGF 407",
+    "title": "Surveying Project II",
+    "units": 3
+  },
+  {
+    "code": "SGF 408",
+    "title": "Advanced Photogrammetry",
+    "units": 3
+  },
+  {
+    "code": "SGF 409",
+    "title": "Geospatial Data Management",
+    "units": 3
+  },
+  {
+    "code": "SGF 410",
+    "title": "Professional Practice in Surveying",
+    "units": 3
+  },
+  {
+    "code": "SGF 411",
+    "title": "Seminar in Surveying",
+    "units": 2
+  },
+  {
+    "code": "SGF 412",
+    "title": "Emerging Trends in Surveying",
+    "units": 3
+  },
+  {
+    "code": "SGF 501",
+    "title": "Advanced Geoinformatics",
+    "units": 3
+  },
+  {
+    "code": "SGF 502",
+    "title": "Surveying Research Project I",
+    "units": 6
+  },
+  {
+    "code": "SGF 503",
+    "title": "Advanced Remote Sensing Applications",
+    "units": 3
+  },
+  {
+    "code": "SGF 504",
+    "title": "Geospatial Data Science",
+    "units": 3
+  },
+  {
+    "code": "SGF 505",
+    "title": "Surveying Entrepreneurship",
+    "units": 3
+  },
+  {
+    "code": "SGF 506",
+    "title": "Surveying Capstone Project",
+    "units": 3
+  },
+  {
+    "code": "SGF 507",
+    "title": "Surveying Research Project II",
+    "units": 6
+  },
+  {
+    "code": "SGF 508",
+    "title": "Advanced Hydrographic Applications",
+    "units": 3
+  },
+  {
+    "code": "SGF 509",
+    "title": "Surveying Policy and Law",
+    "units": 3
+  },
+  {
+    "code": "SGF 510",
+    "title": "Seminar in Geoinformatics",
+    "units": 2
+  },
+  {
+    "code": "SGF 511",
+    "title": "Professional Ethics in Surveying",
+    "units": 3
+  },
+  {
+    "code": "SGF 512",
+    "title": "Emerging Technologies in Surveying",
+    "units": 3
+  },
+  {
+    "code": "ARC 101",
+    "title": "Introduction to Architecture",
+    "units": 3
+  },
+  {
+    "code": "ARC 102",
+    "title": "Architectural Graphics I",
+    "units": 3
+  },
+  {
+    "code": "MTH 101",
+    "title": "Calculus I",
+    "units": 3
+  },
+  {
+    "code": "PHY 101",
+    "title": "Introduction to physics",
+    "units": 3
+  },
+  {
+    "code": "GST 101",
+    "title": "Use of English",
+    "units": 2
+  },
+  {
+    "code": "ARC 103",
+    "title": "Building Materials I",
+    "units": 3
+  },
+  {
+    "code": "ARC 104",
+    "title": "Architectural Graphics II",
+    "units": 3
+  },
+  {
+    "code": "ARC 105",
+    "title": "History of Architecture I",
+    "units": 3
+  },
+  {
+    "code": "MTH 102",
+    "title": "Linear Algebra",
+    "units": 3
+  },
+  {
+    "code": "PHY 413",
+    "title": "Environmental Physics",
+    "units": 3
+  },
+  {
+    "code": "GST 102",
+    "title": "Philosophy and Logic",
+    "units": 2
+  },
+  {
+    "code": "ARC 106",
+    "title": "Building Materials II",
+    "units": 3
+  },
+  {
+    "code": "ARC 201",
+    "title": "Architectural Design I",
+    "units": 3
+  },
+  {
+    "code": "ARC 202",
+    "title": "Building Construction I",
+    "units": 3
+  },
+  {
+    "code": "ARC 203",
+    "title": "History of Architecture II",
+    "units": 3
+  },
+  {
+    "code": "ARC 204",
+    "title": "Structural Mechanics I",
+    "units": 3
+  },
+  {
+    "code": "ARC 205",
+    "title": "Environmental Science I",
+    "units": 3
+  },
+  {
+    "code": "ARC 206",
+    "title": "Architectural Graphics III",
+    "units": 3
+  },
+  {
+    "code": "ARC 207",
+    "title": "Architectural Design II",
+    "units": 3
+  },
+  {
+    "code": "ARC 208",
+    "title": "Building Construction II",
+    "units": 3
+  },
+  {
+    "code": "ARC 209",
+    "title": "History of Architecture III",
+    "units": 3
+  },
+  {
+    "code": "ARC 210",
+    "title": "Structural Mechanics II",
+    "units": 3
+  },
+  {
+    "code": "ARC 211",
+    "title": "Environmental Science II",
+    "units": 3
+  },
+  {
+    "code": "ARC 212",
+    "title": "Architectural Graphics IV",
+    "units": 3
+  },
+  {
+    "code": "ARC 301",
+    "title": "Architectural Design III",
+    "units": 3
+  },
+  {
+    "code": "ARC 302",
+    "title": "Building Construction III",
+    "units": 3
+  },
+  {
+    "code": "ARC 303",
+    "title": "History of Modern Architecture",
+    "units": 3
+  },
+  {
+    "code": "ARC 304",
+    "title": "Structural Mechanics III",
+    "units": 3
+  },
+  {
+    "code": "ARC 305",
+    "title": "Environmental Science III",
+    "units": 3
+  },
+  {
+    "code": "ARC 306",
+    "title": "Architectural Graphics V",
+    "units": 3
+  },
+  {
+    "code": "ARC 307",
+    "title": "Architectural Design IV",
+    "units": 3
+  },
+  {
+    "code": "ARC 308",
+    "title": "Building Construction IV",
+    "units": 3
+  },
+  {
+    "code": "ARC 309",
+    "title": "Urban Design I",
+    "units": 3
+  },
+  {
+    "code": "ARC 310",
+    "title": "Structural Mechanics IV",
+    "units": 3
+  },
+  {
+    "code": "ARC 311",
+    "title": "Environmental Science IV",
+    "units": 3
+  },
+  {
+    "code": "ARC 312",
+    "title": "Architectural Graphics VI",
+    "units": 3
+  },
+  {
+    "code": "ARC 401",
+    "title": "Architectural Design V",
+    "units": 3
+  },
+  {
+    "code": "ARC 402",
+    "title": "Building Construction V",
+    "units": 3
+  },
+  {
+    "code": "ARC 403",
+    "title": "Urban Design II",
+    "units": 3
+  },
+  {
+    "code": "ARC 404",
+    "title": "Structural Mechanics V",
+    "units": 3
+  },
+  {
+    "code": "ARC 405",
+    "title": "Environmental Science V",
+    "units": 3
+  },
+  {
+    "code": "ARC 406",
+    "title": "Architectural Graphics VII",
+    "units": 3
+  },
+  {
+    "code": "ARC 407",
+    "title": "Architectural Design VI",
+    "units": 3
+  },
+  {
+    "code": "ARC 408",
+    "title": "Building Construction VI",
+    "units": 3
+  },
+  {
+    "code": "ARC 409",
+    "title": "Urban Design III",
+    "units": 3
+  },
+  {
+    "code": "ARC 410",
+    "title": "Structural Mechanics VI",
+    "units": 3
+  },
+  {
+    "code": "ARC 411",
+    "title": "Environmental Science VI",
+    "units": 3
+  },
+  {
+    "code": "ARC 412",
+    "title": "Architectural Graphics VIII",
+    "units": 3
+  },
+  {
+    "code": "ARC 501",
+    "title": "Advanced Architectural Design I",
+    "units": 3
+  },
+  {
+    "code": "ARC 502",
+    "title": "Building Construction VII",
+    "units": 3
+  },
+  {
+    "code": "ARC 503",
+    "title": "Urban Design IV",
+    "units": 3
+  },
+  {
+    "code": "ARC 504",
+    "title": "Research Methods in Architecture",
+    "units": 3
+  },
+  {
+    "code": "ARC 505",
+    "title": "Professional Practice I",
+    "units": 3
+  },
+  {
+    "code": "ARC 506",
+    "title": "Architectural Graphics IX",
+    "units": 3
+  },
+  {
+    "code": "ARC 507",
+    "title": "Advanced Architectural Design II",
+    "units": 3
+  },
+  {
+    "code": "ARC 508",
+    "title": "Building Construction VIII",
+    "units": 3
+  },
+  {
+    "code": "ARC 509",
+    "title": "Urban Design V",
+    "units": 3
+  },
+  {
+    "code": "CHM 511",
+    "title": "Thesis",
+    "units": 6
+  },
+  {
+    "code": "ARC 511",
+    "title": "Professional Practice II",
+    "units": 3
+  },
+  {
+    "code": "ARC 512",
+    "title": "Seminar in Architecture",
+    "units": 3
+  },
+  {
+    "code": "IND 101",
+    "title": "Introduction to Industrial Design",
+    "units": 3
+  },
+  {
+    "code": "IND 102",
+    "title": "Design Fundamentals I",
+    "units": 3
+  },
+  {
+    "code": "IND 103",
+    "title": "Drawing and Illustration I",
+    "units": 3
+  },
+  {
+    "code": "IND 104",
+    "title": "History of Design I",
+    "units": 3
+  },
+  {
+    "code": "GST 101",
+    "title": "Use of English",
+    "units": 2
+  },
+  {
+    "code": "MTH 101",
+    "title": "Calculus I",
+    "units": 3
+  },
+  {
+    "code": "IND 105",
+    "title": "Design Fundamentals II",
+    "units": 3
+  },
+  {
+    "code": "IND 106",
+    "title": "Drawing and Illustration II",
+    "units": 3
+  },
+  {
+    "code": "IND 107",
+    "title": "History of Design II",
+    "units": 3
+  },
+  {
+    "code": "IND 108",
+    "title": "Introduction to 3D Design",
+    "units": 3
+  },
+  {
+    "code": "GST 102",
+    "title": "Philosophy and Logic",
+    "units": 2
+  },
+  {
+    "code": "PHY 101",
+    "title": "Introduction to physics",
+    "units": 3
+  },
+  {
+    "code": "IND 201",
+    "title": "Product Design I",
+    "units": 3
+  },
+  {
+    "code": "IND 202",
+    "title": "Materials and Processes I",
+    "units": 3
+  },
+  {
+    "code": "IND 203",
+    "title": "Computer-Aided Design I",
+    "units": 3
+  },
+  {
+    "code": "IND 204",
+    "title": "Design Thinking",
+    "units": 3
+  },
+  {
+    "code": "GST 201",
+    "title": "Entrepreneurship Studies",
+    "units": 2
+  },
+  {
+    "code": "IND 205",
+    "title": "Ergonomics in Design",
+    "units": 3
+  },
+  {
+    "code": "IND 206",
+    "title": "Product Design II",
+    "units": 3
+  },
+  {
+    "code": "IND 207",
+    "title": "Materials and Processes II",
+    "units": 3
+  },
+  {
+    "code": "IND 208",
+    "title": "Computer-Aided Design II",
+    "units": 3
+  },
+  {
+    "code": "IND 209",
+    "title": "Packaging Design",
+    "units": 3
+  },
+  {
+    "code": "IND 210",
+    "title": "Sustainable Design",
+    "units": 3
+  },
+  {
+    "code": "IND 211",
+    "title": "Design Research Methods",
+    "units": 3
+  },
+  {
+    "code": "IND 301",
+    "title": "Advanced Product Design I",
+    "units": 3
+  },
+  {
+    "code": "IND 302",
+    "title": "Advanced Materials and Processes I",
+    "units": 3
+  },
+  {
+    "code": "IND 303",
+    "title": "3D Modeling and Animation I",
+    "units": 3
+  },
+  {
+    "code": "IND 304",
+    "title": "Design for Manufacturing",
+    "units": 3
+  },
+  {
+    "code": "IND 305",
+    "title": "Human-Centered Design",
+    "units": 3
+  },
+  {
+    "code": "IND 306",
+    "title": "Design Studio I",
+    "units": 3
+  },
+  {
+    "code": "IND 307",
+    "title": "Advanced Product Design II",
+    "units": 3
+  },
+  {
+    "code": "IND 308",
+    "title": "Advanced Materials and Processes II",
+    "units": 3
+  },
+  {
+    "code": "IND 309",
+    "title": "3D Modeling and Animation II",
+    "units": 3
+  },
+  {
+    "code": "IND 310",
+    "title": "Design for Sustainability",
+    "units": 3
+  },
+  {
+    "code": "IND 311",
+    "title": "Design Studio II",
+    "units": 3
+  },
+  {
+    "code": "CHM 214",
+    "title": "Research Methodology",
+    "units": 2
+  },
+  {
+    "code": "IND 401",
+    "title": "Capstone Design Project I",
+    "units": 3
+  },
+  {
+    "code": "IND 402",
+    "title": "Advanced 3D Design",
+    "units": 3
+  },
+  {
+    "code": "IND 403",
+    "title": "Design for Innovation",
+    "units": 3
+  },
+  {
+    "code": "IND 404",
+    "title": "Professional Practice in Design",
+    "units": 3
+  },
+  {
+    "code": "IND 405",
+    "title": "Design Studio III",
+    "units": 3
+  },
+  {
+    "code": "IND 406",
+    "title": "Design Ethics",
+    "units": 3
+  },
+  {
+    "code": "IND 407",
+    "title": "Capstone Design Project II",
+    "units": 3
+  },
+  {
+    "code": "IND 408",
+    "title": "Advanced Design Research",
+    "units": 3
+  },
+  {
+    "code": "IND 409",
+    "title": "Design for Emerging Technologies",
+    "units": 3
+  },
+  {
+    "code": "IND 410",
+    "title": "Design Studio IV",
+    "units": 3
+  },
+  {
+    "code": "IND 411",
+    "title": "Seminar in Industrial Design",
+    "units": 2
+  },
+  {
+    "code": "IND 412",
+    "title": "Entrepreneurship in Design",
+    "units": 3
+  },
+  {
+    "code": "IND 501",
+    "title": "Advanced Capstone Project I",
+    "units": 6
+  },
+  {
+    "code": "IND 502",
+    "title": "Design Leadership",
+    "units": 3
+  },
+  {
+    "code": "IND 503",
+    "title": "Design for Global Markets",
+    "units": 3
+  },
+  {
+    "code": "IND 504",
+    "title": "Advanced Design Studio I",
+    "units": 3
+  },
+  {
+    "code": "IND 505",
+    "title": "Design Innovation Management",
+    "units": 3
+  },
+  {
+    "code": "IND 506",
+    "title": "Seminar in Advanced Design",
+    "units": 2
+  },
+  {
+    "code": "IND 507",
+    "title": "Advanced Capstone Project II",
+    "units": 6
+  },
+  {
+    "code": "IND 508",
+    "title": "Design for Emerging Markets",
+    "units": 3
+  },
+  {
+    "code": "IND 509",
+    "title": "Advanced Design Studio II",
+    "units": 3
+  },
+  {
+    "code": "IND 510",
+    "title": "Professional Practice in Industrial Design",
+    "units": 3
+  },
+  {
+    "code": "IND 511",
+    "title": "Seminar in Design Innovation",
+    "units": 2
+  },
+  {
+    "code": "IND 512",
+    "title": "Thesis in Industrial Design",
+    "units": 6
+  },
+  {
+    "code": "RSG 101",
+    "title": "Introduction to Remote Sensing",
+    "units": 3
+  },
+  {
+    "code": "RSG 102",
+    "title": "Introduction to GIS",
+    "units": 3
+  },
+  {
+    "code": "MTH 101",
+    "title": "Calculus I",
+    "units": 3
+  },
+  {
+    "code": "PHY 101",
+    "title": "Introduction to physics",
+    "units": 3
+  },
+  {
+    "code": "GST 101",
+    "title": "Use of English",
+    "units": 2
+  },
+  {
+    "code": "CHM 101",
+    "title": "General Chemistry",
+    "units": 3
+  },
+  {
+    "code": "RSG 103",
+    "title": "Fundamentals of Cartography",
+    "units": 3
+  },
+  {
+    "code": "RSG 104",
+    "title": "Introduction to Geospatial Data",
+    "units": 3
+  },
+  {
+    "code": "MTH 102",
+    "title": "Linear Algebra",
+    "units": 3
+  },
+  {
+    "code": "PHY 106",
+    "title": "General Physics II",
+    "units": 3
+  },
+  {
+    "code": "GST 102",
+    "title": "Philosophy and Logic",
+    "units": 2
+  },
+  {
+    "code": "STA 101",
+    "title": "Introduction to Statistics",
+    "units": 3
+  },
+  {
+    "code": "RSG 201",
+    "title": "Remote Sensing Techniques I",
+    "units": 3
+  },
+  {
+    "code": "RSG 202",
+    "title": "GIS Applications I",
+    "units": 3
+  },
+  {
+    "code": "MTH 102",
+    "title": "Linear Algebra",
+    "units": 3
+  },
+  {
+    "code": "PHY 102",
+    "title": "Electromagnetic Waves",
+    "units": 3
+  },
+  {
+    "code": "GST 201",
+    "title": "Entrepreneurship Studies",
+    "units": 2
+  },
+  {
+    "code": "RSG 203",
+    "title": "Geospatial Data Analysis",
+    "units": 3
+  },
+  {
+    "code": "RSG 204",
+    "title": "Remote Sensing Techniques II",
+    "units": 3
+  },
+  {
+    "code": "RSG 205",
+    "title": "GIS Applications II",
+    "units": 3
+  },
+  {
+    "code": "MTH 107",
+    "title": "Differential Equations",
+    "units": 3
+  },
+  {
+    "code": "CHM 209",
+    "title": "Thermodynamics",
+    "units": 3
+  },
+  {
+    "code": "RSG 206",
+    "title": "Geospatial Data Visualization",
+    "units": 3
+  },
+  {
+    "code": "RSG 207",
+    "title": "Cartographic Techniques",
+    "units": 3
+  },
+  {
+    "code": "RSG 301",
+    "title": "Advanced Remote Sensing I",
+    "units": 3
+  },
+  {
+    "code": "RSG 302",
+    "title": "Advanced GIS I",
+    "units": 3
+  },
+  {
+    "code": "RSG 303",
+    "title": "Geospatial Data Modeling",
+    "units": 3
+  },
+  {
+    "code": "RSG 304",
+    "title": "Environmental Applications of GIS",
+    "units": 3
+  },
+  {
+    "code": "RSG 305",
+    "title": "Hydrological Applications of GIS",
+    "units": 3
+  },
+  {
+    "code": "CHM 214",
+    "title": "Research Methodology",
+    "units": 2
+  },
+  {
+    "code": "RSG 307",
+    "title": "Advanced Remote Sensing II",
+    "units": 3
+  },
+  {
+    "code": "RSG 308",
+    "title": "Advanced GIS II",
+    "units": 3
+  },
+  {
+    "code": "SGF 409",
+    "title": "Geospatial Data Management",
+    "units": 3
+  },
+  {
+    "code": "RSG 310",
+    "title": "Urban Applications of GIS",
+    "units": 3
+  },
+  {
+    "code": "RSG 311",
+    "title": "Geospatial Programming",
+    "units": 3
+  },
+  {
+    "code": "RSG 312",
+    "title": "Seminar in Remote Sensing",
+    "units": 2
+  },
+  {
+    "code": "RSG 401",
+    "title": "Capstone Project I",
+    "units": 3
+  },
+  {
+    "code": "RSG 402",
+    "title": "Advanced Geospatial Analysis",
+    "units": 3
+  },
+  {
+    "code": "RSG 403",
+    "title": "Remote Sensing for Agriculture",
+    "units": 3
+  },
+  {
+    "code": "RSG 404",
+    "title": "GIS for Disaster Management",
+    "units": 3
+  },
+  {
+    "code": "RSG 405",
+    "title": "Professional Practice in GIS",
+    "units": 3
+  },
+  {
+    "code": "RSG 406",
+    "title": "Geospatial Ethics",
+    "units": 3
+  },
+  {
+    "code": "INF 514",
+    "title": "Capstone Project II",
+    "units": 3
+  },
+  {
+    "code": "RSG 408",
+    "title": "Remote Sensing for Climate Change",
+    "units": 3
+  },
+  {
+    "code": "RSG 409",
+    "title": "GIS for Health Applications",
+    "units": 3
+  },
+  {
+    "code": "RSG 410",
+    "title": "Geospatial Data Security",
+    "units": 3
+  },
+  {
+    "code": "RSG 411",
+    "title": "Seminar in GIS",
+    "units": 2
+  },
+  {
+    "code": "RSG 412",
+    "title": "Entrepreneurship in GIS",
+    "units": 3
+  },
+  {
+    "code": "IND 501",
+    "title": "Advanced Capstone Project I",
+    "units": 6
+  },
+  {
+    "code": "SGF 504",
+    "title": "Geospatial Data Science",
+    "units": 3
+  },
+  {
+    "code": "RSG 503",
+    "title": "Remote Sensing for Urban Planning",
+    "units": 3
+  },
+  {
+    "code": "RSG 504",
+    "title": "Advanced GIS Applications",
+    "units": 3
+  },
+  {
+    "code": "RSG 505",
+    "title": "Seminar in Advanced GIS",
+    "units": 2
+  },
+  {
+    "code": "RSG 506",
+    "title": "Thesis in Remote Sensing",
+    "units": 6
+  },
+  {
+    "code": "IND 507",
+    "title": "Advanced Capstone Project II",
+    "units": 6
+  },
+  {
+    "code": "RSG 508",
+    "title": "Remote Sensing for Environmental Monitoring",
+    "units": 3
+  },
+  {
+    "code": "RSG 509",
+    "title": "GIS for Transportation",
+    "units": 3
+  },
+  {
+    "code": "RSG 510",
+    "title": "Professional Practice in Remote Sensing",
+    "units": 3
+  },
+  {
+    "code": "RSG 511",
+    "title": "Seminar in Geospatial Technologies",
+    "units": 2
+  },
+  {
+    "code": "RSG 512",
+    "title": "Emerging Trends in GIS",
+    "units": 3
+  },
+  {
+    "code": "CSP 101",
+    "title": "Introduction to Crop Science",
+    "units": 3
+  },
+  {
+    "code": "CSP 102",
+    "title": "Principles of Agriculture",
+    "units": 3
+  },
+  {
+    "code": "BIO 101",
+    "title": "General Biology I",
+    "units": 3
+  },
+  {
+    "code": "CHM 101",
+    "title": "General Chemistry",
+    "units": 3
+  },
+  {
+    "code": "GST 101",
+    "title": "Use of English",
+    "units": 2
+  },
+  {
+    "code": "MTH 101",
+    "title": "Calculus I",
+    "units": 3
+  },
+  {
+    "code": "CSP 103",
+    "title": "Introduction to Pest Management",
+    "units": 3
+  },
+  {
+    "code": "CSP 104",
+    "title": "Crop Anatomy and Physiology",
+    "units": 3
+  },
+  {
+    "code": "BIO 106",
+    "title": "General Biology II",
+    "units": 3
+  },
+  {
+    "code": "CHM 107",
+    "title": "General Chemistry II",
+    "units": 3
+  },
+  {
+    "code": "GST 102",
+    "title": "Philosophy and Logic",
+    "units": 2
+  },
+  {
+    "code": "PHY 101",
+    "title": "Introduction to physics",
+    "units": 3
+  },
+  {
+    "code": "CSP 201",
+    "title": "Crop Production Techniques",
+    "units": 3
+  },
+  {
+    "code": "CSP 202",
+    "title": "Principles of Soil Science",
+    "units": 3
+  },
+  {
+    "code": "CSP 203",
+    "title": "Weed Science",
+    "units": 3
+  },
+  {
+    "code": "BIO 212",
+    "title": "Entomology",
+    "units": 3
+  },
+  {
+    "code": "GST 201",
+    "title": "Entrepreneurship Studies",
+    "units": 2
+  },
+  {
+    "code": "MTH 407",
+    "title": "Biostatistics",
+    "units": 3
+  },
+  {
+    "code": "BIO 310",
+    "title": "Plant Pathology",
+    "units": 3
+  },
+  {
+    "code": "CSP 206",
+    "title": "Soil Fertility and Management",
+    "units": 3
+  },
+  {
+    "code": "CSP 207",
+    "title": "Agricultural Microbiology",
+    "units": 3
+  },
+  {
+    "code": "CSP 208",
+    "title": "Crop Genetics and Breeding",
+    "units": 3
+  },
+  {
+    "code": "CSP 209",
+    "title": "Pest Identification and Control",
+    "units": 3
+  },
+  {
+    "code": "CSP 210",
+    "title": "Research Methods in Agriculture",
+    "units": 2
+  },
+  {
+    "code": "CSP 301",
+    "title": "Advanced Crop Production",
+    "units": 3
+  },
+  {
+    "code": "CSP 302",
+    "title": "Integrated Pest Management",
+    "units": 3
+  },
+  {
+    "code": "CSP 303",
+    "title": "Plant Nutrition",
+    "units": 3
+  },
+  {
+    "code": "CSP 304",
+    "title": "Seed Science and Technology",
+    "units": 3
+  },
+  {
+    "code": "BIO 308",
+    "title": "Developmental Biology",
+    "units": 3
+  },
+  {
+    "code": "CSP 306",
+    "title": "Practical Crop Science I",
+    "units": 2
+  },
+  {
+    "code": "CSP 307",
+    "title": "Crop Ecology",
+    "units": 3
+  },
+  {
+    "code": "CSP 308",
+    "title": "Post-Harvest Technology",
+    "units": 3
+  },
+  {
+    "code": "CSP 309",
+    "title": "Pest and Disease Management",
+    "units": 3
+  },
+  {
+    "code": "CSP 310",
+    "title": "Climate Change and Agriculture",
+    "units": 3
+  },
+  {
+    "code": "CSP 311",
+    "title": "Practical Crop Science II",
+    "units": 2
+  },
+  {
+    "code": "CHM 214",
+    "title": "Research Methodology",
+    "units": 2
+  },
+  {
+    "code": "CSP 401",
+    "title": "Advanced Crop Genetics",
+    "units": 3
+  },
+  {
+    "code": "CSP 402",
+    "title": "Advanced Pest Management",
+    "units": 3
+  },
+  {
+    "code": "CSP 403",
+    "title": "Crop Physiology",
+    "units": 3
+  },
+  {
+    "code": "CSP 404",
+    "title": "Agricultural Policy and Economics",
+    "units": 3
+  },
+  {
+    "code": "CSP 405",
+    "title": "Practical Crop Science III",
+    "units": 2
+  },
+  {
+    "code": "CHM 413",
+    "title": "Research Project I",
+    "units": 3
+  },
+  {
+    "code": "CSP 407",
+    "title": "Advanced Soil Science",
+    "units": 3
+  },
+  {
+    "code": "CSP 408",
+    "title": "Crop Protection Strategies",
+    "units": 3
+  },
+  {
+    "code": "CSP 409",
+    "title": "Sustainable Agriculture",
+    "units": 3
+  },
+  {
+    "code": "CSP 410",
+    "title": "Practical Crop Science IV",
+    "units": 2
+  },
+  {
+    "code": "CSP 411",
+    "title": "Seminar in Crop Science",
+    "units": 2
+  },
+  {
+    "code": "CSP 412",
+    "title": "Emerging Trends in Pest Management",
+    "units": 3
+  },
+  {
+    "code": "CSP 501",
+    "title": "Advanced Crop Production Systems",
+    "units": 3
+  },
+  {
+    "code": "CSP 502",
+    "title": "Advanced Integrated Pest Management",
+    "units": 3
+  },
+  {
+    "code": "CSP 503",
+    "title": "Crop Improvement Techniques",
+    "units": 3
+  },
+  {
+    "code": "CHM 507",
+    "title": "Research Project II",
+    "units": 3
+  },
+  {
+    "code": "CSP 505",
+    "title": "Agricultural Entrepreneurship",
+    "units": 3
+  },
+  {
+    "code": "CSP 506",
+    "title": "Capstone Seminar",
+    "units": 3
+  },
+  {
+    "code": "CHM 511",
+    "title": "Thesis",
+    "units": 6
+  },
+  {
+    "code": "CSP 508",
+    "title": "Advanced Post-Harvest Technology",
+    "units": 3
+  },
+  {
+    "code": "CSP 509",
+    "title": "Precision Agriculture",
+    "units": 3
+  },
+  {
+    "code": "CSP 510",
+    "title": "Professional Practice in Crop Science",
+    "units": 3
+  },
+  {
+    "code": "CSP 511",
+    "title": "Seminar in Pest Management",
+    "units": 2
+  },
+  {
+    "code": "CSP 512",
+    "title": "Emerging Technologies in Agriculture",
+    "units": 3
+  },
+  {
+    "code": "PHS 101",
+    "title": "Introduction to Physiology",
+    "units": 3
+  },
+  {
+    "code": "BIO 101",
+    "title": "General Biology I",
+    "units": 3
+  },
+  {
+    "code": "CHM 101",
+    "title": "General Chemistry",
+    "units": 3
+  },
+  {
+    "code": "PHY 101",
+    "title": "Introduction to physics",
+    "units": 3
+  },
+  {
+    "code": "GST 101",
+    "title": "Use of English",
+    "units": 2
+  },
+  {
+    "code": "MTH 101",
+    "title": "Calculus I",
+    "units": 3
+  },
+  {
+    "code": "PHS 103",
+    "title": "Cell Physiology",
+    "units": 3
+  },
+  {
+    "code": "BIO 106",
+    "title": "General Biology II",
+    "units": 3
+  },
+  {
+    "code": "CHM 107",
+    "title": "General Chemistry II",
+    "units": 3
+  },
+  {
+    "code": "PHS 104",
+    "title": "Practical Physiology I",
+    "units": 2
+  },
+  {
+    "code": "GST 102",
+    "title": "Philosophy and Logic",
+    "units": 2
+  },
+  {
+    "code": "MTH 407",
+    "title": "Biostatistics",
+    "units": 3
+  },
+  {
+    "code": "PHS 201",
+    "title": "Human Physiology I",
+    "units": 3
+  },
+  {
+    "code": "PHS 202",
+    "title": "Neurophysiology",
+    "units": 3
+  },
+  {
+    "code": "PHS 203",
+    "title": "Endocrinology",
+    "units": 3
+  },
+  {
+    "code": "PHS 204",
+    "title": "Practical Physiology II",
+    "units": 2
+  },
+  {
+    "code": "BIO 201",
+    "title": "Genetics II",
+    "units": 3
+  },
+  {
+    "code": "BCH 205",
+    "title": "Biochemistry I",
+    "units": 3
+  },
+  {
+    "code": "PHS 205",
+    "title": "Human Physiology II",
+    "units": 3
+  },
+  {
+    "code": "PHS 206",
+    "title": "Cardiovascular Physiology",
+    "units": 3
+  },
+  {
+    "code": "PHS 207",
+    "title": "Respiratory Physiology",
+    "units": 3
+  },
+  {
+    "code": "PHS 208",
+    "title": "Practical Physiology III",
+    "units": 2
+  },
+  {
+    "code": "BIO 208",
+    "title": "Molecular Biology",
+    "units": 3
+  },
+  {
+    "code": "BCH 210",
+    "title": "Biochemistry II",
+    "units": 3
+  },
+  {
+    "code": "PHS 301",
+    "title": "Renal Physiology",
+    "units": 3
+  },
+  {
+    "code": "PHS 302",
+    "title": "Gastrointestinal Physiology",
+    "units": 3
+  },
+  {
+    "code": "PHS 303",
+    "title": "Reproductive Physiology",
+    "units": 3
+  },
+  {
+    "code": "PHS 304",
+    "title": "Practical Physiology IV",
+    "units": 2
+  },
+  {
+    "code": "BIO 411",
+    "title": "Advanced Molecular Biology",
+    "units": 3
+  },
+  {
+    "code": "BCH 301",
+    "title": "Advanced Metabolism",
+    "units": 3
+  },
+  {
+    "code": "PHS 305",
+    "title": "Exercise Physiology",
+    "units": 3
+  },
+  {
+    "code": "PHS 306",
+    "title": "Environmental Physiology",
+    "units": 3
+  },
+  {
+    "code": "PHS 307",
+    "title": "Comparative Physiology",
+    "units": 3
+  },
+  {
+    "code": "PHS 308",
+    "title": "Practical Physiology V",
+    "units": 2
+  },
+  {
+    "code": "BIO 302",
+    "title": "Immunology",
+    "units": 3
+  },
+  {
+    "code": "STA 301",
+    "title": "Applied Data Science",
+    "units": 3
+  },
+  {
+    "code": "PHS 401",
+    "title": "Advanced Neurophysiology",
+    "units": 3
+  },
+  {
+    "code": "PHS 402",
+    "title": "Advanced Endocrinology",
+    "units": 3
+  },
+  {
+    "code": "PHS 403",
+    "title": "Clinical Physiology I",
+    "units": 3
+  },
+  {
+    "code": "PHS 404",
+    "title": "Practical Physiology VI",
+    "units": 2
+  },
+  {
+    "code": "BIO 401",
+    "title": "Genomics",
+    "units": 3
+  },
+  {
+    "code": "BCH 401",
+    "title": "Advanced Enzymology",
+    "units": 3
+  },
+  {
+    "code": "PHS 405",
+    "title": "Advanced Cardiovascular Physiology",
+    "units": 3
+  },
+  {
+    "code": "PHS 406",
+    "title": "Advanced Respiratory Physiology",
+    "units": 3
+  },
+  {
+    "code": "PHS 407",
+    "title": "Clinical Physiology II",
+    "units": 3
+  },
+  {
+    "code": "PHS 408",
+    "title": "Practical Physiology VII",
+    "units": 2
+  },
+  {
+    "code": "BIO 402",
+    "title": "Proteomics",
+    "units": 3
+  },
+  {
+    "code": "STA 401",
+    "title": "Statistical Modeling",
+    "units": 3
+  },
+  {
+    "code": "PHS 501",
+    "title": "Advanced Exercise Physiology",
+    "units": 3
+  },
+  {
+    "code": "PHS 502",
+    "title": "Advanced Environmental Physiology",
+    "units": 3
+  },
+  {
+    "code": "CHM 413",
+    "title": "Research Project I",
+    "units": 3
+  },
+  {
+    "code": "PHS 504",
+    "title": "Advanced Reproductive Physiology",
+    "units": 3
+  },
+  {
+    "code": "PHS 505",
+    "title": "Advanced Comparative Physiology",
+    "units": 3
+  },
+  {
+    "code": "BIO 403",
+    "title": "Advanced Immunology",
+    "units": 3
+  },
+  {
+    "code": "CHM 507",
+    "title": "Research Project II",
+    "units": 3
+  },
+  {
+    "code": "PHS 507",
+    "title": "Clinical Physiology III",
+    "units": 3
+  },
+  {
+    "code": "PHS 508",
+    "title": "Advanced Systems Physiology",
+    "units": 3
+  },
+  {
+    "code": "PHS 509",
+    "title": "Professional Practice in Physiology",
+    "units": 3
+  },
+  {
+    "code": "PHS 510",
+    "title": "Seminar in Physiology",
+    "units": 2
+  },
+  {
+    "code": "PHS 511",
+    "title": "Emerging Trends in Physiology",
+    "units": 3
+  },
+  {
+    "code": "PMT 101",
+    "title": "Introduction to Project Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 102",
+    "title": "Principles of Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 103",
+    "title": "Business Communication",
+    "units": 3
+  },
+  {
+    "code": "PMT 104",
+    "title": "Introduction to Economics",
+    "units": 3
+  },
+  {
+    "code": "GST 101",
+    "title": "Use of English",
+    "units": 2
+  },
+  {
+    "code": "MTH 101",
+    "title": "Calculus I",
+    "units": 3
+  },
+  {
+    "code": "PMT 105",
+    "title": "Project Planning and Scheduling",
+    "units": 3
+  },
+  {
+    "code": "PMT 106",
+    "title": "Introduction to Accounting",
+    "units": 3
+  },
+  {
+    "code": "INF 112",
+    "title": "Organizational Behavior",
+    "units": 3
+  },
+  {
+    "code": "PMT 108",
+    "title": "Introduction to Marketing",
+    "units": 3
+  },
+  {
+    "code": "GST 102",
+    "title": "Philosophy and Logic",
+    "units": 2
+  },
+  {
+    "code": "STA 101",
+    "title": "Introduction to Statistics",
+    "units": 3
+  },
+  {
+    "code": "PMT 201",
+    "title": "Project Cost Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 202",
+    "title": "Risk Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 203",
+    "title": "Leadership and Team Building",
+    "units": 3
+  },
+  {
+    "code": "PMT 204",
+    "title": "Operations Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 205",
+    "title": "Business Law",
+    "units": 3
+  },
+  {
+    "code": "STA 201",
+    "title": "Advanced Probability",
+    "units": 3
+  },
+  {
+    "code": "PMT 206",
+    "title": "Project Procurement Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 207",
+    "title": "Human Resource Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 208",
+    "title": "Project Monitoring and Evaluation",
+    "units": 3
+  },
+  {
+    "code": "PMT 209",
+    "title": "Entrepreneurship Development",
+    "units": 3
+  },
+  {
+    "code": "PMT 210",
+    "title": "Financial Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 211",
+    "title": "Research Methods in Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 301",
+    "title": "Advanced Project Planning",
+    "units": 3
+  },
+  {
+    "code": "PMT 302",
+    "title": "Project Quality Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 303",
+    "title": "Strategic Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 304",
+    "title": "Project Feasibility Studies",
+    "units": 3
+  },
+  {
+    "code": "PMT 305",
+    "title": "Business Ethics",
+    "units": 3
+  },
+  {
+    "code": "PMT 306",
+    "title": "Information Systems for Project Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 307",
+    "title": "Project Resource Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 308",
+    "title": "Project Portfolio Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 309",
+    "title": "Innovation and Change Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 310",
+    "title": "Project Risk Analysis",
+    "units": 3
+  },
+  {
+    "code": "PMT 311",
+    "title": "Negotiation and Conflict Resolution",
+    "units": 3
+  },
+  {
+    "code": "CHM 413",
+    "title": "Research Project I",
+    "units": 3
+  },
+  {
+    "code": "PMT 401",
+    "title": "Advanced Project Cost Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 402",
+    "title": "Project Governance",
+    "units": 3
+  },
+  {
+    "code": "PMT 403",
+    "title": "Sustainability in Project Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 404",
+    "title": "Project Leadership",
+    "units": 3
+  },
+  {
+    "code": "RSG 401",
+    "title": "Capstone Project I",
+    "units": 3
+  },
+  {
+    "code": "INF 510",
+    "title": "Advanced Research Methods",
+    "units": 3
+  },
+  {
+    "code": "PMT 407",
+    "title": "Project Management Software Tools",
+    "units": 3
+  },
+  {
+    "code": "PMT 408",
+    "title": "Global Project Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 409",
+    "title": "Project Ethics and Professionalism",
+    "units": 3
+  },
+  {
+    "code": "INF 514",
+    "title": "Capstone Project II",
+    "units": 3
+  },
+  {
+    "code": "PMT 411",
+    "title": "Advanced Financial Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 412",
+    "title": "Seminar in Project Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 501",
+    "title": "Advanced Project Risk Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 502",
+    "title": "Project Innovation Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 503",
+    "title": "Project Management in Practice",
+    "units": 3
+  },
+  {
+    "code": "PMT 504",
+    "title": "Thesis I",
+    "units": 6
+  },
+  {
+    "code": "PMT 505",
+    "title": "Advanced Project Monitoring",
+    "units": 3
+  },
+  {
+    "code": "PMT 506",
+    "title": "Professional Development in Project Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 507",
+    "title": "Thesis II",
+    "units": 6
+  },
+  {
+    "code": "PMT 508",
+    "title": "Project Management Case Studies",
+    "units": 3
+  },
+  {
+    "code": "PMT 509",
+    "title": "Emerging Trends in Project Management",
+    "units": 3
+  },
+  {
+    "code": "PMT 510",
+    "title": "Project Management Simulation",
+    "units": 3
+  },
+  {
+    "code": "PMT 511",
+    "title": "Advanced Negotiation Skills",
+    "units": 3
+  },
+  {
+    "code": "CSP 506",
+    "title": "Capstone Seminar",
+    "units": 3
+  },
+  {
+    "code": "MCE 101",
+    "title": "Introduction to Mechanical Engineering",
+    "units": 3
+  },
+  {
+    "code": "MTH 101",
+    "title": "Calculus I",
+    "units": 3
+  },
+  {
+    "code": "PHY 101",
+    "title": "Introduction to physics",
+    "units": 3
+  },
+  {
+    "code": "CHM 101",
+    "title": "General Chemistry",
+    "units": 3
+  },
+  {
+    "code": "GST 101",
+    "title": "Use of English",
+    "units": 2
+  },
+  {
+    "code": "MCE 102",
+    "title": "Engineering Drawing",
+    "units": 3
+  },
+  {
+    "code": "MTH 102",
+    "title": "Linear Algebra",
+    "units": 3
+  },
+  {
+    "code": "PHY 106",
+    "title": "General Physics II",
+    "units": 3
+  },
+  {
+    "code": "CHM 102",
+    "title": "Applied Chemistry",
+    "units": 3
+  },
+  {
+    "code": "GST 102",
+    "title": "Philosophy and Logic",
+    "units": 2
+  },
+  {
+    "code": "MCE 201",
+    "title": "Strength of Materials I",
+    "units": 3
+  },
+  {
+    "code": "MCE 202",
+    "title": "Fluid Mechanics I",
+    "units": 3
+  },
+  {
+    "code": "MTH 102",
+    "title": "Linear Algebra",
+    "units": 3
+  },
+  {
+    "code": "PHY 102",
+    "title": "Electromagnetic Waves",
+    "units": 3
+  },
+  {
+    "code": "GST 201",
+    "title": "Entrepreneurship Studies",
+    "units": 2
+  },
+  {
+    "code": "MCE 203",
+    "title": "Thermodynamics I",
+    "units": 3
+  },
+  {
+    "code": "MCE 204",
+    "title": "Engineering Materials",
+    "units": 3
+  },
+  {
+    "code": "MCE 205",
+    "title": "Workshop Practice",
+    "units": 2
+  },
+  {
+    "code": "MTH 107",
+    "title": "Differential Equations",
+    "units": 3
+  },
+  {
+    "code": "PHY 103",
+    "title": "Heat and Thermodynamics",
+    "units": 3
+  },
+  {
+    "code": "MCE 301",
+    "title": "Machine Design I",
+    "units": 3
+  },
+  {
+    "code": "MCE 302",
+    "title": "Fluid Mechanics II",
+    "units": 3
+  },
+  {
+    "code": "MCE 303",
+    "title": "Thermodynamics II",
+    "units": 3
+  },
+  {
+    "code": "MCE 304",
+    "title": "Engineering Mathematics",
+    "units": 3
+  },
+  {
+    "code": "MCE 305",
+    "title": "Mechanics of Machines",
+    "units": 3
+  },
+  {
+    "code": "MCE 306",
+    "title": "Heat Transfer",
+    "units": 3
+  },
+  {
+    "code": "MCE 307",
+    "title": "Control Systems",
+    "units": 3
+  },
+  {
+    "code": "MCE 308",
+    "title": "Manufacturing Processes",
+    "units": 3
+  },
+  {
+    "code": "MCE 309",
+    "title": "Applied Thermodynamics",
+    "units": 3
+  },
+  {
+    "code": "CHM 214",
+    "title": "Research Methodology",
+    "units": 2
+  },
+  {
+    "code": "MCE 401",
+    "title": "Machine Design II",
+    "units": 3
+  },
+  {
+    "code": "MCE 402",
+    "title": "Advanced Fluid Mechanics",
+    "units": 3
+  },
+  {
+    "code": "MCE 403",
+    "title": "Energy Systems",
+    "units": 3
+  },
+  {
+    "code": "MCE 404",
+    "title": "Vibration Analysis",
+    "units": 3
+  },
+  {
+    "code": "RSG 401",
+    "title": "Capstone Project I",
+    "units": 3
+  },
+  {
+    "code": "MCE 406",
+    "title": "Advanced Heat Transfer",
+    "units": 3
+  },
+  {
+    "code": "MCE 407",
+    "title": "Robotics and Automation",
+    "units": 3
+  },
+  {
+    "code": "MCE 408",
+    "title": "Renewable Energy Systems",
+    "units": 3
+  },
+  {
+    "code": "MCE 409",
+    "title": "Industrial Engineering",
+    "units": 3
+  },
+  {
+    "code": "INF 514",
+    "title": "Capstone Project II",
+    "units": 3
+  },
+  {
+    "code": "MCE 501",
+    "title": "Advanced Machine Design",
+    "units": 3
+  },
+  {
+    "code": "MCE 502",
+    "title": "Advanced Thermodynamics",
+    "units": 3
+  },
+  {
+    "code": "MCE 503",
+    "title": "Computational Fluid Dynamics",
+    "units": 3
+  },
+  {
+    "code": "MCE 504",
+    "title": "Project Management",
+    "units": 3
+  },
+  {
+    "code": "CHM 413",
+    "title": "Research Project I",
+    "units": 3
+  },
+  {
+    "code": "MCE 506",
+    "title": "Advanced Robotics",
+    "units": 3
+  },
+  {
+    "code": "MCE 507",
+    "title": "Advanced Energy Systems",
+    "units": 3
+  },
+  {
+    "code": "CHM 507",
+    "title": "Research Project II",
+    "units": 3
+  },
+  {
+    "code": "BIO 512",
+    "title": "Professional Practice",
+    "units": 2
+  },
+  {
+    "code": "CHM 514",
+    "title": "Seminar",
+    "units": 2
+  },
+  {
+    "code": "CVE 101",
+    "title": "Introduction to Civil Engineering",
+    "units": 3
+  },
+  {
+    "code": "MTH 101",
+    "title": "Calculus I",
+    "units": 3
+  },
+  {
+    "code": "PHY 101",
+    "title": "Introduction to physics",
+    "units": 3
+  },
+  {
+    "code": "CHM 101",
+    "title": "General Chemistry",
+    "units": 3
+  },
+  {
+    "code": "GST 101",
+    "title": "Use of English",
+    "units": 2
+  },
+  {
+    "code": "MCE 102",
+    "title": "Engineering Drawing",
+    "units": 3
+  },
+  {
+    "code": "MTH 102",
+    "title": "Linear Algebra",
+    "units": 3
+  },
+  {
+    "code": "PHY 106",
+    "title": "General Physics II",
+    "units": 3
+  },
+  {
+    "code": "CHM 102",
+    "title": "Applied Chemistry",
+    "units": 3
+  },
+  {
+    "code": "GST 102",
+    "title": "Philosophy and Logic",
+    "units": 2
+  },
+  {
+    "code": "MCE 201",
+    "title": "Strength of Materials I",
+    "units": 3
+  },
+  {
+    "code": "MCE 202",
+    "title": "Fluid Mechanics I",
+    "units": 3
+  },
+  {
+    "code": "MTH 102",
+    "title": "Linear Algebra",
+    "units": 3
+  },
+  {
+    "code": "PHY 102",
+    "title": "Electromagnetic Waves",
+    "units": 3
+  },
+  {
+    "code": "GST 201",
+    "title": "Entrepreneurship Studies",
+    "units": 2
+  },
+  {
+    "code": "CVE 203",
+    "title": "Structural Analysis I",
+    "units": 3
+  },
+  {
+    "code": "CVE 204",
+    "title": "Surveying I",
+    "units": 3
+  },
+  {
+    "code": "CVE 205",
+    "title": "Building Materials",
+    "units": 3
+  },
+  {
+    "code": "MTH 107",
+    "title": "Differential Equations",
+    "units": 3
+  },
+  {
+    "code": "CHM 209",
+    "title": "Thermodynamics",
+    "units": 3
+  },
+  {
+    "code": "CVE 301",
+    "title": "Structural Analysis II",
+    "units": 3
+  },
+  {
+    "code": "CVE 302",
+    "title": "Geotechnical Engineering I",
+    "units": 3
+  },
+  {
+    "code": "CVE 303",
+    "title": "Hydraulics",
+    "units": 3
+  },
+  {
+    "code": "CVE 304",
+    "title": "Transportation Engineering I",
+    "units": 3
+  },
+  {
+    "code": "MCE 304",
+    "title": "Engineering Mathematics",
+    "units": 3
+  },
+  {
+    "code": "CVE 306",
+    "title": "Structural Design I",
+    "units": 3
+  },
+  {
+    "code": "CVE 307",
+    "title": "Geotechnical Engineering II",
+    "units": 3
+  },
+  {
+    "code": "CVE 308",
+    "title": "Surveying II",
+    "units": 3
+  },
+  {
+    "code": "CVE 309",
+    "title": "Environmental Engineering",
+    "units": 3
+  },
+  {
+    "code": "CVE 310",
+    "title": "Construction Management",
+    "units": 3
+  },
+  {
+    "code": "CVE 401",
+    "title": "Structural Design II",
+    "units": 3
+  },
+  {
+    "code": "CVE 402",
+    "title": "Hydrology",
+    "units": 3
+  },
+  {
+    "code": "CVE 403",
+    "title": "Transportation Engineering II",
+    "units": 3
+  },
+  {
+    "code": "CVE 404",
+    "title": "Advanced Geotechnical Engineering",
+    "units": 3
+  },
+  {
+    "code": "CHM 214",
+    "title": "Research Methodology",
+    "units": 2
+  },
+  {
+    "code": "CVE 406",
+    "title": "Structural Dynamics",
+    "units": 3
+  },
+  {
+    "code": "CVE 407",
+    "title": "Water Resources Engineering",
+    "units": 3
+  },
+  {
+    "code": "CVE 408",
+    "title": "Environmental Impact Assessment",
+    "units": 3
+  },
+  {
+    "code": "CVE 409",
+    "title": "Construction Technology",
+    "units": 3
+  },
+  {
+    "code": "RSG 401",
+    "title": "Capstone Project I",
+    "units": 3
+  },
+  {
+    "code": "CVE 501",
+    "title": "Advanced Structural Design",
+    "units": 3
+  },
+  {
+    "code": "CVE 502",
+    "title": "Advanced Hydraulics",
+    "units": 3
+  },
+  {
+    "code": "CVE 503",
+    "title": "Advanced Transportation Engineering",
+    "units": 3
+  },
+  {
+    "code": "MCE 504",
+    "title": "Project Management",
+    "units": 3
+  },
+  {
+    "code": "CHM 413",
+    "title": "Research Project I",
+    "units": 3
+  },
+  {
+    "code": "CVE 404",
+    "title": "Advanced Geotechnical Engineering",
+    "units": 3
+  },
+  {
+    "code": "CVE 507",
+    "title": "Advanced Environmental Engineering",
+    "units": 3
+  },
+  {
+    "code": "CHM 507",
+    "title": "Research Project II",
+    "units": 3
+  },
+  {
+    "code": "BIO 512",
+    "title": "Professional Practice",
+    "units": 2
+  },
+  {
+    "code": "CHM 514",
+    "title": "Seminar",
+    "units": 2
+  }
+]
