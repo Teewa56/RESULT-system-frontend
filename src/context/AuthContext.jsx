@@ -21,6 +21,7 @@ const AuthProvider = ({children}) => {
         }
     },[userId])
     async function LogInstudent(userInfo) {
+        setError(null);
         try {
             const res = await signInStudent(userInfo);
             const data = res;
@@ -34,6 +35,7 @@ const AuthProvider = ({children}) => {
         }
     }
     async function LogInlecturer(userInfo) {
+        setError(null);
         try {
             const res = await signInLecturer(userInfo);
             const data = res;
@@ -47,6 +49,7 @@ const AuthProvider = ({children}) => {
         }
     }
     async function LogInadmin(userInfo) {
+        setError(null);
         try {
             const res = await signInAdmin(userInfo);
             const data = res;
@@ -60,6 +63,7 @@ const AuthProvider = ({children}) => {
         }
     }
     async function LogOut(){
+        setError(null);
         const userType = localStorage.getItem('userType');
         try {
             if(userType === 'admin'){

@@ -22,7 +22,7 @@
         "Civil Engineering"
     ],
     "Levels" : [
-        100, 200, 300, 400, 500
+        "100 Level", "200 Level", "300 Level", "400 Level", "500 Level"
     ],
     "Semesters": [
         "First Semester", "Second Semester"

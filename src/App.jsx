@@ -9,6 +9,27 @@ import LecturerHome from './users/lecturer/LecturerHome';
 import StudentHome from './users/student/StudentHome';
 import Navbar from './components/Navbar';
 import ErrorBoundary from './error/ErrorBoundary';
+import UpdateSemester from './users/admin/UpdateSemster';
+import NewAdmin from './users/admin/NewAdmin';
+import NewStudent from './users/admin/NewStudent';
+import NewLecturer from './users/admin/NewLecturer';
+import Courses from './users/admin/Courses';
+import Profiles from './users/admin/Profiles';
+import EditAdmin from './users/admin/EditAdmin';
+import EditStudent from './users/admin/EditStudent';
+import EditLecturer from './users/admin/EditLecturer';
+import Profile from './users/admin/Profile';
+import Result from './users/admin/Result';
+// lecturer routes
+import CoursesL from './users/lecturer/Courses';
+import EditResult from './users/lecturer/EditResult';
+import ResultL from './users/lecturer/Result';
+import UploadResult from './users/lecturer/UploadResult';
+// student routes
+import CarryOverCourses from './users/student/CarryOverCourses';
+import RegisteredCourses from './users/student/RegisteredCourses';
+import ResultS from './users/student/Result';
+import Results from './users/student/Results';
 import './App.css';
 
 const App = () => {
@@ -42,18 +63,45 @@ const App = () => {
     }
     return children;
   }
+
   return (
     <BrowserRouter>
       <ErrorBoundary>
         <div className="flex items-center justify-between w-full h-screen">
           {isAuth && isWideScreen && <Navbar />}
-          <div className={`flex flex-col items-center justify-center ${isAuth && isWideScreen ? 'w-3/4' : 'w-full'} m-4 md:m-0 h-full`}>
+          <div className={`p-4 ${isAuth && isWideScreen ? 'w-3/4' : 'w-full'} m-4 md:m-0 h-full`}>
             <Routes>
               <Route path="/" element={isAuth ? <Navigate to={`/${userType}`} replace /> : <Landing />} />
               <Route path="/signin" element={<SignIn />} />
+
+              {/* Admin Routes */}
               <Route path="/admin" element={<AdminRoutes><AdminHome /></AdminRoutes>} />
+              <Route path='/admin/updateSemster' element={<AdminRoutes><UpdateSemester /></AdminRoutes>} />
+              <Route path='/admin/newAdmin' element={<AdminRoutes><NewAdmin /></AdminRoutes>} />
+              <Route path='/admin/newLecturer' element={<AdminRoutes><NewLecturer /></AdminRoutes>} />
+              <Route path='/admin/newStudent' element={<AdminRoutes><NewStudent /></AdminRoutes>} />
+              <Route path='/admin/courses' element={<AdminRoutes><Courses /></AdminRoutes>} />
+              <Route path='/admin/result' element={<AdminRoutes><Result /></AdminRoutes>} />
+              <Route path='/admin/profiles' element={<AdminRoutes><Profiles /></AdminRoutes>} />
+              <Route path='/admin/profile/:id' element={<AdminRoutes><Profile /></AdminRoutes>} />
+              <Route path='/admin/editStudent/:id' element={<AdminRoutes><EditStudent /></AdminRoutes>} />
+              <Route path='/admin/editAdmin/:id' element={<AdminRoutes><EditAdmin /></AdminRoutes>} />
+              <Route path='/admin/editLecturer/:id' element={<AdminRoutes><EditLecturer /></AdminRoutes>} />
+
+              {/* Lecturer Routes */}
               <Route path="/lecturer" element={<LecturerRoutes><LecturerHome /></LecturerRoutes>} />
+              <Route path="/lecturer/courses" element={<LecturerRoutes><CoursesL /></LecturerRoutes>} />
+              <Route path="/lecturer/results" element={<LecturerRoutes><ResultL /></LecturerRoutes>} />
+              <Route path="/lecturer/uploadresult/:courseId" element={<LecturerRoutes><UploadResult /></LecturerRoutes>} />
+              <Route path="/lecturer/editResults/:courseId" element={<LecturerRoutes><EditResult /></LecturerRoutes>} />
+
+              {/* Student Routes */}
               <Route path="/student" element={<StudentRoutes><StudentHome /></StudentRoutes>} />
+              <Route path="/student/registered-courses" element={<StudentRoutes><RegisteredCourses /></StudentRoutes>} />
+              <Route path="/student/carry-over" element={<StudentRoutes><CarryOverCourses /></StudentRoutes>} />
+              <Route path="/student/results" element={<StudentRoutes><Results /></StudentRoutes>} />
+              <Route path="/student/result/:resultId" element={<StudentRoutes><ResultS /></StudentRoutes>} />
+
               <Route path="*" element={<NotFoundError />} />
             </Routes>
           </div>

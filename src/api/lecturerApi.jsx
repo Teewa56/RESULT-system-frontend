@@ -16,14 +16,16 @@ export const logoutLecturer = async() =>
     lecturerApi.post('/lecturer/logout')
 export const lecturerProfile = async(id) => 
     lecturerApi.get(`/lecturer/profile/${id}`, {params: {id}})
-export const getCoursesTaking = async(id) => 
-    lecturerApi.get(`/lecturer/courses-taking/${id}`, {params: {id}})
-export const getCourse = async(courseId) => 
-    lecturerApi.get(`/lecturer/courses-taking/${courseId}`, {params : {courseId}})
-export const getCourseResult = async(courseId, lecturerId) => 
-    lecturerApi.get(`/lecturer/results/${lecturerId}/${courseId}`, {params: {courseId, lecturerId}} )
-export const editResult = async(lecturerId, studentId, courseCode, data) => 
-    lecturerApi.put(`/lecturer/result/${lecturerId}/${studentId}/${courseCode}`, data)
+export const getCoursesTaking = async(courseCode) => 
+    lecturerApi.get(`/lecturer/courses-taking/${courseCode}`, {params: {courseCode}})
+export const getCourse = async(courseCode) => 
+    lecturerApi.get(`/lecturer/courses-taking/${courseCode}`, {params : {courseId}})
+export const getRegisteredStudents = async(courseCode) =>
+    lecturerApi.get(`/lecturer/registered-students/${courseCode}`)
+export const getCourseResult = async(courseCode, lecturerId) => 
+    lecturerApi.get(`/lecturer/results/${lecturerId}`, {params: {lecturerId}}, courseCode)
+export const editResult = async(lecturerId, data) => 
+    lecturerApi.put(`/lecturer/result/${lecturerId}`, data)
 export const uploadResult = async(lecturerId, results) => 
     lecturerApi.post(`/lecturer/result/${lecturerId}`, results)
 

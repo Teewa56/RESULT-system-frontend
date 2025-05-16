@@ -49,7 +49,7 @@ const Navbar = () => {
                             className="w-7 h-7"/>
                         <p>New Admin</p>
                     </Link>
-                    <Link to='/admin/results'
+                    <Link to='/admin/result'
                         className="flex justify-start shadow-md rounded-2xl p-2 items-center gap-2 hover:opacity-0.8 transition-all duration-200 ease-in-out mb-4">
                         <img src="/images/result.svg" alt="results" 
                             className="w-6 h-6"/>
