@@ -26,7 +26,7 @@ import EditResult from './users/lecturer/EditResult';
 import ResultL from './users/lecturer/Result';
 import UploadResult from './users/lecturer/UploadResult';
 // student routes
-import CarryOverCourses from './users/student/CarryOverCourses';
+import CarryOverCourses from './users/student/CarryOver';
 import RegisteredCourses from './users/student/RegisteredCourses';
 import ResultS from './users/student/Result';
 import Results from './users/student/Results';
