@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import Toast from '../../components/Toast'
-import Loading from '../../components/Loading'
+import Loading from '../../components/Loaidng'
 import { getCoursesTaking, getCourse } from "../../api/lecturerApi"
 import { Link } from "react-router-dom"
 

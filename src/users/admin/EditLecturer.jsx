@@ -4,7 +4,7 @@ import Courses from '../../../allCourses.json'
 import { editLecturer, lecturerProfile } from "../../api/adminApi";
 import { useParams } from 'react-router-dom'
 import Toast from '../../components/Toast'
-import Loading from '../../components/Loading'
+import Loading from '../../components/Loaidng'
 import { useNavigate } from "react-router-dom";
 
 export default function EditLecturer(){

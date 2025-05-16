@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { registeredCourses } from "../../api/studentApi";
-import Loading from '../../components/Loading';
+import Loading from '../../components/Loaidng';
 import Toast from '../../components/Toast';
 
 export default function RegisteredCourses() {
