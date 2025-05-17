@@ -1,9 +1,10 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import States from '../../../cacheInfo.json'
-import { editStudent } from "../../api/adminApi";
+import { editStudent, studentProfile } from "../../api/adminApi";
 import Toast from "../../components/Toast";
 import Loading from '../../components/Loaidng'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import handleApiError from "../../utils/HandleAPIERROR";
 
 export default function EditStudent(){
     const [userInfo, setUserInfo] = useState({
@@ -33,7 +34,18 @@ export default function EditStudent(){
             ...prev, [field]: value
         }))
     };
-
+    const userId = useParams().id;
+    useEffect(() => {
+        async function GetExistingProfile(userId) {
+            try{
+                const res = await studentProfile(userId);
+                setUserInfo(res.data.student)
+            }catch(err){
+                handleApiError(err, setError, "An unexpected error occuured")
+            }
+        }
+        GetExistingProfile(userId)
+    },[userId])
     async function uploadToCloudinary(file) {
         const data = new FormData();
         data.append("file", file);
@@ -69,7 +81,7 @@ export default function EditStudent(){
             await editStudent(payload);
             navigate('/admin');
         } catch (err) {
-            setError(err.message || "Failed to update student.");
+            handleApiError(err, setError, "An unexpected error occuured")
         } finally {
             setLoading(false);
         }
@@ -77,10 +89,17 @@ export default function EditStudent(){
 
     const states = States['States'];
     return(
-        <div className="flex flex-col p-4 max-w-md mx-auto">
+        <div className="flex flex-col max-w-md mx-auto">
             {loading && <Loading />}
             {error && <Toast text={error} color={'red'} />}
-            <p className="font-bold text-3xl mb-3">Edit Student</p>
+            <div className="flex items-center justify-start gap-4">
+                <img 
+                    src="/images/back-button.svg" 
+                    className="md:hidden w-6 h-6" 
+                    onClick={() => navigate(-1)} 
+                />
+                <h3 className="text-3xl font-bold">Edit student</h3>
+            </div>
             <div>
                 <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
                     <label htmlFor="fullname">

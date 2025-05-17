@@ -75,13 +75,13 @@ const Navbar = () => {
                 )}
                 {userType === 'student' && (
                     <>
-                    <Link to='/student/courses'
+                    <Link to='/student/registered-courses'
                         className="flex justify-start shadow-md rounded-2xl p-2 items-center gap-2 hover:opacity-0.8 transition-all duration-200 ease-in-out mb-4">
                         <img src="/images/courses.svg" alt="courses" 
                             className="w-6 h-6"/>
                         <p>Registered Courses</p>
                     </Link>
-                    <Link to='/student/carryover'
+                    <Link to='/student/carry-over'
                         className="flex justify-start shadow-md rounded-2xl p-2 items-center gap-2 hover:opacity-0.8 transition-all duration-200 ease-in-out mb-4">
                         <img src="/images/courses.svg" alt="carryover"
                             className="w-6 h-6"/>

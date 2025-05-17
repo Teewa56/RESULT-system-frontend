@@ -5,6 +5,7 @@ import Loading from '../../components/Loaidng'
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../../context/AuthContext'
 import ThemeToggle from '../../components/ThemeToggle'
+import handleApiError from '../../utils/HandleAPIERROR'
 
 function formatDate(date) {
     if (!date) return "";
@@ -14,13 +15,25 @@ function formatDate(date) {
 }
 
 function getAge(dateOfBirth) {
-    if (!dateOfBirth) return "";
-    const dob = new Date(dateOfBirth);
-    if (isNaN(dob)) return "";
-    const diff = Date.now() - dob.getTime();
-    const ageDt = new Date(diff);
-    return Math.abs(ageDt.getUTCFullYear() - 1970);
+    if (!dateOfBirth || typeof dateOfBirth !== 'string') return '-';
+    const parts = dateOfBirth.split('/');
+    if (parts.length !== 3) return '-';
+
+    const [day, month, year] = parts.map(part => parseInt(part, 10));
+    if (!year || year < 1900 || year > new Date().getFullYear()) return '-';
+
+    const birthDate = new Date(year, month - 1, day);
+    const today = new Date();
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    return age;
 }
+
 
 export default function LecturerHome() {
     const [loading, setLoading] = useState(false);
@@ -34,22 +47,22 @@ export default function LecturerHome() {
 
     useEffect(() => {
         async function fetchProfile() {
-            setLoading(true);
             setError(null);
             try {
+                setLoading(true);
                 const res = await lecturerProfile(userId);
                 setUserInfo(res.data.lecturer);
             } catch (err) {
-                setError(err.message || "Failed to fetch profile.");
-            } finally {
+                handleApiError(err, setError, "An unexpected error occuured")
+            }finally{
                 setLoading(false);
             }
         }
         fetchProfile();
-    }, [userId]);
+    }, [userId])
 
     return (
-        <div>
+        <div className='pb-4'>
             {loading && <Loading />}
             {error && <Toast text={error} color='red' />}
             {Error && <Toast text={Error} color={'red'} />}
@@ -59,9 +72,9 @@ export default function LecturerHome() {
             </div>
             <div className='flex flex-col md:flex-row items-start justify-start gap-5 w-full'>
                 <div className={`${window.innerWidth < 786 ? 'w-1/3' : 'w-1/4'} h-40 rounded-3xl shadow-lg`}>
-                    <img src={userInfo.profilePic || "/mypic.png"} alt="profile" className='w-full h-full rounded-3xl object-cover' />
+                    <img src={userInfo.profilePic || "/images/lecturerSVG.svg"} alt="profile" className='w-full h-full rounded-3xl object-cover' />
                 </div>
-                <div className='w-3/4'>
+                <div className='md:w-3/4 w-full'>
                     <div className='grid grid-cols-2 md:grid-cols-3 gap-2 mt-1'>
                         <div className='flex flex-col items-start '>
                             <h3 className='font-bold'>Full Name</h3>
@@ -73,7 +86,7 @@ export default function LecturerHome() {
                         </div>
                         <div className='flex flex-col items-start '>
                             <h3 className='font-bold'>Age</h3>
-                            <p>{getAge(userInfo.dateOfBirth)}</p>
+                            <p>{getAge(userInfo.dateOfBirth) || 10}</p>
                         </div>
                         <div className='flex flex-col items-start '>
                             <h3 className='font-bold'>Registration Id</h3>
@@ -81,7 +94,7 @@ export default function LecturerHome() {
                         </div>
                         <div className='flex flex-col items-start '>
                             <h3 className='font-bold'>Email</h3>
-                            <p>{userInfo.email || "-"}</p>
+                            <p style={{fontSize: '15px'}}>{userInfo.email || "-"}</p>
                         </div>
                         <div className='flex flex-col items-start '>
                             <h3 className='font-bold'>State of origin</h3>
@@ -106,22 +119,22 @@ export default function LecturerHome() {
                     </div>
                 </div>
                 {window.innerWidth < 768 && (
-                    <div>
+                    <div className='w-full flex flex-col gap-3'>
                         <Link to='/lecturer/courses'
-                            className="flex justify-start shadow-md rounded-2xl p-2 items-center gap-2 hover:opacity-0.8 transition-all duration-200 ease-in-out mb-4">
+                            className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
                             <img src="/images/courses.svg" alt="courses"
-                                className="w-6 h-6" />
+                                className="w-full h-10" />
                             <p>Courses</p>
                         </Link>
                         <Link to='/lecturer/results'
-                            className="flex justify-start shadow-md rounded-2xl p-2 items-center gap-2 hover:opacity-0.8 transition-all duration-200 ease-in-out mb-4">
+                            className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
                             <img src="/images/result.svg" alt="results"
-                                className="w-6 h-6" />
+                                className="w-full h-10" />
                             <p>Results</p>
                         </Link>
                         <button
                             onClick={handleLogout}
-                            className="w-full  rounded-2xl p-4 shadow-md hover:cursor-pointer hover:opacity-0.8 transition-all duration-200 ease-in-out " >
+                            className="w-full bg-red-400  rounded-2xl p-4 shadow-md hover:cursor-pointer hover:opacity-0.8 transition-all duration-200 ease-in-out " >
                             <p>Logout</p>
                         </button>
                     </div>

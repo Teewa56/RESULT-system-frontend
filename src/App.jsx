@@ -69,7 +69,7 @@ const App = () => {
       <ErrorBoundary>
         <div className="flex items-center justify-between w-full h-screen">
           {isAuth && isWideScreen && <Navbar />}
-          <div className={`p-4 ${isAuth && isWideScreen ? 'w-3/4' : 'w-full'} m-4 md:m-0 h-full`}>
+          <div className={`p-4 ${isAuth && isWideScreen ? 'w-3/4' : 'w-full'} md:m-0 h-full`}>
             <Routes>
               <Route path="/" element={isAuth ? <Navigate to={`/${userType}`} replace /> : <Landing />} />
               <Route path="/signin" element={<SignIn />} />
@@ -92,8 +92,8 @@ const App = () => {
               <Route path="/lecturer" element={<LecturerRoutes><LecturerHome /></LecturerRoutes>} />
               <Route path="/lecturer/courses" element={<LecturerRoutes><CoursesL /></LecturerRoutes>} />
               <Route path="/lecturer/results" element={<LecturerRoutes><ResultL /></LecturerRoutes>} />
-              <Route path="/lecturer/uploadresult/:courseId" element={<LecturerRoutes><UploadResult /></LecturerRoutes>} />
-              <Route path="/lecturer/editResults/:courseId" element={<LecturerRoutes><EditResult /></LecturerRoutes>} />
+              <Route path="/lecturer/uploadresult/:CourseCode" element={<LecturerRoutes><UploadResult /></LecturerRoutes>} />
+              <Route path="/lecturer/editResults/:CourseCode" element={<LecturerRoutes><EditResult /></LecturerRoutes>} />
 
               {/* Student Routes */}
               <Route path="/student" element={<StudentRoutes><StudentHome /></StudentRoutes>} />

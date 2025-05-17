@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react"
 import Toast from '../../components/Toast'
 import Loading from '../../components/Loaidng'
 import { getCourseResult, getCoursesTaking } from "../../api/lecturerApi"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 export default function ResultL(){
     const lecturerId = localStorage.getItem('userId');
@@ -13,6 +13,7 @@ export default function ResultL(){
     const [results, setResults] = useState([]);
     const [resultLoading, setResultLoading] = useState(false);
     const printRef = useRef();
+    const navigate = useNavigate();
 
     useEffect(() => {
         async function fetchCourses() {
@@ -22,7 +23,8 @@ export default function ResultL(){
                 const res = await getCoursesTaking(lecturerId);
                 setCourses(res.data.courses || []);
             } catch (err) {
-                setError(err.message || "Failed to fetch courses.");
+                console.log(err.message);
+                setError("Failed to fetch courses.");
             } finally {
                 setLoading(false);
             }
@@ -30,16 +32,33 @@ export default function ResultL(){
         fetchCourses();
     }, [lecturerId]);
 
-    async function handleCourseClick(courseId) {
-        setSelectedCourse(courseId);
+    async function handleCourseClick(courseCode) {
+        setSelectedCourse(courseCode);
         setResultLoading(true);
         setResults([]);
         setError(null);
         try {
-            const res = await getCourseResult(courseId, lecturerId);
+            const res = await getCourseResult(courseCode, lecturerId);
+            console.log('res 2: ', res)
             setResults(res.data.results || []);
         } catch (err) {
-            setError(err.message || "Failed to fetch course results.");
+            if (err.response) {
+                const status = err.response.status;
+
+                if (status === 404) {
+                    setError("No results found for this course.");
+                } else if (status === 500) {
+                    setError("Server error. Please try again later.");
+                } else {
+                    setError("An unexpected error occurred.");
+                }
+            } else if (err.request) {
+                console.error("No response received:", err.request);
+                setError("No response from server. Check your internet connection.");
+            } else {
+                console.error("Error", err.message);
+                setError("Request failed. Please try again.");
+            }
         } finally {
             setResultLoading(false);
         }
@@ -55,26 +74,30 @@ export default function ResultL(){
     }
 
     return(
-        <div className="p-4">
-            <h2 className="text-xl font-bold mb-4">Preview Course Results</h2>
+        <div className="max-w-md mx-auto">
+            <div className="flex items-center justify-start gap-4 mb-4">
+                <img src="/images/back-button.svg" className="md:hidden w-8 h-8" 
+                    onClick={() => navigate(-1)}/>
+                <h3 className="text-2xl font-bold">Course Results Preview</h3>
+            </div>
             {loading && <Loading />}
             {error && <Toast text={error} color="red" />}
             <div className="space-y-4 mb-6">
                 {courses.length === 0 && !loading && <div>No courses found.</div>}
                 {courses.map(course => (
                     <div
-                        key={course._id || course.code}
-                        className={`p-4 border rounded cursor-pointer hover:bg-gray-100 ${selectedCourse === (course._id || course.code) ? "bg-gray-50" : ""}`}
-                        onClick={() => handleCourseClick(course._id || course.code)}
+                        key={course['Course-Code']}
+                        className={`p-4 border rounded cursor-pointer hover:bg-gray-100 ${selectedCourse === course['Course-Code'] ? "bg-gray-50" : ""}`}
+                        onClick={() => handleCourseClick(course['Course-Code'])}
                     >
-                        <div className="font-semibold">{course.code} - {course.title}</div>
+                        <div className="font-semibold">{course['Course-Code']}</div>
                     </div>
                 ))}
             </div>
             {selectedCourse && (
                 <div>
                     <h3 className="text-lg font-semibold mb-2">
-                        Results for {courses.find(c => (c._id || c.code) === selectedCourse)?.title || ""}
+                        Results for {selectedCourse}
                     </h3>
                     {resultLoading && <Loading />}
                     {results.length === 0 && !resultLoading && <div>No results found for this course.</div>}

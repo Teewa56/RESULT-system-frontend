@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { studentProfile, lecturerProfile, adminProfile } from "../../api/adminApi";
 import Toast from "../../components/Toast";
 import Loading from "../../components/Loaidng";
+import {useNavigate} from 'react-router-dom'
+import handleApiError from "../../utils/HandleAPIERROR";
 
 export default function Profile(){
     const [userInfo, setUserInfo] = useState({});
@@ -10,7 +12,7 @@ export default function Profile(){
     const [error, setError] = useState(null);
     const userId = useParams().id;
     const current = Number(localStorage.getItem('current'));
-
+    const navigate = useNavigate();
     useEffect(() => {
         async function GetUserInfo(id) {
             setLoading(true);
@@ -27,8 +29,8 @@ export default function Profile(){
                     const res = await adminProfile(id);
                     setUserInfo(res.data.admin)
                 }
-            }catch(error){
-                setError(error.message);
+            }catch(err){
+                handleApiError(err, setError, "An unexpected error occuured")
             }finally{
                 setLoading(false);
             }
@@ -50,17 +52,22 @@ export default function Profile(){
     const profilePic = userInfo.profilePic;
 
     return(
-        <div className="p-4 w-full">
+        <div className="w-full">
             {loading && <Loading />}
             {error && <Toast text={error} color={'red'} />}
-            <h3 className="font-bold text-3xl">User Profile</h3>
+            <div className="flex items-center justify-start gap-4">
+                <img src="/images/back-button.svg" className="md:hidden w-6 h-6" 
+                    onClick={() => navigate(-1)}/>
+                <h3 className="text-3xl font-bold">Profile</h3>
+            </div>
             {current === 1 && userInfo &&
+            <>
             <div className='flex flex-col md:flex-row items-start justify-start gap-5 w-full mt-4'>
-                <div className={`${window.innerWidth < 786 ? 'w-1/3' : 'w-1/4'} h-40 rounded-3xl shadow-lg`}>
+                <div className={`${window.innerWidth < 786 ? 'w-full' : 'w-1/4'} h-40 rounded-3xl shadow-lg`}>
                     <img src={profilePic} alt="profile" className='w-full h-full rounded-3xl object-cover' />
                 </div>
-                <div className='w-3/4'>
-                    <div className='grid grid-cols-2 md:grid-cols-3 gap-2 mt-1'>
+                <div className = {`${window.innerWidth < 786 ? 'w-full' : 'w-3/4'}`}>
+                    <div className='grid grid-cols-2 md:grid-cols-3 gap-2 mt-2'>
                         <div className='flex flex-col items-start '>
                             <h3 className='font-bold'>Full Name</h3>
                             <p>{userInfo.fullName}</p>
@@ -98,10 +105,6 @@ export default function Profile(){
                             <p>{userInfo.phone}</p>
                         </div>
                         <div className='flex flex-col items-start '>
-                            <h3 className='font-bold'>Gender</h3>
-                            <p>{userInfo.gender}</p>
-                        </div>
-                        <div className='flex flex-col items-start '>
                             <h3 className='font-bold'>Year of Admission</h3>
                             <p>{userInfo.yearOfAdmission}</p>
                         </div>
@@ -115,17 +118,22 @@ export default function Profile(){
                         </div>
                     </div> 
                 </div>
-                <Link to={`/admin/editStudent/${userId}`}>
-                    <p>Edit Profile</p>
-                </Link>
             </div>
+            <Link 
+                to={`/admin/editStudent/${userId}`}
+                className="inline-block px-6 py-2 rounded-2xl bg-gradient-to-r from-gray-600 to-gray-500 text-white font-semibold shadow-md hover:shadow-lg hover:from-gray-700 hover:to-gray-600 transition duration-300 ease-in-out text-center"
+                >
+                <p>Edit Profile</p>
+            </Link>
+            </>
             }
             {current === 2 && userInfo &&
+            <>
             <div className='flex flex-col md:flex-row items-start justify-start gap-5 w-full mt-4'>
                 <div className={`${window.innerWidth < 786 ? 'w-1/3' : 'w-1/4'} h-40 rounded-3xl shadow-lg`}>
                     <img src={profilePic} alt="profile" className='w-full h-full rounded-3xl object-cover' />
                 </div>
-                <div className='w-3/4'>
+                <div className = {`${window.innerWidth < 786 ? 'w-full' : 'w-3/4'}`}>
                     <div className='grid grid-cols-2 md:grid-cols-3 gap-2 mt-1'>
                         <div className='flex flex-col items-start '>
                             <h3 className='font-bold'>Full Name</h3>
@@ -169,18 +177,23 @@ export default function Profile(){
                         </div>
                     </div> 
                 </div>
-                <Link to={`/admin/editLecturer/${userId}`}>
-                    <p>Edit Profile</p>
-                </Link>
             </div>
+            <Link 
+                to={`/admin/editLecturer/${userId}`}
+                className="inline-block px-6 py-2 rounded-2xl bg-gradient-to-r from-gray-600 to-gray-500 text-white font-semibold shadow-md hover:shadow-lg hover:from-gray-700 hover:to-gray-600 transition duration-300 ease-in-out text-center"
+                >
+                <p>Edit Profile</p>
+            </Link>
+            </>
             }
             {current === 3 && userInfo &&
-            <div className='flex flex-col md:flex-row items-start justify-start gap-5 w-full mt-4'>
+            <>
+            <div className='flex flex-col md:flex-row items-start justify-start gap-5 w-full mt-4 mb-2'>
                 <div className={`${window.innerWidth < 786 ? 'w-1/3' : 'w-1/4'} h-40 rounded-3xl shadow-lg`}>
                     <img src={profilePic} alt="profile" className='w-full h-full rounded-3xl object-cover' />
                 </div>
-                <div className='w-3/4'>
-                    <div className='grid grid-cols-2 md:grid-cols-3 gap-2 mt-1'>
+                <div className = {`${window.innerWidth < 786 ? 'w-full' : 'w-3/4'}`}>
+                    <div className='grid grid-cols-2  md:grid-cols-3 gap-5 mt-1'>
                         <div className='flex flex-col items-start '>
                             <h3 className='font-bold'>Full Name</h3>
                             <p>{userInfo.fullName}</p>
@@ -221,10 +234,14 @@ export default function Profile(){
                         </div>
                     </div> 
                 </div>
-                <Link to={`/admin/editAdmin/${userId}`}>
-                    <p>Edit Profile</p>
-                </Link>
             </div>
+            <Link 
+                to={`/admin/editAdmin/${userId}`}
+                className="inline-block px-6 py-2 rounded-2xl bg-gradient-to-r from-gray-600 to-gray-500 text-white font-semibold shadow-md hover:shadow-lg hover:from-gray-700 hover:to-gray-600 transition duration-300 ease-in-out text-center"
+                >
+                <p>Edit Profile</p>
+            </Link>
+            </>
             }
         </div>
     )

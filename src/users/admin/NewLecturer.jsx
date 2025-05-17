@@ -5,6 +5,7 @@ import { newLecturer } from "../../api/adminApi";
 import Loading from '../../components/Loaidng'
 import Toast from '../../components/Toast'
 import { useNavigate } from "react-router-dom";
+import handleApiError from "../../utils/HandleAPIERROR";
 
 export default function NewLecturer(){
     const [userInfo, setUserInfo] = useState({
@@ -31,18 +32,30 @@ export default function NewLecturer(){
         }))
     };
 
-    function handleCoursesChange(e) {
-        const selected = Array.from(e.target.selectedOptions, option => option.value);
-        updateUserInfo('coursesTaking', selected);
+    function handleCourseToggle(courseCode) {
+        setUserInfo(prev => {
+            const currentCourses = [...prev.coursesTaking];
+            if (currentCourses.includes(courseCode)) {
+                return {
+                    ...prev,
+                    coursesTaking: currentCourses.filter(code => code !== courseCode)
+                };
+            } else {
+                return {
+                    ...prev,
+                    coursesTaking: [...currentCourses, courseCode]
+                };
+            }
+        });
     }
 
     async function uploadToCloudinary(file) {
         const data = new FormData();
         data.append("file", file);
         data.append("upload_preset", 'pymeet');
-        data.append("cloud_name", import.meta.env.CLOUDINARY_CLOUD_NAME);
+        data.append("cloud_name", import.meta.env.VITE_CLOUDINARY_CLOUD_NAME);
 
-        const res = await fetch(`https://api.cloudinary.com/v1_1/${import.meta.env.CLOUDINARY_CLOUD_NAME}/image/upload`, {
+        const res = await fetch(`https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUDINARY_CLOUD_NAME}/image/upload`, {
             method: "POST",
             body: data
         });
@@ -68,10 +81,10 @@ export default function NewLecturer(){
                 profilePicUrl = await uploadToCloudinary(imageFile);
             }
             const payload = { ...userInfo, profilePic: profilePicUrl };
-            await newLecturer(payload);
+            await newLecturer({lecturerInfo: payload});
             navigate('/admin')
         } catch (err) {
-            setError(err.message || "Failed to create lecturer.");
+            handleApiError(err, setError, "An unexpected error occuured")
         } finally {
             setLoading(false);
         }
@@ -81,10 +94,14 @@ export default function NewLecturer(){
     const Departments = States['Departments'];
 
     return(
-        <div className="flex flex-col p-4 max-w-md mx-auto">
+        <div className="flex flex-col max-w-md mx-auto">
             {loading && <Loading />}
             {error && <Toast text={error} color="red" />}
-            <p className="font-bold text-3xl mb-3">New Lecturer</p>
+            <div className="flex items-center justify-start gap-4">
+                <img src="/images/back-button.svg" className="md:hidden w-6 h-6" 
+                    onClick={() => navigate(-1)}/>
+                <h3 className="text-3xl font-bold">New Lecturer</h3>
+            </div>
             <div>
                 <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
                     <label htmlFor="fullname">
@@ -138,7 +155,6 @@ export default function NewLecturer(){
                             <input type="text"
                                 className="bg-gray-200 p-2 rounded-xl " 
                                 placeholder="Enter iD i.e ADCB/2345"
-                                maxLength={7}
                                 value={userInfo.registrationId}
                                 onChange={(e) => updateUserInfo('registrationId', e.target.value)}/>
                         </div>
@@ -167,8 +183,9 @@ export default function NewLecturer(){
                     </div>
                     <div className="flex items-center justify-between gap-2 ">
                         <div className="w-1/2 flex flex-col gap-2">
-                            <label htmlFor="profilePic">
-                                <p>Profile picture</p>
+                            <label htmlFor="profilePic"
+                                className="px-4 cursor-pointer py-2 rounded-2xl bg-blue-400">
+                                <p>Choose Profile picture</p>
                             </label>
                             {imagePreview && (
                                 <div>
@@ -195,24 +212,8 @@ export default function NewLecturer(){
                                 </select>
                         </div>
                     </div>
-                    <div className="flex items-center justify-between gap-2 ">
-                        <div className="w-1/2 flex flex-col gap-2">
-                            <label>
-                                <p>Courses</p>
-                            </label>
-                            <select 
-                                className="bg-gray-200 p-2 rounded-xl "
-                                multiple
-                                value={userInfo.coursesTaking}
-                                onChange={handleCoursesChange}>
-                                    {Courses.map((course) => (
-                                        <option value={course.code} key={course.code}>
-                                            {course.code} - {course.title}
-                                        </option>
-                                    ))}
-                            </select>
-                        </div>
-                        <div className="w-1/2 flex flex-col gap-2">
+                    <div className="flex justify-between gap-2">
+                        <div className="w-full flex flex-col gap-2">
                             <label>
                                 <p>Department</p>
                             </label>
@@ -226,6 +227,41 @@ export default function NewLecturer(){
                                     ))}
                             </select>
                         </div>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                        <label>
+                            <p>Courses Taking</p>
+                        </label>
+                        <div className="bg-gray-100 p-3 rounded-xl max-h-48 overflow-y-auto">
+                            <div className="grid grid-cols-2 gap-2">
+                                {Courses.map((course) => (
+                                    <div key={course.code} className="flex items-center">
+                                        <input
+                                            type="checkbox"
+                                            id={`course-${course.code}`}
+                                            checked={userInfo.coursesTaking.includes(course.code)}
+                                            onChange={() => handleCourseToggle(course.code)}
+                                            className="mr-2"
+                                        />
+                                        <label htmlFor={`course-${course.code}`} className="text-sm">
+                                            {course.code}
+                                        </label>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        {userInfo.coursesTaking.length > 0 && (
+                            <div className="mt-2">
+                                <p className="text-sm font-medium">Selected Courses ({userInfo.coursesTaking.length}):</p>
+                                <div className="flex flex-wrap gap-1 mt-1">
+                                    {userInfo.coursesTaking.map(code => (
+                                        <span key={code} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
+                                            {code}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
                     </div>
                     <button className="border-2 w-fit mx-auto px-4 py-2 rounded-2xl" type="submit">
                         <p>Create new Lecturer</p>

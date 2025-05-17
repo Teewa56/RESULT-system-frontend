@@ -3,11 +3,12 @@ import Toast from '../../components/Toast'
 import Loading from '../../components/Loaidng'
 import { editResult, getCourse, getRegisteredStudents, getCourseResult } from "../../api/lecturerApi"
 import { useParams, useNavigate } from "react-router-dom"
+import handleApiError from "../../utils/HandleAPIERROR"
 
 export default function EditResult(){
-    const { courseId } = useParams();
+    const  courseId  = useParams().CourseCode;
     const lecturerId = localStorage.getItem('userId');
-    const [course, setCourse] = useState(null);
+    const [course, setCourse] = useState({});
     const [students, setStudents] = useState([]);
     const [scores, setScores] = useState({});
     const [loading, setLoading] = useState(false);
@@ -23,18 +24,17 @@ export default function EditResult(){
                 const studentsRes = await getRegisteredStudents(courseId);
                 setStudents(studentsRes.data.students || []);
                 const resultsRes = await getCourseResult(courseId, lecturerId);
-                // Prefill scores with existing results
                 const initialScores = {};
-                (studentsRes.data.students || []).forEach(stu => {
-                    const result = (resultsRes.data.results || []).find(r => r.studentId === stu._id);
+                studentsRes.data.students.forEach(stu => {
+                    const result = resultsRes.data.results.find(r => r.student._id === stu._id);
                     initialScores[stu._id] = {
-                        test: result ? result.test : '',
-                        exam: result ? result.exam : ''
+                        test: result ? result.testScore : '',
+                        exam: result ? result.examScore : ''
                     };
                 });
                 setScores(initialScores);
             } catch (err) {
-                setError(err.message || "Failed to load data.");
+                handleApiError(err, setError, "An unexpected error occured")
             } finally {
                 setLoading(false);
             }
@@ -65,23 +65,26 @@ export default function EditResult(){
             await editResult(lecturerId, courseId, { results });
             navigate('/admin');
         } catch (err) {
-            setError(err.message || "Failed to edit results.");
+            handleApiError(err, setError, "An unexpected Error Occured")
         } finally {
             setLoading(false);
         }
     }
 
     return(
-        <div className="p-4">
-            <h2 className="text-2xl font-bold mb-4">Edit Results</h2>
+        <div >
+            <div className="flex items-center justify-start gap-4 mb-4">
+                <img src="/images/back-button.svg" className="md:hidden w-8 h-8" 
+                    onClick={() => navigate(-1)}/>
+                <h3 className="text-2xl font-bold">Edit {course['Course-Code']} Results</h3>
+            </div>
             {loading && <Loading />}
             {error && <Toast text={error} color="red" />}
             {course && (
                 <div className="mb-4">
-                    <div><strong>Course Title:</strong> {course.title}</div>
-                    <div><strong>Course Code:</strong> {course.code}</div>
-                    <div><strong>Lecturer:</strong> {course.lecturerName}</div>
-                    <div><strong>Course Unit:</strong> {course.unit}</div>
+                    <div><strong>Course Title:</strong> {course["Course-Title"]}</div>
+                    <div><strong>Course Code:</strong> {course["Course-Code"]}</div>
+                    <div><strong>Course Unit:</strong> {course["Course-Units"]}</div>
                 </div>
             )}
             <form onSubmit={handleSubmit}>
@@ -89,7 +92,7 @@ export default function EditResult(){
                     <table className="min-w-full border">
                         <thead>
                             <tr>
-                                <th className="border px-2 py-1">#</th>
+                                <th className="border px-2 py-1">S/N</th>
                                 <th className="border px-2 py-1">Student Name</th>
                                 <th className="border px-2 py-1">Matric No</th>
                                 <th className="border px-2 py-1">Test Score</th>
@@ -129,10 +132,16 @@ export default function EditResult(){
                         </tbody>
                     </table>
                 </div>
+                {students.length === 0 && (
+                    <div className="my-5">
+                        <img src="/images/error.svg" alt="" className="w-10 h-10 mx-auto m-2"/>
+                        <p className="text-center">No Students and Information Found for this course</p>
+                    </div>
+                )}
                 <button
                     type="submit"
-                    className="mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-                    disabled={loading}
+                    className={`mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 ${students.length == 0 && 'cursor-not-allowed'}`}
+                    disabled={loading || students.length === 0}
                 >
                     Save Changes
                 </button>

@@ -29,18 +29,14 @@ export default function SignIn() {
 
     async function signInUser(e) {
         e.preventDefault(); 
-        try {
-            setLoading(true);
-            const payload = {data: {...userInfo}};
-            if (userType === 'admin') await LogInadmin(payload);
-            if (userType === 'lecturer') await LogInlecturer(payload);
-            if (userType === 'student') {await LogInstudent(payload);}
-            navigate(`/${userType}`)
-        } catch (error) {
-            console.log('Emi err',error);
-        } finally {
-            setLoading(false);
-        }
+        setLoading(true);
+        const payload = {data: {...userInfo}};
+        if (userType === 'admin') await LogInadmin(payload);
+        if (userType === 'lecturer') await LogInlecturer(payload);
+        if (userType === 'student') {await LogInstudent(payload);}
+        setLoading(false);
+        navigate(`/${userType}`)
+        
     }
 
     return (

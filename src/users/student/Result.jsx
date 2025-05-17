@@ -2,15 +2,17 @@ import { useState, useEffect } from "react";
 import { getResult, getGpa } from "../../api/studentApi";
 import Loading from '../../components/Loaidng';
 import Toast from '../../components/Toast';
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import handleApiError from "../../utils/HandleAPIERROR";
 
 export default function ResultS() {
     const { resultId } = useParams();
     const userId = localStorage.getItem('userId');
-    const [result, setResult] = useState(null);
+    const [result, setResult] = useState({});
     const [gpa, setGpa] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         async function fetchResult() {
@@ -21,7 +23,7 @@ export default function ResultS() {
                 const gpaRes = await getGpa(userId, { resultId });
                 setGpa(gpaRes.data.gpa);
             } catch (err) {
-                setError(err.message || "Failed to fetch result.");
+                handleApiError(err, setError, "An unexpected error occuured")
             } finally {
                 setLoading(false);
             }
@@ -31,7 +33,11 @@ export default function ResultS() {
 
     return (
         <div className="mx-auto max-w-md">
-            <h2 className="text-xl font-bold mb-4">Result Details</h2>
+            <div className="flex items-center justify-start gap-4 mb-2">
+                <img src="/images/back-button.svg" className="md:hidden w-8 h-8" 
+                    onClick={() => navigate(-1)}/>
+                <h2 className="text-xl font-bold mb-4">Result Details</h2>
+            </div>
             {loading && <Loading />}
             {error && <Toast text={error} color="red" />}
             {result && (

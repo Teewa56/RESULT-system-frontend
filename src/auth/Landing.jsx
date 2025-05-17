@@ -10,7 +10,7 @@ export default function Landing() {
     }
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100 md:w-1/3 w-full">
+        <div className="flex items-center justify-center min-h-screen bg-gray-100 max-w-md mx-auto">
             <div className="flex flex-col w-full p-6 bg-white rounded-lg shadow-lg border border-gray-200">
                 <h1 className="font-black text-2xl text-center text-gray-800 mb-6">Sign In As</h1>
                 <div

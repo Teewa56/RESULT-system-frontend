@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 import Toast from "../../components/Toast";
 import Loading from "../../components/Loaidng";
 import { useNavigate } from "react-router-dom";
+import handleApiError from "../../utils/HandleAPIERROR";
 
 export default function EditAdmin(){
     const [userInfo, setUserInfo] = useState({
@@ -30,10 +31,10 @@ export default function EditAdmin(){
             try {
                 setLoading(true);
                 const res = await adminProfile(params);
-                setUserInfo(res.data.admin)
+                setUserInfo(res.data.admin);
                 setImagePreview(res.data.admin.profilePic || '');
-            } catch (error) {
-                setError(error.message);
+            } catch (err) {
+               handleApiError(err, setError, "An unexpected error occuured")
             } finally {
                 setLoading(false);
             }
@@ -86,20 +87,27 @@ export default function EditAdmin(){
             setSuccess("Admin updated successfully!");
             navigate('/admin')
         } catch (err) {
-            setError(err.message || "Failed to update admin.");
+            handleApiError(err, setError, "An unexpected error occuured")
         } finally {
             setLoading(false);
         }
     }
 
     return(
-        <div className="flex flex-col p-4 max-w-md mx-auto">
+        <div className="flex flex-col max-w-md mx-auto ">
             {loading && <Loading /> }
             {error && <Toast text={error} color={'red'} /> }
             {success && <Toast text={success} color={'green'} /> }
-            <p className="font-bold text-3xl mb-3">Edit Admin</p>
+            <div className="flex items-center justify-start gap-4">
+                <img 
+                    src="/images/back-button.svg" 
+                    className="md:hidden w-6 h-6" 
+                    onClick={() => navigate(-1)} 
+                />
+                <h3 className="text-3xl font-bold">Edit Admin</h3>
+            </div>
             <div>
-                <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
+                <form className="flex flex-col gap-3 py-4" onSubmit={handleSubmit}>
                     <label htmlFor="fullname">
                         <p>Full Name</p>
                     </label>

@@ -4,6 +4,7 @@ import { newAdmin } from "../../api/adminApi";
 import Loading from '../../components/Loaidng'
 import Toast from '../../components/Toast'
 import {useNavigate} from 'react-router-dom'
+import handleApiError from "../../utils/HandleAPIERROR";
 
 export default function NewAdmin(){
     const [userInfo, setUserInfo] = useState({
@@ -34,9 +35,9 @@ export default function NewAdmin(){
         const data = new FormData();
         data.append("file", file);
         data.append("upload_preset", 'pymeet');
-        data.append("cloud_name", import.meta.env.CLOUDINARY_CLOUD_NAME);
+        data.append("cloud_name", import.meta.env.VITE_CLOUDINARY_CLOUD_NAME);
 
-        const res = await fetch(`https://api.cloudinary.com/v1_1/${import.meta.env.CLOUDINARY_CLOUD_NAME}/image/upload`, {
+        const res = await fetch(`https://api.cloudinary.com/v1_1/${import.meta.env.VITE_CLOUDINARY_CLOUD_NAME}/image/upload`, {
             method: "POST",
             body: data
         });
@@ -62,22 +63,26 @@ export default function NewAdmin(){
                 profilePicUrl = await uploadToCloudinary(imageFile);
             }
             const payload = { ...userInfo, profilePic: profilePicUrl };
-            await newAdmin(payload);
+            await newAdmin({adminInfo : payload});
             navigate('/admin')
         } catch (err) {
-            setError(err.message || "Failed to create admin.");
+            handleApiError(err, setError, "An unexpected error occuured")
         } finally {
             setLoading(false);
         }
     }
 
     return(
-        <div className="flex flex-col p-4 max-w-md mx-auto">
+        <div className="flex flex-col max-w-md mx-auto">
             {loading && <Loading />}
             {error && <Toast text={error} color="red" />}
-            <p className="font-bold text-3xl mb-3">New Admin</p>
+            <div className="flex items-center justify-start gap-4">
+                <img src="/images/back-button.svg" className="md:hidden w-6 h-6" 
+                    onClick={() => navigate(-1)}/>
+                <h3 className="text-3xl font-bold">New Admin</h3>
+            </div>
             <div>
-                <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
+                <form className="flex flex-col gap-3 py-4" onSubmit={handleSubmit}>
                     <label htmlFor="fullname">
                         <p>Full Name</p>
                     </label>
@@ -129,7 +134,6 @@ export default function NewAdmin(){
                             <input type="text"
                                 className="bg-gray-200 p-2 rounded-xl " 
                                 placeholder="Enter iD i.e ADCB/2345"
-                                maxLength={7}
                                 value={userInfo.adminId}
                                 onChange={(e) => updateUserInfo('adminId', e.target.value)}/>
                         </div>
@@ -152,15 +156,15 @@ export default function NewAdmin(){
                             <input type="text" 
                                 className="bg-gray-200 p-2 rounded-xl "
                                 placeholder="DD/MM/YY"
-                                maxLength={7}
                                 value={userInfo.dateOfEmployment}
                                 onChange={(e) => updateUserInfo('dateOfEmployment', e.target.value)}/>
                         </div>
                     </div>
                     <div className="flex items-center justify-between gap-2 ">
                         <div className="w-1/2 flex flex-col gap-2">
-                            <label htmlFor="profilePic">
-                                <p>Profile picture</p>
+                            <label htmlFor="profilePic"
+                                className="px-4 cursor-pointer py-2 rounded-2xl bg-blue-400">
+                                <p>Choose Profile picture</p>
                             </label>
                             {imagePreview && (
                                 <div>
@@ -169,6 +173,7 @@ export default function NewAdmin(){
                             )}
                             <input type="file" 
                                 id="profilePic"
+                                className="hidden"
                                 accept="image/*"
                                 onChange={handleImageChange}/>
                         </div>

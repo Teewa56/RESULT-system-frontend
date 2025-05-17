@@ -1,12 +1,16 @@
-# React + Vite
+RMS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a project that allows schools to automate and process school results better
 
-Currently, two official plugins are available:
+features:
+1. Resgistration of users: students, admins and users
+2. Computation of results
+3. Administrative operations 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+it is designed to be used from the begining of the school operations meaning all students that are registered must be 100 level students and also prooper chacking of the users information before creating a user to prevent issues
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+running backend: nodemon or node server.js
+rennuing client: npm run dev
+
+the courses for every level, department and semster is custom stored in a file to reduce fetching from the backend evrytime and consedering the size of the data base

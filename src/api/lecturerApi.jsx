@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiURL = import.meta.env.DEPLOYED_BACKEND_URL || 'http://localhost:5000/api' ;
+const apiURL = import.meta.env.DEPLOYED_BACKEND_URL || `http://localhost:5000/api` ;
 const lecturerApi = axios.create({
     baseURL: apiURL,
     withCredentials: true,
@@ -10,23 +10,32 @@ const lecturerApi = axios.create({
     },
 });
 
-export const signInLecturer = async(data) => 
-    lecturerApi.post('/lecturer/signIn', data)
-export const logoutLecturer = async() =>
-    lecturerApi.post('/lecturer/logout')
-export const lecturerProfile = async(id) => 
-    lecturerApi.get(`/lecturer/profile/${id}`, {params: {id}})
-export const getCoursesTaking = async(courseCode) => 
-    lecturerApi.get(`/lecturer/courses-taking/${courseCode}`, {params: {courseCode}})
-export const getCourse = async(courseCode) => 
-    lecturerApi.get(`/lecturer/courses-taking/${courseCode}`, {params : {courseId}})
-export const getRegisteredStudents = async(courseCode) =>
-    lecturerApi.get(`/lecturer/registered-students/${courseCode}`)
-export const getCourseResult = async(courseCode, lecturerId) => 
-    lecturerApi.get(`/lecturer/results/${lecturerId}`, {params: {lecturerId}}, courseCode)
-export const editResult = async(lecturerId, data) => 
-    lecturerApi.put(`/lecturer/result/${lecturerId}`, data)
-export const uploadResult = async(lecturerId, results) => 
-    lecturerApi.post(`/lecturer/result/${lecturerId}`, results)
+export const signInLecturer = async(data) => {
+    return lecturerApi.post('/lecturer/signIn', data)
+}
+export const logoutLecturer = async() => {
+    return lecturerApi.post('/lecturer/logout')
+}
+export const lecturerProfile = async(lecturerId) => {
+    return lecturerApi.get(`/lecturer/profile/${lecturerId}`)
+}
+export const getCoursesTaking = async(lecturerId) => {
+    return lecturerApi.get(`/lecturer/courses-taking/${lecturerId}`)
+}
+export const getCourse = async(courseCode) => {
+    return lecturerApi.get(`/lecturer/course-taking/${courseCode}`)
+}
+export const getRegisteredStudents = async(courseCode) => {
+    return lecturerApi.get(`/lecturer/registered-students/${courseCode}`)
+}
+export const getCourseResult = async (courseCode, lecturerId) => {
+    return lecturerApi.get(`/lecturer/results/${lecturerId}?courseCode=${courseCode}`);
+}
+export const editResult = async(lecturerId, data) => {
+    return lecturerApi.put(`/lecturer/result/${lecturerId}`, data)
+}
+export const uploadResult = async(lecturerId, data) => {
+    return lecturerApi.post(`/lecturer/result/${lecturerId}`, data)
+}
 
 export default lecturerApi;

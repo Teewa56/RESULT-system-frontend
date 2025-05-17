@@ -10,21 +10,28 @@ const studentApi = axios.create({
     },
 });
 
-export const signInStudent = async(data) => 
-    studentApi.post(`/student/signIn`, data);
-export const logoutStudent = async() =>
-    studentApi.post('/student/logout')
-export const studentProfile = async(id) => 
-    studentApi.get(`/student/profile/${id}`, {params: {id}})
-export const registeredCourses = async(id) => 
-    studentApi.get(`/student/registeredCourses/${id}`, {params: {id}})
-export const carryOverCourses = async(id) => 
-    studentApi.get(`/student/carryOverCourses/${id}`)
-export const allResults  = async(id) => 
-    studentApi.get(`/student/results/${id}`, {params: {id}})
-export const getResult = async(id, data) => 
-    studentApi.get(`/student/result/${id}`, {params: {id}}, data)
-export const getGpa = async(id, data) => 
-    studentApi.get(`/student/gpa/${id}`, {params: {id}}, data)
-
+export const signInStudent = async(data) => {
+    return studentApi.post(`/student/signIn`, data);
+}
+export const logoutStudent = async() => {
+    return studentApi.post('/student/logout')
+}
+export const studentProfile = async(id) => {
+    return studentApi.get(`/student/profile/${id}`)
+}
+export const registeredCourses = async(id) => {
+    return studentApi.get(`/student/profile/registered-courses/${id}`)
+}
+export const carryOverCourses = async(id) => {
+    return studentApi.get(`/student/carryOverCourses/${id}`)
+}
+export const allResults  = async(id) => {
+    return studentApi.get(`/student/results/${id}`)
+}
+export const getResult = async(id, data) => {
+    return studentApi.get(`/student/result/${id}`, data)
+}
+export const getGpa = async(id, data) => {
+    return studentApi.get(`/student/gpa/${id}`, data)
+}
 export default studentApi;

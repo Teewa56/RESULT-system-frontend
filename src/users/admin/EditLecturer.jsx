@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom'
 import Toast from '../../components/Toast'
 import Loading from '../../components/Loaidng'
 import { useNavigate } from "react-router-dom";
+import handleApiError from "../../utils/HandleAPIERROR";
 
 export default function EditLecturer(){
     const [userInfo, setUserInfo] = useState({
@@ -24,6 +25,7 @@ export default function EditLecturer(){
     const [imagePreview, setImagePreview] = useState('');
     const [imageFile, setImageFile] = useState(null);
     const [error, setError] = useState(null);
+    const [searchTerm, setSearchTerm] = useState('');
     const userId = useParams().id;
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
@@ -35,8 +37,8 @@ export default function EditLecturer(){
                 const res = await lecturerProfile(params);
                 setUserInfo(res.data.lecturer);
                 setImagePreview(res.data.lecturer.profilePic || '');
-            } catch (error) {
-                setError(error.message);
+            } catch (err) {
+                handleApiError(err, setError, "An unexpected error occuured")
             } finally {
                 setLoading(false);
             }
@@ -75,9 +77,24 @@ export default function EditLecturer(){
         }
     }
 
-    function handleCoursesChange(e) {
-        const selected = Array.from(e.target.selectedOptions, option => option.value);
-        updateUserInfo('coursesTaking', selected);
+    // New function to handle checkbox selection for courses
+    function handleCourseCheckboxChange(courseCode) {
+        setUserInfo(prev => {
+            const coursesTaking = [...prev.coursesTaking];
+            
+            // If course is already selected, remove it; otherwise, add it
+            if (coursesTaking.includes(courseCode)) {
+                return {
+                    ...prev,
+                    coursesTaking: coursesTaking.filter(code => code !== courseCode)
+                };
+            } else {
+                return {
+                    ...prev,
+                    coursesTaking: [...coursesTaking, courseCode]
+                };
+            }
+        });
     }
 
     async function handleSubmit(e){
@@ -92,18 +109,33 @@ export default function EditLecturer(){
             const payload = { ...userInfo, profilePic: profilePicUrl };
             await editLecturer(payload, userId);
             navigate('/admin');
-        } catch (error) {
-            setError(error.message);
+        } catch (err) {
+            handleApiError(err, setError, "An unexpected error occuured")
         } finally {
             setLoading(false);
         }
     }
 
+    // Filter courses based on search term
+    const filteredCourses = searchTerm 
+        ? Courses.filter(course => 
+            course.code.toLowerCase().includes(searchTerm.toLowerCase()) || 
+            course.title.toLowerCase().includes(searchTerm.toLowerCase())
+          )
+        : Courses;
+
     return(
-        <div className="flex flex-col p-4 max-w-md mx-auto">
+        <div className="flex flex-col max-w-md mx-auto">
             {error && <Toast text={error} color={'red'} /> }
             {loading && <Loading />}
-            <p className="font-bold text-3xl mb-3">Edit Lecturer</p>
+            <div className="flex items-center justify-start gap-4">
+                <img 
+                    src="/images/back-button.svg" 
+                    className="md:hidden w-6 h-6" 
+                    onClick={() => navigate(-1)} 
+                />
+                <h3 className="text-3xl font-bold">Edit Lecturer</h3>
+            </div>
             <div>
                 <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
                     <label htmlFor="fullname">
@@ -214,24 +246,74 @@ export default function EditLecturer(){
                                 </select>
                         </div>
                     </div>
-                    <div className="flex items-center justify-between gap-2 ">
-                        <div className="w-1/2 flex flex-col gap-2">
-                            <label>
-                                <p>Courses</p>
-                            </label>
-                            <select 
-                                className="bg-gray-200 p-2 rounded-xl "
-                                multiple
-                                value={userInfo.coursesTaking}
-                                onChange={handleCoursesChange}>
-                                    {Courses.map((course) => (
-                                        <option value={course.code} key={course.code}>
-                                            {course.code} - {course.title}
-                                        </option>
-                                    ))}
-                            </select>
+                    
+                    {/* Course Selection with Checkboxes */}
+                    <div className="flex flex-col gap-2 mt-2">
+                        <label>
+                            <p>Select Courses</p>
+                        </label>
+                        
+                        {/* Search input for filtering courses */}
+                        <div className="relative mb-2">
+                            <input
+                                type="text"
+                                placeholder="Search courses..."
+                                className="bg-gray-200 p-2 rounded-xl w-full pl-8"
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                            />
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                className="h-5 w-5 absolute left-2 top-2.5 text-gray-500" 
+                                fill="none" 
+                                viewBox="0 0 24 24" 
+                                stroke="currentColor"
+                            >
+                                <path 
+                                    strokeLinecap="round" 
+                                    strokeLinejoin="round" 
+                                    strokeWidth={2} 
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" 
+                                />
+                            </svg>
                         </div>
-                        <div className="w-1/2 flex flex-col gap-2">
+                        
+                        {/* Selected course count */}
+                        <div className="text-sm text-gray-600 mb-1">
+                            Selected: {userInfo.coursesTaking.length} courses
+                        </div>
+                        
+                        {/* Courses list with checkboxes */}
+                        <div className="bg-gray-100 p-3 rounded-xl max-h-60 overflow-y-auto">
+                            {filteredCourses.length > 0 ? (
+                                filteredCourses.map((course) => (
+                                    <div 
+                                        key={course.code}
+                                        className="flex items-center py-1.5 px-2 hover:bg-gray-200 rounded-md transition-colors duration-150"
+                                    >
+                                        <input
+                                            type="checkbox"
+                                            id={`course-${course.code}`}
+                                            checked={userInfo.coursesTaking.includes(course.code)}
+                                            onChange={() => handleCourseCheckboxChange(course.code)}
+                                            className="w-4 h-4 mr-3"
+                                        />
+                                        <label 
+                                            htmlFor={`course-${course.code}`}
+                                            className="flex-1 cursor-pointer text-sm"
+                                        >
+                                            <span className="font-medium">{course.code}</span> - {course.title}
+                                        </label>
+                                    </div>
+                                ))
+                            ) : (
+                                <p className="text-center py-4 text-gray-500">No courses match your search</p>
+                            )}
+                        </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between gap-2 mt-2">
+                        <div className="w-full flex flex-col gap-2">
                             <label>
                                 <p>Department</p>
                             </label>
@@ -246,7 +328,7 @@ export default function EditLecturer(){
                             </select>
                         </div>
                     </div>
-                    <button className="border-2 w-fit mx-auto px-4 py-2 rounded-2xl">
+                    <button className="border-2 w-fit mx-auto px-4 py-2 rounded-2xl bg-blue-500 text-white hover:bg-blue-600 mt-3">
                         <p>Edit Profile</p>
                     </button>
                 </form>
