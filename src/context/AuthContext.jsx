@@ -86,6 +86,7 @@ const AuthProvider = ({ children }) => {
                 console.error("Error", err.message);
                 setError("Request failed. Please try again.");
             }
+            setIsAuth(false);
         }
     }
 
@@ -123,6 +124,7 @@ const AuthProvider = ({ children }) => {
                 console.error("Error", err.message);
                 setError("Request failed. Please try again.");
             }
+            setIsAuth(false);
         }
     }
 
@@ -176,6 +178,7 @@ const AuthProvider = ({ children }) => {
                 console.error("Error", err.message);
                 setError("Request failed. Please try again.");
             }
+            setIsAuth(false);
         }
     }
 

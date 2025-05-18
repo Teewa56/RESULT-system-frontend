@@ -29,13 +29,18 @@ export default function SignIn() {
 
     async function signInUser(e) {
         e.preventDefault(); 
-        setLoading(true);
-        const payload = {data: {...userInfo}};
-        if (userType === 'admin') await LogInadmin(payload);
-        if (userType === 'lecturer') await LogInlecturer(payload);
-        if (userType === 'student') {await LogInstudent(payload);}
-        setLoading(false);
-        navigate(`/${userType}`)
+        try {
+            setLoading(true);
+            const payload = {data: {...userInfo}};
+            if (userType === 'admin') await LogInadmin(payload);
+            if (userType === 'lecturer') await LogInlecturer(payload);
+            if (userType === 'student') {await LogInstudent(payload);}
+            setLoading(false);
+            navigate(`/${userType}`)
+        } catch (error) {
+            console.error("Error during sign-in:", error);
+            setLoading(false);
+        }
         
     }
 
@@ -70,7 +75,6 @@ export default function SignIn() {
                             id="userId"
                             type="text"
                             required
-                            pattern={userType !== 'student' ? '[A-Z]{4}/[0-9]{4}' : '[A-Z]{4}/[0-9]{2}/[0-9]{4}'}
                             placeholder={getPlaceholder(userType)}
                             value={userInfo.userId}
                             onChange={(e) => updateUserInfo('userId', e.target.value)}
@@ -94,8 +98,9 @@ export default function SignIn() {
                         </div>
                     )}
                     <button
+                        disabled={loading}
                         type="submit"
-                        className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                        className={`w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${loading ? 'opacity-50 cursor-not-allowed' : ''}}`}
                     >
                         Sign In
                     </button>
