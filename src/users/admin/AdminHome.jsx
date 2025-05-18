@@ -110,7 +110,7 @@ export default function AdminHome() {
                 <ThemeToggle />
             </div>
             <div className='flex flex-col md:flex-row items-start justify-start gap-5 w-full'>
-                <div className={`${windowWidth < 786 ? 'w-full' : 'w-1/4'} h-40 rounded-3xl shadow-lg`}>
+                <div className={`${windowWidth < 786 ? 'w-1/3' : 'w-1/4'} h-40 rounded-3xl shadow-lg`}>
                     <img
                         src={userInfo.profilePic || "/images/adminSVG.svg"}
                         alt="profile"
