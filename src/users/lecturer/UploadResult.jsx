@@ -91,8 +91,8 @@ export default function UploadResult(){
                                 <th className="border px-2 py-1">S/N</th>
                                 <th className="border px-2 py-1">Student Name</th>
                                 <th className="border px-2 py-1">Matric No</th>
-                                <th className="border px-2 py-1">Test Score</th>
-                                <th className="border px-2 py-1">Exam Score</th>
+                                <th className="border px-2 py-1">Test Score(40)</th>
+                                <th className="border px-2 py-1">Exam Score(60)</th>
                             </tr>
                         </thead>
                         <tbody>
