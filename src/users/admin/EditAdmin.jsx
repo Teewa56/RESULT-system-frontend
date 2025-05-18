@@ -82,7 +82,7 @@ export default function EditAdmin(){
             if (imageFile) {
                 profilePicUrl = await uploadToCloudinary(imageFile);
             }
-            const payload = { ...userInfo, profilePic: profilePicUrl };
+            const payload = {data: {...userInfo, profilePic: profilePicUrl }};
             await editAdmin(adminId, payload);
             setSuccess("Admin updated successfully!");
             navigate('/admin')

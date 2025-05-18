@@ -147,7 +147,7 @@ export default function Profiles() {
                     <div className="mt-6">
                         <p className="font-bold text-2xl">{["", "Students", "Lecturers", "Admins"][current]}</p>
                         {results.map((result) => (
-                            <>
+                            
                             <Link 
                                 to={`/admin/profile/${result._id}`} 
                                 key={result._id}
@@ -158,7 +158,7 @@ export default function Profiles() {
                                     <p>{result.adminId || result.matricNo || result.registrationId}</p>
                                 </div>
                             </Link>
-                            </>
+                            
                         ))}
                     </div>
                 </div>

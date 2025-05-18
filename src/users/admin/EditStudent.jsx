@@ -77,7 +77,7 @@ export default function EditStudent(){
             if (imageFile) {
                 profilePicUrl = await uploadToCloudinary(imageFile);
             }
-            const payload = { ...userInfo, profilePic: profilePicUrl };
+            const payload = { studentInfo: { ...userInfo, profilePic: profilePicUrl }};
             await editStudent(payload);
             navigate('/admin');
         } catch (err) {

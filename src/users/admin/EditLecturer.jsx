@@ -81,7 +81,6 @@ export default function EditLecturer(){
         setUserInfo(prev => {
             const coursesTaking = [...prev.coursesTaking];
             
-            // If course is already selected, remove it; otherwise, add it
             if (coursesTaking.includes(courseCode)) {
                 return {
                     ...prev,
@@ -105,7 +104,7 @@ export default function EditLecturer(){
             if (imageFile) {
                 profilePicUrl = await uploadToCloudinary(imageFile);
             }
-            const payload = { ...userInfo, profilePic: profilePicUrl };
+            const payload = { lecturerInfo: { ...userInfo, profilePic: profilePicUrl }};
             await editLecturer(payload, userId);
             navigate('/admin');
         } catch (err) {
