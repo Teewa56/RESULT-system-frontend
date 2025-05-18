@@ -38,7 +38,6 @@ export default function ResultL(){
         setError(null);
         try {
             const res = await getCourseResult(courseCode, lecturerId);
-            console.log('res 2: ', res)
             setResults(res.data.results || []);
         } catch (err) {
             if (err.response) {
@@ -101,11 +100,12 @@ export default function ResultL(){
                     {resultLoading && <Loading />}
                     {results.length === 0 && !resultLoading && <div>No results found for this course.</div>}
                     {results.length > 0 && (
-                        <div className="overflow-x-auto" ref={printRef}>
+                        <div className="overflow-x-auto" >
+                            <div ref={printRef}>
                             <table className="min-w-full border">
                                 <thead>
                                     <tr>
-                                        <th className="border px-2 py-1">#</th>
+                                        <th className="border px-2 py-1">S/N</th>
                                         <th className="border px-2 py-1">Student Name</th>
                                         <th className="border px-2 py-1">Matric No</th>
                                         <th className="border px-2 py-1">Score</th>
@@ -114,16 +114,18 @@ export default function ResultL(){
                                 </thead>
                                 <tbody>
                                     {results.map((res, idx) => (
-                                        <tr key={res.studentId}>
+                                        <tr key={res._id}>
                                             <td className="border px-2 py-1">{idx + 1}</td>
-                                            <td className="border px-2 py-1">{res.fullName || "-"}</td>
-                                            <td className="border px-2 py-1">{res.matricNo || "-"}</td>
-                                            <td className="border px-2 py-1">{res.score}</td>
+                                            <td className="border px-2 py-1">{res.student.fullName || "-"}</td>
+                                            <td className="border px-2 py-1">{res.student.matricNo || "-"}</td>
+                                            <td className="border px-2 py-1">{res.testScore + res.examScore}</td>
                                             <td className="border px-2 py-1">{res.grade}</td>
                                         </tr>
                                     ))}
                                 </tbody>
                             </table>
+                            </div>
+                            <p style={{fontSize: '15px'}} className="text-red-300">Note: Grade remains unchanged until results are released</p>
                             <Link
                                 to={`/lecturer/editResults/${selectedCourse}`}
                                 className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 print-hide"

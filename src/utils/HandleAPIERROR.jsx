@@ -7,7 +7,9 @@ export default function handleApiError(err, setError, fallbackMsg) {
 
         if (status === 404) {
             setError("No results found");
-        } else if (status === 500) {
+        }else if (status === 403){
+            setError("This acation cannot be performed");
+        }else if (status === 500) {
             setError("Server error. Please try again later.");
         } else if (err.response.data && err.response.data.message) {
             setError(err.response.data.message);

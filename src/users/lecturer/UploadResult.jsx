@@ -57,11 +57,16 @@ export default function UploadResult(){
                 courseCode: courseId,
                 testScore: Number(scores[stu._id]?.test) || 0,
                 examScore: Number(scores[stu._id]?.exam) || 0
-            }));
-            await uploadResult(lecturerId, { results });
+            }));                        
+            await uploadResult(lecturerId, { data: { results } });
             navigate('/lecturer');
         } catch (err) {
-            handleApiError(err, setError, "An unexpected error occuured")
+            console.error('Error details:', err);
+            if (err.response && err.response.data) {
+                setError(err.response.data.message || "Failed to upload results");
+            } else {
+                handleApiError(err, setError, "An unexpected error occurred");
+            }
         } finally {
             setLoading(false);
         }

@@ -13,6 +13,7 @@ export default function CoursesL(){
     const [courseInfo, setCourseInfo] = useState({});
     const [courseLoading, setCourseLoading] = useState(false);
     const userId = localStorage.getItem('userId');
+    const [resulAlreadyUploaded, setResultAlreadyUploaded] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -38,6 +39,7 @@ export default function CoursesL(){
         try {
             const res = await getCourse(courseCode);
             setCourseInfo(res.data.course);
+            setResultAlreadyUploaded(res.data.uploaded);
         } catch (err) {
             handleApiError(err, setError, "An unexpected error occuured")
         } finally {
@@ -84,18 +86,19 @@ export default function CoursesL(){
                                             <p>{courseInfo['Course-Units']}</p>
                                         </div>
                                         <div className="flex items-center justify-around">
+                                            { !resulAlreadyUploaded ? 
                                             <Link
                                                 to={`/lecturer/uploadresult/${courseInfo['Course-Code']}`}
                                                 className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
                                             >
                                                 Compute Result
-                                            </Link>
+                                            </Link>:
                                             <Link
                                                 to={`/lecturer/editResults/${courseInfo['Course-Code']}`}
                                                 className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
                                             >
                                                 Edit Result
-                                            </Link>
+                                            </Link>}
                                         </div>
                                     </div>
                                 )}

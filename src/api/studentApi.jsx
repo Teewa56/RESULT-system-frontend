@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const deployURL = 'https://result-system-backend.onrender.com/api';
 const localURL = 'http://localhost:5000/api';
-const apiURL = deployURL || localURL;
+const apiURL = localURL || deployURL;
 
 const studentApi = axios.create({
     baseURL: apiURL,
