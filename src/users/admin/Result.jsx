@@ -33,6 +33,7 @@ const Result = () => {
         });
         const fetchedResults = res.data.results;
         setResults(fetchedResults);
+        console.log(fetchedResults);
         if (fetchedResults.length === 0) {
           setError("No results found.");
         }
