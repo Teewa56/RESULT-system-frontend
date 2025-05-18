@@ -35,6 +35,8 @@ const AuthProvider = ({ children }) => {
                 console.log("HTTP Status:", status);
                 if (status === 404) {
                     setError("User Does not exist, please reach out to admin");
+                }else if (status === 401) {
+                    setError("Invalid credentials. Please check your username and id.");
                 } else if (status === 500) {
                     setError("Server error. Please try again later.");
                 } else if (err.response.data && err.response.data.message) {
@@ -68,6 +70,8 @@ const AuthProvider = ({ children }) => {
                 console.log("HTTP Status:", status);
                 if (status === 404) {
                     setError("User Does not exist, please reach out to admin");
+                }else if (status === 401) {
+                    setError("Invalid credentials. Please check your username and id.");
                 } else if (status === 500) {
                     setError("Server error. Please try again later.");
                 } else if (err.response.data && err.response.data.message) {
@@ -101,7 +105,11 @@ const AuthProvider = ({ children }) => {
                 console.log("HTTP Status:", status);
                 if (status === 404) {
                     setError("User Does not exist, please reach out to admin");
-                } else if (status === 500) {
+                } else if (status === 401) {
+                    setError("Invalid credentials. Please check your username and id.");
+                } else if (status === 402) {
+                    setError("Wrong Password.");
+                }else if (status === 500) {
                     setError("Server error. Please try again later.");
                 } else if (err.response.data && err.response.data.message) {
                     setError(err.response.data.message);

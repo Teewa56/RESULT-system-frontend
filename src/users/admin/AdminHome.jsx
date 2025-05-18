@@ -121,7 +121,7 @@ export default function AdminHome() {
                     />
                 </div>
                 <div className='w-full md:w-3/4'>
-                    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-1'>
+                    <div className='grid grid-cols-2  md:grid-cols-3 gap-4 mt-1'>
                         <div className='flex flex-col items-start'>
                             <h3 className='font-bold'>Full Name</h3>
                             <p>{userInfo.fullName || "-"}</p>

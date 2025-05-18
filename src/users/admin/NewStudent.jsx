@@ -33,7 +33,7 @@ export default function NewStudent() {
   function updateUserInfo(field, value) {
     setUserInfo((prev) => ({
       ...prev,
-      [field]: value,
+      [field]: value.trim(),
     }));
   }
 
@@ -100,6 +100,7 @@ export default function NewStudent() {
         <input
           type="text"
           id="fullName"
+          required
           className="bg-gray-200 p-2 rounded-xl"
           placeholder="Enter your full name"
           value={userInfo.fullName}
@@ -115,6 +116,7 @@ export default function NewStudent() {
             <input
               type="email"
               id="email"
+              required
               className="bg-gray-200 p-2 rounded-xl"
               placeholder="Enter your email"
               value={userInfo.email}
@@ -126,6 +128,7 @@ export default function NewStudent() {
               <p>Gender</p>
             </label>
             <select
+              required
               id="gender"
               className="bg-gray-200 p-2 rounded-xl"
               value={userInfo.gender}
@@ -145,6 +148,7 @@ export default function NewStudent() {
               <p>Phone Number</p>
             </label>
             <input
+              required
               type="text"
               id="phone"
               maxLength={11}
@@ -159,8 +163,10 @@ export default function NewStudent() {
               <p>Matric Number</p>
             </label>
             <input
+              required
               type="text"
               id="matricNo"
+              pattern="/^[A-Za-z]{3}/\d{2}/\d{4}$/"
               maxLength={15}
               className="bg-gray-200 p-2 rounded-xl"
               placeholder="CSC/23/XXXX"
@@ -177,6 +183,8 @@ export default function NewStudent() {
               <p>Date of Birth</p>
             </label>
             <input
+              required
+              pattern="\d{2}/\d{2}/\d{4}"
               type="text"
               id="dateOfBirth"
               className="bg-gray-200 p-2 rounded-xl"
@@ -190,6 +198,8 @@ export default function NewStudent() {
               <p>Year of Admission</p>
             </label>
             <input
+              required
+              pattern="\d{4}"
               type="text"
               id="yearOfAdmission"
               className="bg-gray-200 p-2 rounded-xl"
@@ -207,10 +217,12 @@ export default function NewStudent() {
                     <p>Year of Graduation</p>
                 </label>
                 <input
+                    required
+                    pattern="\d{4}"
                     type="text"
                     id="yearOfGraduation"
                     className="bg-gray-200 p-2 rounded-xl"
-                    placeholder="2026"
+                    placeholder="e.g 2026"
                     maxLength={4}
                     value={userInfo.yearOfGraduation}
                     onChange={(e) => updateUserInfo("yearOfGraduation", e.target.value)}
@@ -220,8 +232,9 @@ export default function NewStudent() {
                 <label htmlFor="department">
                     <p>Department</p>
                 </label>
-                <select 
-                className="bg-gray-200 rounded-2xl p-2 "
+                <select
+                  required 
+                  className="bg-gray-200 rounded-2xl p-2 "
                   value={userInfo.department}
                   onChange={(e) => updateUserInfo('department', e.target.value)}>
                     <option value="">Select Department</option>
@@ -247,6 +260,7 @@ export default function NewStudent() {
               />
             )}
             <input
+              required
               type="file"
               className="hidden"
               id="profilePic"
@@ -259,6 +273,7 @@ export default function NewStudent() {
               <p>State of Origin</p>
             </label>
             <select
+              required
               id="stateOfOrigin"
               className="bg-gray-200 p-2 rounded-xl"
               value={userInfo.stateOfOrigin}
@@ -281,6 +296,7 @@ export default function NewStudent() {
               <p>Current Level</p>
             </label>
             <input
+              required
               type="text"
               id="currentLevel"
               className="bg-gray-200 p-2 rounded-xl"
@@ -294,6 +310,7 @@ export default function NewStudent() {
               <p>Current Semester</p>
             </label>
             <select
+              required
               id="currentSemester"
               className="bg-gray-200 p-2 rounded-xl"
               value={userInfo.currentSemester}
@@ -312,6 +329,9 @@ export default function NewStudent() {
             <p>Current Session</p>
           </label>
           <input
+            required
+            pattern="\d{4}/\d{4}"
+            maxLength={9}
             type="text"
             id="currentSession"
             className="bg-gray-200 p-2 rounded-xl"

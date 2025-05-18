@@ -17,7 +17,7 @@ export default function SignIn() {
     function updateUserInfo(field, value) {
         setUserInfo((prev) => ({
             ...prev,
-            [field]: value,
+            [field]: value.trim(),
         }));
     }
 
@@ -55,6 +55,7 @@ export default function SignIn() {
                         <input
                             id="fullName"
                             type="text"
+                            required
                             placeholder="Enter your full name"
                             value={userInfo.fullName}
                             onChange={(e) => updateUserInfo('fullName', e.target.value)}
@@ -68,6 +69,8 @@ export default function SignIn() {
                         <input
                             id="userId"
                             type="text"
+                            required
+                            pattern={userType !== 'student' ? '[A-Z]{4}/[0-9]{4}' : '[A-Z]{4}/[0-9]{2}/[0-9]{4}'}
                             placeholder={getPlaceholder(userType)}
                             value={userInfo.userId}
                             onChange={(e) => updateUserInfo('userId', e.target.value)}
@@ -82,6 +85,7 @@ export default function SignIn() {
                             <input
                                 id="adminPassword"
                                 type="password"
+                                required
                                 placeholder="Enter your admin password"
                                 value={userInfo.adminPassword}
                                 onChange={(e) => updateUserInfo('adminPassword', e.target.value)}
