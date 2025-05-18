@@ -226,7 +226,7 @@ export default function AdminHome() {
                             </Link>
                             <button
                                 onClick={handleLogout}
-                                className="w-full bg-red-50 text-red-600 dark:bg-red-900 dark:text-red-100 rounded-2xl p-4 shadow-md hover:cursor-pointer hover:bg-red-100 dark:hover:bg-red-800 transition-all duration-200 ease-in-out">
+                                className="w-full bg-red-500 text-red-600 dark:bg-red-900 dark:text-red-100 rounded-2xl p-4 shadow-md hover:cursor-pointer hover:bg-red-100 dark:hover:bg-red-800 transition-all duration-200 ease-in-out">
                                 <p>Logout</p>
                             </button>
                         </>
