@@ -64,12 +64,26 @@ const App = () => {
     return children;
   }
 
+  if(navigator.onLine) {
+    return (
+      <div className="flex items-center justify-center w-full h-screen">
+        <div>
+          <img 
+            src="/images/error.svg" 
+            alt="Error image" 
+            className='w-10 h-10'/>
+          <h1 className="text-2xl font-bold">You are offline, kindly connect to the internet</h1>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <BrowserRouter>
       <ErrorBoundary>
         <div className="flex items-center justify-between w-full h-screen">
           {isAuth && isWideScreen && <Navbar />}
-          <div className={`p-4 ${isAuth && isWideScreen ? 'w-3/4' : 'w-full'} md:m-0 h-full`}>
+          <div className={`p-4 ${isAuth && isWideScreen ? 'w-3/4' : 'w-full'} md:m-0 h-screen`}>
             <Routes>
               <Route path="/" element={isAuth ? <Navigate to={`/${userType}`} replace /> : <Landing />} />
               <Route path="/signin" element={<SignIn />} />

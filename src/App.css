@@ -7,6 +7,6 @@
     color: black;
 }
 .dark{
-    background: radial-gradient(circle at center,#06141b,#040b1d,#000413 );
+    background: rgb(9, 19, 32);
     color: white;
 }
