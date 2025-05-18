@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiURL = import.meta.env.DEPLOYED_BACKEND_URL || `http://localhost:5000/api` ;
+const apiURL = import.meta.env.VITE_DEPLOYED_BACKEND_URL || `http://localhost:5000/api` ;
 const lecturerApi = axios.create({
     baseURL: apiURL,
     withCredentials: true,
