@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import Toast from '../components/Toast';
 import Loading from '../components/Loaidng';
@@ -11,9 +11,14 @@ export default function SignIn() {
         userId: '', 
         adminPassword: '',
     });
-    const { LogInstudent, LogInlecturer, LogInadmin, error } = useContext(AuthContext);
+    const { LogInstudent, LogInlecturer, LogInadmin, error, isAuth } = useContext(AuthContext);
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
+    useEffect(() => {
+        if (isAuth && userType) {
+            navigate(`/${userType}`);
+        }
+    }, [isAuth, userType, navigate]);
     function updateUserInfo(field, value) {
         setUserInfo((prev) => ({
             ...prev,
@@ -36,7 +41,6 @@ export default function SignIn() {
             if (userType === 'lecturer') await LogInlecturer(payload);
             if (userType === 'student') {await LogInstudent(payload);}
             setLoading(false);
-            navigate(`/${userType}`)
         } catch (error) {
             console.error("Error during sign-in:", error);
             setLoading(false);
