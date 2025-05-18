@@ -166,7 +166,6 @@ export default function NewStudent() {
               required
               type="text"
               id="matricNo"
-              pattern="/^[A-Za-z]{3}/\d{2}/\d{4}$/"
               maxLength={15}
               className="bg-gray-200 p-2 rounded-xl"
               placeholder="CSC/23/XXXX"
