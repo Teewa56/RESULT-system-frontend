@@ -62,7 +62,10 @@ export default function CoursesL(){
                         className={`p-4 border rounded cursor-pointer hover:bg-gray-100 ${selectedCourse === course['Course-Code'] ? "bg-gray-50" : ""}`}
                         onClick={() => handleCourseClick(course['Course-Code'])}
                     >
-                        <div className="font-semibold">{course['Course-Code']}</div>
+                        <div className="flex items-center justify-between">
+                            <p className="font-semibold">{course['Course-Code']}</p>
+                            <img src="/images/dropdown.svg" alt="" className="w-8 h-8"/>
+                        </div>
                         {selectedCourse === course['Course-Code'] && (
                             <div className="mt-2">
                                 {courseLoading && <Loading />}
