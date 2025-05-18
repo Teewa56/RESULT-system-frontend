@@ -63,58 +63,19 @@ export default function ResultL(){
     }
 
     function handlePrint() {
-        const printWindow = window.open('', '_blank');
-        if (!printWindow) {
-            setError("Please allow popups to print the results");
-            return;
-        }
-        const contentToPrint = printRef.current;
-        printWindow.document.write(`
-            <!DOCTYPE html>
-            <html>
-            <head>
-                <title>Course Result - ${selectedCourse}</title>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <style>
-                    body { font-family: Arial, sans-serif; padding: 20px; }
-                    h2 { text-align: center; margin-bottom: 20px; }
-                    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
-                    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-                    th { background-color: #f2f2f2; }
-                    @media print {
-                        button { display: none !important; }
-                    }
-                    @media screen and (max-width: 600px) {
-                        table { font-size: 12px; }
-                        th, td { padding: 5px; }
-                    }
-                </style>
-            </head>
-            <body>
-                <h2>Result for ${selectedCourse}</h2>
-                ${contentToPrint.innerHTML}
-                <div style="margin-top: 20px; text-align: center;">
-                    <button onclick="window.print(); window.close();" style="padding: 10px 20px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">
-                        Print
-                    </button>
-                </div>
-            </body>
-            </html>
-        `);
-        
-        printWindow.document.close();
+        window.print();
     }
 
     return(
         <div className="max-w-md mx-auto">
-            <div className="flex items-center justify-start gap-4 mb-4">
+            <div className="flex items-center justify-start gap-4 mb-4 print:hidden">
                 <img src="/images/back-button.svg" className="md:hidden w-8 h-8" 
                     onClick={() => window.history.back()}/>
                 <h3 className="text-2xl font-bold">Course Results Preview</h3>
             </div>
             {loading && <Loading />}
             {error && <Toast text={error} color="red" />}
-            <div className="space-y-4 mb-6">
+            <div className="space-y-4 mb-6 print:hidden">
                 {courses.length === 0 && !loading && <div>No courses found.</div>}
                 {courses.map(course => (
                     <div
@@ -128,48 +89,51 @@ export default function ResultL(){
             </div>
             {selectedCourse && (
                 <div>
-                    <h3 className="text-lg font-semibold mb-2">
+                    <h3 className="text-lg font-semibold mb-2 print:hidden">
                         Results for {selectedCourse}
                     </h3>
                     {resultLoading && <Loading />}
                     {results.length === 0 && !resultLoading && <div>No results found for this course.</div>}
                     {results.length > 0 && (
-                        <div className="overflow-x-auto py-5">
-                            <div ref={printRef}>
-                            <table className="min-w-full border">
-                                <thead>
-                                    <tr>
-                                        <th className="border px-2 py-1">S/N</th>
-                                        <th className="border px-2 py-1">Student Name</th>
-                                        <th className="border px-2 py-1">Matric No</th>
-                                        <th className="border px-2 py-1">Score</th>
-                                        <th className="border px-2 py-1">Grade</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {results.map((res, idx) => (
-                                        <tr key={res._id}>
-                                            <td className="border px-2 py-1">{idx + 1}</td>
-                                            <td className="border px-2 py-1">{res.student.fullName || "-"}</td>
-                                            <td className="border px-2 py-1">{res.student.matricNo || "-"}</td>
-                                            <td className="border px-2 py-1">{res.testScore + res.examScore}</td>
-                                            <td className="border px-2 py-1">{res.grade}</td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
+                        <div className="overflow-x-auto">
+                            <div className="print-content">
+                                <h2 className="text-center font-bold mb-4 hidden print:block">Results for {selectedCourse}</h2>
+                                <div ref={printRef}>
+                                    <table className="min-w-full border">
+                                        <thead>
+                                            <tr>
+                                                <th className="border px-2 py-1">S/N</th>
+                                                <th className="border px-2 py-1">Student Name</th>
+                                                <th className="border px-2 py-1">Matric No</th>
+                                                <th className="border px-2 py-1">Score</th>
+                                                <th className="border px-2 py-1">Grade</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {results.map((res, idx) => (
+                                                <tr key={res._id}>
+                                                    <td className="border px-2 py-1">{idx + 1}</td>
+                                                    <td className="border px-2 py-1">{res.student.fullName || "-"}</td>
+                                                    <td className="border px-2 py-1">{res.student.matricNo || "-"}</td>
+                                                    <td className="border px-2 py-1">{res.testScore + res.examScore}</td>
+                                                    <td className="border px-2 py-1">{res.grade}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                    <p style={{fontSize: '15px'}} className="text-red-300 print:hidden">Note: Grade remains unchanged until results are released</p>
+                                </div>
                             </div>
-                            <p style={{fontSize: '15px'}} className="text-red-300">Note: Grade remains unchanged until results are released</p>
                             <Link
                                 to={`/lecturer/editResults/${selectedCourse}`}
-                                className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 print-hide"
+                                className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 print:hidden"
                             >
                                 Edit Result
                             </Link>
                             <button
                                 type="button"
                                 onClick={handlePrint}
-                                className="ml-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 print-hide"
+                                className="ml-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 print:hidden"
                             >
                                 Print result
                             </button>
@@ -177,6 +141,42 @@ export default function ResultL(){
                     )}
                 </div>
             )}
+            <style>{`
+                @media print {
+                    @page {
+                        size: portrait;
+                        margin: 1cm;
+                    }
+                    
+                    body * {
+                        visibility: hidden;
+                    }
+                    
+                    .print-content,
+                    .print-content * {
+                        visibility: visible;
+                    }
+                    
+                    .print-content {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        padding: 15px;
+                    }
+                    
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                    }
+                    
+                    th, td {
+                        border: 1px solid #000;
+                        padding: 8px;
+                        text-align: left;
+                    }
+                }
+            `}</style>
         </div>
     )
 }
