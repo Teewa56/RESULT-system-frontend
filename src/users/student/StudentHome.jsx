@@ -172,7 +172,7 @@ export default function StudentHome() {
             )}
             
             {isMobile && (
-                <div className="w-full mb-5 mt-4">
+                <div className="w-full grid grid-cols-1 sm:grid-cols-2 mb-5 mt-4">
                     <Link to="/student/registered-courses"
                         className="flex justify-start shadow-md rounded-2xl p-2 items-center gap-2 hover:opacity-0.8 transition-all duration-200 ease-in-out mb-4">
                         <img src="/images/courses.svg" alt="courses"
@@ -193,7 +193,7 @@ export default function StudentHome() {
                     </Link>
                     <button
                         onClick={handleLogout}
-                        className="w-full font-bold rounded-2xl p-4 bg-red-500 shadow-lg hover:cursor-pointer hover:opacity-0.8 transition-all duration-200 ease-in-out">
+                        className="w-full font-semibold rounded-xl p-4 bg-red-300 shadow-lg hover:cursor-pointer hover:opacity-0.8 transition-all duration-200 ease-in-out">
                         <p>Logout</p>
                     </button>
                 </div>

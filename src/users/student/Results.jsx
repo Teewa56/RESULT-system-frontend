@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { allResults } from "../../api/studentApi";
 import Loading from '../../components/Loaidng';
 import Toast from '../../components/Toast';
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import handleApiError from "../../utils/HandleAPIERROR";
 
 export default function Results() {
@@ -10,7 +10,6 @@ export default function Results() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const userId = localStorage.getItem('userId');
-    const navigate = useNavigate();
     useEffect(() => {
         async function fetchResults() {
             setLoading(true);
@@ -30,7 +29,7 @@ export default function Results() {
         <div className="max-w-md mx-auto">
             <div className="flex items-center justify-start gap-4 mb-2">
                 <img src="/images/back-button.svg" className="md:hidden w-8 h-8" 
-                    onClick={() => navigate(-1)}/>
+                    onClick={() => window.history.back()}/>
                 <h2 className="text-2xl font-bold">All Results</h2>
             </div>
             {loading && <Loading />}

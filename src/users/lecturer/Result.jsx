@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react"
 import Toast from '../../components/Toast'
 import Loading from '../../components/Loaidng'
 import { getCourseResult, getCoursesTaking } from "../../api/lecturerApi"
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export default function ResultL(){
     const lecturerId = localStorage.getItem('userId');
@@ -13,7 +13,6 @@ export default function ResultL(){
     const [results, setResults] = useState([]);
     const [resultLoading, setResultLoading] = useState(false);
     const printRef = useRef();
-    const navigate = useNavigate();
 
     useEffect(() => {
         async function fetchCourses() {
@@ -77,7 +76,7 @@ export default function ResultL(){
         <div className="max-w-md mx-auto">
             <div className="flex items-center justify-start gap-4 mb-4">
                 <img src="/images/back-button.svg" className="md:hidden w-8 h-8" 
-                    onClick={() => navigate(-1)}/>
+                    onClick={() => window.history.back()}/>
                 <h3 className="text-2xl font-bold">Course Results Preview</h3>
             </div>
             {loading && <Loading />}
