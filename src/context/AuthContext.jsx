@@ -152,6 +152,7 @@ const AuthProvider = ({ children }) => {
                 localStorage.removeItem('token');
                 localStorage.removeItem('userType');
                 localStorage.removeItem('theme');
+                localStorage.removeItem('current');
                 setIsAuth(false);
             }
             window.location.href = '/';
