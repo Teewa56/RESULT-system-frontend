@@ -100,7 +100,6 @@ export default function NewStudent() {
         <input
           type="text"
           id="fullName"
-          required
           className="bg-gray-200 p-2 rounded-xl"
           placeholder="Enter your full name"
           value={userInfo.fullName}
@@ -116,7 +115,6 @@ export default function NewStudent() {
             <input
               type="email"
               id="email"
-              required
               className="bg-gray-200 p-2 rounded-xl"
               placeholder="Enter your email"
               value={userInfo.email}
@@ -128,15 +126,14 @@ export default function NewStudent() {
               <p>Gender</p>
             </label>
             <select
-              required
               id="gender"
               className="bg-gray-200 p-2 rounded-xl"
               value={userInfo.gender}
               onChange={(e) => updateUserInfo("gender", e.target.value)}
             >
               <option value="">Select Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
             </select>
           </div>
         </div>
@@ -148,7 +145,6 @@ export default function NewStudent() {
               <p>Phone Number</p>
             </label>
             <input
-              required
               type="text"
               id="phone"
               maxLength={11}
@@ -163,7 +159,6 @@ export default function NewStudent() {
               <p>Matric Number</p>
             </label>
             <input
-              required
               type="text"
               id="matricNo"
               maxLength={15}
@@ -182,8 +177,6 @@ export default function NewStudent() {
               <p>Date of Birth</p>
             </label>
             <input
-              required
-              pattern="\d{2}/\d{2}/\d{4}"
               type="text"
               id="dateOfBirth"
               className="bg-gray-200 p-2 rounded-xl"
@@ -197,8 +190,6 @@ export default function NewStudent() {
               <p>Year of Admission</p>
             </label>
             <input
-              required
-              pattern="\d{4}"
               type="text"
               id="yearOfAdmission"
               className="bg-gray-200 p-2 rounded-xl"
@@ -216,8 +207,6 @@ export default function NewStudent() {
                     <p>Year of Graduation</p>
                 </label>
                 <input
-                    required
-                    pattern="\d{4}"
                     type="text"
                     id="yearOfGraduation"
                     className="bg-gray-200 p-2 rounded-xl"
@@ -232,7 +221,6 @@ export default function NewStudent() {
                     <p>Department</p>
                 </label>
                 <select
-                  required 
                   className="bg-gray-200 rounded-2xl p-2 "
                   value={userInfo.department}
                   onChange={(e) => updateUserInfo('department', e.target.value)}>
@@ -272,7 +260,6 @@ export default function NewStudent() {
               <p>State of Origin</p>
             </label>
             <select
-              required
               id="stateOfOrigin"
               className="bg-gray-200 p-2 rounded-xl"
               value={userInfo.stateOfOrigin}
@@ -295,7 +282,6 @@ export default function NewStudent() {
               <p>Current Level</p>
             </label>
             <input
-              required
               type="text"
               id="currentLevel"
               className="bg-gray-200 p-2 rounded-xl"
@@ -309,7 +295,6 @@ export default function NewStudent() {
               <p>Current Semester</p>
             </label>
             <select
-              required
               id="currentSemester"
               className="bg-gray-200 p-2 rounded-xl"
               value={userInfo.currentSemester}
@@ -328,8 +313,6 @@ export default function NewStudent() {
             <p>Current Session</p>
           </label>
           <input
-            required
-            pattern="\d{4}/\d{4}"
             maxLength={9}
             type="text"
             id="currentSession"

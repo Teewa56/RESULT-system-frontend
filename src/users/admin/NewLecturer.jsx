@@ -108,7 +108,6 @@ export default function NewLecturer(){
                         <p>Full Name</p>
                     </label>
                     <input type="text"
-                        required
                         className="bg-gray-200 p-2 rounded-xl "
                         placeholder="Enter your full name" 
                         value={userInfo.fullName}
@@ -119,7 +118,6 @@ export default function NewLecturer(){
                                 <p>Email</p>
                             </label>
                             <input type="text" 
-                                required
                                 className="bg-gray-200 p-2 rounded-xl "
                                 placeholder="Enter your email here"
                                 value={userInfo.email}
@@ -130,7 +128,6 @@ export default function NewLecturer(){
                                 <p>Gender</p>
                             </label>
                             <select 
-                                required
                                 className="bg-gray-200 p-2 rounded-xl "
                                 value={userInfo.gender}
                                 onChange={(e) => updateUserInfo('gender', e.target.value)}>
@@ -146,7 +143,6 @@ export default function NewLecturer(){
                                 <p>Phone Number</p>
                             </label>
                             <input 
-                                required
                                 type="text" 
                                 placeholder="Enter your phone number: Without +234" 
                                 className="bg-gray-200 p-2 rounded-xl "
@@ -159,7 +155,6 @@ export default function NewLecturer(){
                                 <p>Registration ID</p>
                             </label>
                             <input 
-                                required
                                 type="text"
                                 className="bg-gray-200 p-2 rounded-xl " 
                                 placeholder="Enter iD i.e ADCB/2345"
@@ -173,7 +168,6 @@ export default function NewLecturer(){
                                 <p>Date Of Birth</p>
                             </label>
                             <input 
-                                required
                                 type="text" 
                                 className="bg-gray-200 p-2 rounded-xl "
                                 placeholder="DD/MM/YY"
@@ -185,7 +179,6 @@ export default function NewLecturer(){
                                 <p>Date Of Employment</p>
                             </label>
                             <input 
-                                required
                                 type="text" 
                                 className="bg-gray-200 p-2 rounded-xl "
                                 placeholder="DD/MM/YY"
@@ -205,7 +198,6 @@ export default function NewLecturer(){
                                 </div>
                             )}
                             <input 
-                                required
                                 type="file" 
                                 id="profilePic"
                                 accept="image/*"
@@ -216,7 +208,6 @@ export default function NewLecturer(){
                                 <p>State of Origin</p>
                             </label>
                             <select 
-                                required
                                 className="bg-gray-200 p-2 rounded-xl "
                                 value={userInfo.stateOfOrigin}
                                 onChange={(e) => updateUserInfo('stateOfOrigin', e.target.value)}>
@@ -233,7 +224,6 @@ export default function NewLecturer(){
                                 <p>Department</p>
                             </label>
                             <select 
-                                required
                                 className="bg-gray-200 p-2 rounded-xl "
                                 value={userInfo.department}
                                 onChange={(e) => updateUserInfo('department', e.target.value)}>

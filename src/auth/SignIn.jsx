@@ -64,7 +64,6 @@ export default function SignIn() {
                         <input
                             id="fullName"
                             type="text"
-                            required
                             placeholder="Enter your full name"
                             value={userInfo.fullName}
                             onChange={(e) => updateUserInfo('fullName', e.target.value)}
@@ -78,7 +77,6 @@ export default function SignIn() {
                         <input
                             id="userId"
                             type="text"
-                            required
                             placeholder={getPlaceholder(userType)}
                             value={userInfo.userId}
                             onChange={(e) => updateUserInfo('userId', e.target.value)}
@@ -93,7 +91,6 @@ export default function SignIn() {
                             <input
                                 id="adminPassword"
                                 type="password"
-                                required
                                 placeholder="Enter your admin password"
                                 value={userInfo.adminPassword}
                                 onChange={(e) => updateUserInfo('adminPassword', e.target.value)}

@@ -87,7 +87,6 @@ export default function NewAdmin(){
                         <p>Full Name</p>
                     </label>
                     <input 
-                        required
                         type="text"
                         className="bg-gray-200 p-2 rounded-xl "
                         placeholder="Enter your full name" 
@@ -99,7 +98,6 @@ export default function NewAdmin(){
                                 <p>Email</p>
                             </label>
                             <input 
-                                required
                                 type="text" 
                                 className="bg-gray-200 p-2 rounded-xl "
                                 placeholder="Enter your email here"
@@ -111,7 +109,6 @@ export default function NewAdmin(){
                                 <p>Gender</p>
                             </label>
                             <select 
-                                required
                                 className="bg-gray-200 p-2 rounded-xl "
                                 value={userInfo.gender}
                                 onChange={(e) => updateUserInfo('gender', e.target.value)}>
@@ -127,7 +124,6 @@ export default function NewAdmin(){
                                 <p>Phone Number</p>
                             </label>
                             <input 
-                                required
                                 type="text" placeholder="Enter your phone number: Without +234" 
                                 className="bg-gray-200 p-2 rounded-xl "
                                 maxLength={11}
@@ -139,7 +135,6 @@ export default function NewAdmin(){
                                 <p>Admin ID</p>
                             </label>
                             <input 
-                                required
                                 type="text"
                                 className="bg-gray-200 p-2 rounded-xl " 
                                 placeholder="Enter iD i.e ADCB/2345"
@@ -153,7 +148,6 @@ export default function NewAdmin(){
                                 <p>Date Of Birth</p>
                             </label>
                             <input 
-                                required
                                 type="text" 
                                 className="bg-gray-200 p-2 rounded-xl "
                                 placeholder="DD/MM/YY"
@@ -165,7 +159,6 @@ export default function NewAdmin(){
                                 <p>Date Of Employment</p>
                             </label>
                             <input 
-                                required
                                 type="text" 
                                 className="bg-gray-200 p-2 rounded-xl "
                                 placeholder="DD/MM/YY"
@@ -185,7 +178,6 @@ export default function NewAdmin(){
                                 </div>
                             )}
                             <input 
-                                required
                                 type="file" 
                                 id="profilePic"
                                 className="hidden"
@@ -197,7 +189,6 @@ export default function NewAdmin(){
                                 <p>State of Origin</p>
                             </label>
                             <select 
-                                required
                                 className="bg-gray-200 p-2 rounded-xl "
                                 value={userInfo.stateOfOrigin}
                                 onChange={(e) => updateUserInfo('stateOfOrigin', e.target.value)}>
