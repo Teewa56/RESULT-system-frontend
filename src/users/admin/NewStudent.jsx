@@ -98,6 +98,7 @@ export default function NewStudent() {
           <p>Full Name</p>
         </label>
         <input
+          required        
           type="text"
           id="fullName"
           className="bg-gray-200 p-2 rounded-xl"
@@ -113,6 +114,7 @@ export default function NewStudent() {
               <p>Email</p>
             </label>
             <input
+              required
               type="email"
               id="email"
               className="bg-gray-200 p-2 rounded-xl"
@@ -145,6 +147,7 @@ export default function NewStudent() {
               <p>Phone Number</p>
             </label>
             <input
+              required
               type="text"
               id="phone"
               maxLength={11}
@@ -159,6 +162,7 @@ export default function NewStudent() {
               <p>Matric Number</p>
             </label>
             <input
+              required
               type="text"
               id="matricNo"
               maxLength={15}
@@ -177,6 +181,7 @@ export default function NewStudent() {
               <p>Date of Birth</p>
             </label>
             <input
+              required
               type="text"
               id="dateOfBirth"
               className="bg-gray-200 p-2 rounded-xl"
@@ -190,6 +195,7 @@ export default function NewStudent() {
               <p>Year of Admission</p>
             </label>
             <input
+              required
               type="text"
               id="yearOfAdmission"
               className="bg-gray-200 p-2 rounded-xl"
@@ -207,6 +213,7 @@ export default function NewStudent() {
                     <p>Year of Graduation</p>
                 </label>
                 <input
+                  required
                     type="text"
                     id="yearOfGraduation"
                     className="bg-gray-200 p-2 rounded-xl"
@@ -282,6 +289,7 @@ export default function NewStudent() {
               <p>Current Level</p>
             </label>
             <input
+              required
               type="text"
               id="currentLevel"
               className="bg-gray-200 p-2 rounded-xl"
@@ -313,6 +321,7 @@ export default function NewStudent() {
             <p>Current Session</p>
           </label>
           <input
+            required
             maxLength={9}
             type="text"
             id="currentSession"

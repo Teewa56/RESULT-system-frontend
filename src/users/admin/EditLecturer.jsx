@@ -77,7 +77,6 @@ export default function EditLecturer(){
         }
     }
 
-    // New function to handle checkbox selection for courses
     function handleCourseCheckboxChange(courseCode) {
         setUserInfo(prev => {
             const coursesTaking = [...prev.coursesTaking];

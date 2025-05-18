@@ -22,7 +22,7 @@ export default function SignIn() {
     function updateUserInfo(field, value) {
         setUserInfo((prev) => ({
             ...prev,
-            [field]: value.trim(),
+            [field]: value
         }));
     }
 
@@ -62,6 +62,7 @@ export default function SignIn() {
                             Full Name
                         </label>
                         <input
+                            required
                             id="fullName"
                             type="text"
                             placeholder="Enter your full name"
@@ -75,6 +76,7 @@ export default function SignIn() {
                             User ID
                         </label>
                         <input
+                            required
                             id="userId"
                             type="text"
                             placeholder={getPlaceholder(userType)}
@@ -89,6 +91,7 @@ export default function SignIn() {
                                 Admin Password
                             </label>
                             <input
+                                required
                                 id="adminPassword"
                                 type="password"
                                 placeholder="Enter your admin password"
@@ -99,9 +102,10 @@ export default function SignIn() {
                         </div>
                     )}
                     <button
-                        disabled={loading}
+                        disabled={loading || !userInfo.fullName || !userInfo.userId || (userType === 'admin' && !userInfo.adminPassword)}
                         type="submit"
-                        className={`w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${loading ? 'opacity-50 cursor-not-allowed' : ''}}`}
+                        className={`w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 
+                            ${loading || !userInfo.fullName || !userInfo.userId || (userType === 'admin' && !userInfo.adminPassword) ? 'opacity-50 cursor-not-allowed' : ''}`}
                     >
                         Sign In
                     </button>

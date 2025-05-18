@@ -107,7 +107,9 @@ export default function NewLecturer(){
                     <label htmlFor="fullname">
                         <p>Full Name</p>
                     </label>
-                    <input type="text"
+                    <input
+                        required 
+                        type="text"
                         className="bg-gray-200 p-2 rounded-xl "
                         placeholder="Enter your full name" 
                         value={userInfo.fullName}
@@ -117,7 +119,9 @@ export default function NewLecturer(){
                             <label htmlFor="email">
                                 <p>Email</p>
                             </label>
-                            <input type="text" 
+                            <input
+                                required 
+                                type="text" 
                                 className="bg-gray-200 p-2 rounded-xl "
                                 placeholder="Enter your email here"
                                 value={userInfo.email}
@@ -142,7 +146,8 @@ export default function NewLecturer(){
                             <label htmlFor="phoneNumber">
                                 <p>Phone Number</p>
                             </label>
-                            <input 
+                            <input
+                                required 
                                 type="text" 
                                 placeholder="Enter your phone number: Without +234" 
                                 className="bg-gray-200 p-2 rounded-xl "
@@ -154,7 +159,8 @@ export default function NewLecturer(){
                             <label htmlFor="registrationId">
                                 <p>Registration ID</p>
                             </label>
-                            <input 
+                            <input
+                                required 
                                 type="text"
                                 className="bg-gray-200 p-2 rounded-xl " 
                                 placeholder="Enter iD i.e ADCB/2345"
@@ -167,7 +173,8 @@ export default function NewLecturer(){
                             <label htmlFor="dateOfBirth">
                                 <p>Date Of Birth</p>
                             </label>
-                            <input 
+                            <input
+                                required 
                                 type="text" 
                                 className="bg-gray-200 p-2 rounded-xl "
                                 placeholder="DD/MM/YY"
@@ -178,7 +185,8 @@ export default function NewLecturer(){
                             <label htmlFor="dateEmployed">
                                 <p>Date Of Employment</p>
                             </label>
-                            <input 
+                            <input
+                                required 
                                 type="text" 
                                 className="bg-gray-200 p-2 rounded-xl "
                                 placeholder="DD/MM/YY"
@@ -197,7 +205,8 @@ export default function NewLecturer(){
                                     <img src={imagePreview} alt="image preview" className="w-20 h-20 object-cover rounded-full mb-2" />
                                 </div>
                             )}
-                            <input 
+                            <input
+                                required 
                                 type="file" 
                                 id="profilePic"
                                 accept="image/*"
@@ -243,6 +252,7 @@ export default function NewLecturer(){
                                 {Courses.map((course) => (
                                     <div key={course.code} className="flex items-center">
                                         <input
+                                            required
                                             type="checkbox"
                                             id={`course-${course.code}`}
                                             checked={userInfo.coursesTaking.includes(course.code)}
