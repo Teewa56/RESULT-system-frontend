@@ -34,6 +34,7 @@ export default function Result() {
         });
         const fetchedResults = res.data.results;
         setResults(fetchedResults);
+        console.log(fetchedResults);
         if (fetchedResults.length === 0) {
           setError("No results found.");
         }
@@ -206,6 +207,7 @@ export default function Result() {
                                   <td className="border border-gray-300 px-3 py-1">{course.semester}</td>
                                   <td className="border border-gray-300 px-3 py-1">{course.level}</td>
                                   <td className="border border-gray-300 px-3 py-1">
+                                    <p>Released: {course.isReleased ? 'Yes' : 'No'}</p>
                                   </td>
                                 </tr>
                               ))}
