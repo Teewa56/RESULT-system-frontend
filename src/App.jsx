@@ -64,7 +64,7 @@ const App = () => {
     return children;
   }
 
-  if(navigator.onLine) {
+  if(!navigator.onLine) {
     return (
       <div className="flex items-center justify-center w-full h-screen">
         <div>
