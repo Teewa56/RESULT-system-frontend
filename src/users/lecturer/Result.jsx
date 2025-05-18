@@ -63,12 +63,46 @@ export default function ResultL(){
     }
 
     function handlePrint() {
-        const printContents = printRef.current.innerHTML;
-        const originalContents = document.body.innerHTML;
-        document.body.innerHTML = printContents;
-        window.print();
-        document.body.innerHTML = originalContents;
-        window.location.reload();
+        const printWindow = window.open('', '_blank');
+        if (!printWindow) {
+            setError("Please allow popups to print the results");
+            return;
+        }
+        const contentToPrint = printRef.current;
+        printWindow.document.write(`
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Course Result - ${selectedCourse}</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <style>
+                    body { font-family: Arial, sans-serif; padding: 20px; }
+                    h2 { text-align: center; margin-bottom: 20px; }
+                    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+                    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+                    th { background-color: #f2f2f2; }
+                    @media print {
+                        button { display: none !important; }
+                    }
+                    @media screen and (max-width: 600px) {
+                        table { font-size: 12px; }
+                        th, td { padding: 5px; }
+                    }
+                </style>
+            </head>
+            <body>
+                <h2>Result for ${selectedCourse}</h2>
+                ${contentToPrint.innerHTML}
+                <div style="margin-top: 20px; text-align: center;">
+                    <button onclick="window.print(); window.close();" style="padding: 10px 20px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                        Print
+                    </button>
+                </div>
+            </body>
+            </html>
+        `);
+        
+        printWindow.document.close();
     }
 
     return(
@@ -100,7 +134,7 @@ export default function ResultL(){
                     {resultLoading && <Loading />}
                     {results.length === 0 && !resultLoading && <div>No results found for this course.</div>}
                     {results.length > 0 && (
-                        <div className="overflow-x-auto" >
+                        <div className="overflow-x-auto py-5">
                             <div ref={printRef}>
                             <table className="min-w-full border">
                                 <thead>
@@ -143,13 +177,6 @@ export default function ResultL(){
                     )}
                 </div>
             )}
-            <style>{`
-                @media print {
-                    .print-hide {
-                        display: none !important;
-                    }
-                }
-            `}</style>
         </div>
     )
 }
