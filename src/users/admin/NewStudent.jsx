@@ -33,7 +33,7 @@ export default function NewStudent() {
   function updateUserInfo(field, value) {
     setUserInfo((prev) => ({
       ...prev,
-      [field]: value.trim(),
+      [field]: value,
     }));
   }
 

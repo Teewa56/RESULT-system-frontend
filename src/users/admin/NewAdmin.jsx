@@ -25,7 +25,7 @@ export default function NewAdmin(){
     const navigate = useNavigate();
     function updateUserInfo(field, value){
         setUserInfo((prev) => ({
-            ...prev, [field]: value.trim()
+            ...prev, [field]: value
         }))
     };
 

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { adminProfile } from '../../api/adminApi'
 import { useEffect, useState, useContext } from 'react'
 import Toast from '../../components/Toast'
-import Loading from '../../components/Loaidng'
 import { AuthContext } from '../../context/AuthContext'
 import { EyeIcon, EyeOffIcon } from 'lucide-react'
 import handleApiError from '../../utils/HandleAPIERROR'
@@ -51,7 +50,6 @@ function getAge(dateOfBirth) {
     return Math.abs(ageDt.getUTCFullYear() - 1970);
 }
 
-// Skeleton component for admin profile data
 const AdminProfileSkeleton = ({ isMobile }) => (
     <div className="animate-pulse">
         <div className="flex items-center justify-between mb-5">
@@ -138,7 +136,6 @@ export default function AdminHome() {
         };
     }, []);
 
-    // Handle errors from both sources
     const displayError = error || authError;
 
     return (
@@ -221,19 +218,19 @@ export default function AdminHome() {
                         <h3 className="font-bold text-2xl">Others</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-4 gap-4">
                             <Link to="/admin/updatesemster"
-                                className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-300 transition-all">
                                 <img src="/images/courses.svg" alt=""
                                     className="w-12 h-12 mb-2" />
                                 <p>Update Semester</p>
                             </Link>
                             <Link to="/admin/profiles"
-                                className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-300 transition-all">
                                 <img src="/images/courses.svg" alt=""
                                     className="w-12 h-12 mb-2" />
                                 <p>Profiles</p>
                             </Link>
                             <Link to={`/admin/editAdmin/${userId}`}
-                                className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-300 transition-all">
                                 <img src="/images/courses.svg" alt=""
                                     className="w-12 h-12 mb-2" />
                                 <p>Edit Profile</p>
@@ -241,38 +238,38 @@ export default function AdminHome() {
                             {isMobile &&
                                 <>
                                     <Link to="/admin/courses"
-                                        className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                        className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-300 transition-all">
                                         <img src="/images/courses.svg" alt="courses"
                                             className="w-12 h-12 mb-2" />
                                         <p>Courses</p>
                                     </Link>
                                     <Link to="/admin/newStudent"
-                                        className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                        className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-300 transition-all">
                                         <img src="/images/newUser.svg" alt="newStudent"
                                             className="w-12 h-12 mb-2" />
                                         <p>New Student</p>
                                     </Link>
                                     <Link to="/admin/newLecturer"
-                                        className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                        className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-300 transition-all">
                                         <img src="/images/newUser.svg" alt="newInstructor"
                                             className="w-12 h-12 mb-2" />
                                         <p>New Lecturer</p>
                                     </Link>
                                     <Link to="/admin/newAdmin"
-                                        className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                        className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-300 transition-all">
                                         <img src="/images/newUser.svg" alt="newAdmin"
                                             className="w-12 h-12 mb-2" />
                                         <p>New Admin</p>
                                     </Link>
                                     <Link to="/admin/result"
-                                        className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                        className="p-4 shadow-lg border-2 rounded-3xl flex flex-col items-center justify-center hover:cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-300 transition-all">
                                         <img src="/images/result.svg" alt="results"
                                             className="w-12 h-12 mb-2" />
                                         <p>Results</p>
                                     </Link>
                                     <button
                                         onClick={handleLogout}
-                                        className="w-full bg-red-300 rounded-2xl p-4 shadow-md hover:cursor-pointer hover:bg-red-100 dark:hover:bg-red-800 transition-all duration-200 ease-in-out">
+                                        className="w-full bg-red-300 rounded-2xl p-4 shadow-md hover:cursor-pointer hover:bg-red-100 dark:hover:bg-red-500 transition-all duration-200 ease-in-out">
                                         <p>Logout</p>
                                     </button>
                                 </>
