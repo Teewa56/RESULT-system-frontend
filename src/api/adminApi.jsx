@@ -50,10 +50,10 @@ export const allStudents = async() =>{
     return adminApi.get('/admin/allStudents')
 }
 export const searchStudent = async(search) =>{
-    return adminApi.get(`/admin/searchStudent/${search}`, {params: {search}})
+    return adminApi.get(`/admin/searchStudent/${search}`)
 }
 export const searchLecturer =  async(search) =>{ 
-   return  adminApi.get(`/admin/searchStudent/${search}`, {params: {search}})
+   return  adminApi.get(`/admin/searchStudent/${search}`)
 }
 export const studentProfile = async(id) =>{
     return adminApi.get(`/admin/studentProfile/${id}`)
@@ -62,7 +62,7 @@ export const lecturerProfile = async(id) =>{
    return  adminApi.get(`/admin/lecturerProfile/${id}`)
 }
 export const resultPreview = async (data) => {
-  return adminApi.post('/admin/resultPreview', { data });
+  return adminApi.post('/admin/resultPreview', data );
 }
 export const releaseResults = async() => {
     return adminApi.post('/admin/releaseResult') 

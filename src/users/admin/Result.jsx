@@ -15,7 +15,7 @@ const Result = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-    async function HandleGetResults() {
+  async function HandleGetResults() {
     if (!navigator.onLine) {
         setError('Internet connection error');
         return;

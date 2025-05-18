@@ -14,6 +14,7 @@ export default function CoursesL(){
     const [courseLoading, setCourseLoading] = useState(false);
     const userId = localStorage.getItem('userId');
     const [resulAlreadyUploaded, setResultAlreadyUploaded] = useState(false);
+    const [isClosed, setIsClosed] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -40,6 +41,7 @@ export default function CoursesL(){
             const res = await getCourse(courseCode);
             setCourseInfo(res.data.course);
             setResultAlreadyUploaded(res.data.uploaded);
+            setIsClosed(res.data.isClosed);
         } catch (err) {
             handleApiError(err, setError, "An unexpected error occuured")
         } finally {
@@ -86,7 +88,11 @@ export default function CoursesL(){
                                             <p>{courseInfo['Course-Units']}</p>
                                         </div>
                                         <div className="flex items-center justify-around">
-                                            { !resulAlreadyUploaded ? 
+                                            {isClosed ? 
+                                            <div className="p-4 border rounded bg-gray-500 ">
+                                                <strong className="text-gray-200">Result Submission for course is closed</strong>
+                                            </div> :
+                                             !resulAlreadyUploaded ? 
                                             <Link
                                                 to={`/lecturer/uploadresult/${courseInfo['Course-Code']}`}
                                                 className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
