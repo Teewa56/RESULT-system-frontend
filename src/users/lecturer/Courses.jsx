@@ -13,7 +13,6 @@ export default function CoursesL(){
     const [courseInfo, setCourseInfo] = useState({});
     const [courseLoading, setCourseLoading] = useState(false);
     const userId = localStorage.getItem('userId');
-    const [currentSemester, setCurrentSemester] = useState("");
     const [resulAlreadyUploaded, setResultAlreadyUploaded] = useState(false);
     const [isClosed, setIsClosed] = useState(false);
     const navigate = useNavigate();
@@ -25,7 +24,6 @@ export default function CoursesL(){
             try {
                 const res = await getCoursesTaking(userId);
                 setCourses(res.data.courses || []);
-                setCurrentSemester(res.data.currentSemester);
             } catch (err) {
                 handleApiError(err, setError, "An unexpected error occuured")
             } finally {
@@ -56,7 +54,7 @@ export default function CoursesL(){
             <div className="flex items-center justify-start gap-4 mb-4">
                 <img src="/images/back-button.svg" className="md:hidden w-8 h-8" 
                     onClick={() => navigate(-1)}/>
-                <h3 className="text-3xl font-bold">Courses for {currentSemester}</h3>
+                <h3 className="text-xl font-bold">Courses</h3>
             </div>
             {loading && <Loading />}
             {error && <Toast text={error} color="red" />}
@@ -68,10 +66,15 @@ export default function CoursesL(){
                         className={`p-4 border rounded cursor-pointer hover:bg-gray-100 ${selectedCourse === course['Course-Code'] ? "bg-gray-50" : ""}`}
                         onClick={() => handleCourseClick(course['Course-Code'])}
                     >
-                        <div className="flex items-center justify-between">
-                            <p className="font-semibold">{course['Course-Code']}</p>
-                            <img src="/images/dropdown.svg" alt="" className="w-8 h-8"/>
-                        </div>
+                       <div>
+                            <div className="flex items-center justify-between">
+                                <p className="font-semibold">{course['Course-Code']}</p>
+                                <img src="/images/dropdown.svg" alt="" className="w-8 h-8"/>
+                            </div>
+                            <p>{course['Course-Title']}</p>
+                            <p>{course['Course-Units']}</p>
+                            <p>{course['semester']}</p>
+                       </div>
                         {selectedCourse === course['Course-Code'] && (
                             <div className="mt-2">
                                 {courseLoading && <Loading />}
@@ -114,6 +117,7 @@ export default function CoursesL(){
                         )}
                     </div>
                 ))}
+                <p className="text-xs text-red-600">Note: courses that are not in the current semester do not have students registered for them</p>
             </div>
         </div>
     )
