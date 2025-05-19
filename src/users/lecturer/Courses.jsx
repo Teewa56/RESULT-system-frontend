@@ -73,7 +73,7 @@ export default function CoursesL(){
                             </div>
                             <p>{course['Course-Title']}</p>
                             <p>{course['Course-Units']}</p>
-                            <p>{course['semester']}</p>
+                            <p>{course['Semester']}</p>
                        </div>
                         {selectedCourse === course['Course-Code'] && (
                             <div className="mt-2">
