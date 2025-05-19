@@ -114,7 +114,7 @@ const App = () => {
               <Route path="/student/registered-courses" element={<StudentRoutes><RegisteredCourses /></StudentRoutes>} />
               <Route path="/student/carry-over" element={<StudentRoutes><CarryOverCourses /></StudentRoutes>} />
               <Route path="/student/results" element={<StudentRoutes><Results /></StudentRoutes>} />
-              <Route path="/student/result/:resultId" element={<StudentRoutes><ResultS /></StudentRoutes>} />
+              <Route path="/student/result/:studentId" element={<StudentRoutes><ResultS /></StudentRoutes>} />
 
               <Route path="*" element={<NotFoundError />} />
             </Routes>

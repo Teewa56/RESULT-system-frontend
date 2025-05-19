@@ -34,7 +34,7 @@ export const allResults  = async(id) => {
 export const getResult = async(id, data) => {
     return studentApi.get(`/student/result/${id}`, data)
 }
-export const getGpa = async(id, data) => {
-    return studentApi.get(`/student/gpa/${id}`, data)
+export const getGpa = async(id) => {
+    return studentApi.get(`/student/gpa/${id}`)
 }
 export default studentApi;

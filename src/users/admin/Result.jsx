@@ -184,6 +184,9 @@ export default function Result() {
                     <tr>
                       <td colSpan="4" className="border border-gray-400 p-4">
                         <h4 className="font-bold mb-2">Course Results:</h4>
+                        {student.results.length === 0 && (
+                          <p className="text-center text-red-500">No results available for this student.</p>
+                        )}
                         <div className="overflow-x-auto">
                           <table className="table-auto w-full border-collapse border border-gray-300">
                             <thead>
@@ -212,6 +215,7 @@ export default function Result() {
                                 </tr>
                               ))}
                             </tbody>
+                            <p className='text-xs text-red-400'>Note: Grades are at default until result is released</p>
                           </table>
                         </div>
                       </td>

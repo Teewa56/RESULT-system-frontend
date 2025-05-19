@@ -10,3 +10,39 @@
     background: rgb(9, 19, 32);
     color: white;
 }
+
+@media print {
+  body {
+    color: #000;
+    background: #fff;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .print-area {
+    padding: 1rem;
+  }
+
+  .print-area table {
+    width: 100%;
+    table-layout: auto;
+  }
+
+  .print-area th,
+  .print-area td {
+    border: 1px solid #000;
+    padding: 4px 6px;
+    text-align: left;
+  }
+
+  .print:hidden {
+    display: none !important;
+  }
+
+  button,
+  nav,
+  img,
+  .back-button {
+    display: none !important;
+  }
+}
