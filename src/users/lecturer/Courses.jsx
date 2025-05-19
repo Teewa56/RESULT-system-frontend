@@ -43,7 +43,8 @@ export default function CoursesL(){
             setResultAlreadyUploaded(res.data.uploaded);
             setIsClosed(res.data.isClosed);
         } catch (err) {
-            handleApiError(err, setError, "An unexpected error occuured")
+            console.error(err);
+            setError("Course is not for current semester");
         } finally {
             setCourseLoading(false);
         }
@@ -71,7 +72,6 @@ export default function CoursesL(){
                                 <p className="font-semibold">{course['Course-Code']}</p>
                                 <img src="/images/dropdown.svg" alt="" className="w-8 h-8"/>
                             </div>
-                            <p>{course['Semester']}</p>
                        </div>
                         {selectedCourse === course['Course-Code'] && (
                             <div className="mt-2">
@@ -115,7 +115,6 @@ export default function CoursesL(){
                         )}
                     </div>
                 ))}
-                <p className="text-xs text-red-600">Note: courses that are not in the current semester do not have students registered for them</p>
             </div>
         </div>
     )
