@@ -39,10 +39,8 @@ export default function CarryOverCourses() {
             <div className="space-y-2">
                 {courses.length === 0 && !loading && <div className="flex items-center justify-center">No carry over courses.</div>}
                 {courses.map(course => (
-                    <div key={course["Course-Code"]} className="p-2 border rounded">
-                        <strong>{course['Course-Code']}</strong>
-                        <p>{course['Course-Title']}</p>
-                        <p>{course['Course-Units']} Units</p>
+                    <div key={course} className="p-2 border rounded">
+                        <strong>{course}</strong>
                     </div>
                 ))}
             </div>

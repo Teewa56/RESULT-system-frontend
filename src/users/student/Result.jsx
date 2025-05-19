@@ -1,12 +1,16 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { getResult, getGpa, studentProfile } from "../../api/studentApi";
 import Loading from '../../components/Loaidng';
 import Toast from '../../components/Toast';
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useSearchParams } from "react-router-dom";
 import handleApiError from "../../utils/HandleAPIERROR";
 
 export default function ResultS() {
     const { studentId } = useParams();
+    const [searchParams] = useSearchParams();
+    const level = searchParams.get("level");
+    const semester = searchParams.get("semester");
+    const payload = useMemo(() => ({ level, semester }), [level, semester]);
     const [result, setResult] = useState([]);
     const [gpa, setGpa] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -14,22 +18,14 @@ export default function ResultS() {
     const [cGPA, setCGPA] = useState(null);
     const [student, setStudent] = useState({});
     const navigate = useNavigate();
-    const level = JSON.parse(localStorage.getItem('level'));
-    const semester = JSON.parse(localStorage.getItem('semester'));
     const printRef = useRef();
-
-    useEffect(() => {
-        return () => {
-            localStorage.removeItem('level');
-            localStorage.removeItem('semester');
-        };
-    }, []);
+    
 
     useEffect(() => {
         async function fetchResult() {
             setLoading(true);
             try {
-                const res = await getResult(studentId, { data: { level, semester } });
+                const res = await getResult(studentId, {data: payload});
                 setResult(res.data.results);
                 const gpaRes = await getGpa(studentId);
                 const studentRes = await studentProfile(studentId);
@@ -43,7 +39,7 @@ export default function ResultS() {
             }
         }
         fetchResult();
-    }, [studentId, level, semester]);
+    }, [studentId, payload]);
 
     return (
         <div className="mx-auto max-w-md px-2">
@@ -53,7 +49,7 @@ export default function ResultS() {
                     className="md:hidden w-8 h-8 cursor-pointer"
                     onClick={() => navigate(-1)}
                 />
-                <h2 className="text-xl font-bold mb-4">Result Details</h2>
+                <h2 className="text-xl font-bold mb-2">Result Details</h2>
             </div>
 
             {loading && <Loading />}
@@ -61,7 +57,7 @@ export default function ResultS() {
 
             {result.length > 0 && (
                 <div className="overflow-x-auto print-area" ref={printRef}>
-                    <h2 className="text-xl font-bold mb-2">{`${level} ${semester} Result`}</h2>
+                    <h2 className="text-xl font-semibold mb-2">{`${payload.level} ${payload.semester} Result`}</h2>
                     <div className="mb-4 space-y-2">
                         <div><span className="font-bold">Full Name:</span> {student.fullName}</div>
                         <div><span className="font-bold">Matric Number:</span> {student.matricNo}</div>

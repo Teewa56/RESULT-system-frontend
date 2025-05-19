@@ -16,7 +16,7 @@ export default function Results() {
             setLoading(true);
             try {
                 const res = await allResults(userId);
-                setResults(res.data.results || []);
+                setResults(res.data.semesterResults || []);
             } catch (err) {
                 handleApiError(err, setError, "An unexpected error occurred");
             } finally {
@@ -45,30 +45,30 @@ export default function Results() {
                 {results.length === 0 && !loading && 
                     <div className="p-4 text-center text-gray-500">No results yet!</div>
                 }
-                
-                {results.map(result => (
-                    <Link
-                        onClick={() => {
-                            localStorage.setItem('level', JSON.stringify(result.courses[0].level));
-                            localStorage.setItem('semester', JSON.stringify(result.courses[0].semester));
-                        }}
-                        to={`/student/result/${result.courses[0].student}`}
-                        key={result.semester}
-                        className="block p-4 border-2 rounded-2xl hover:bg-gray-100 transition-colors"
-                    >
-                        <h3 className="text-xl font-bold">{result.courses[0].level}</h3>
-                        <p className="text-lg font-semibold mb-2">{result.semester}</p>
-                        
-                        <div className="flex items-center justify-between mt-2">
-                            <p className="text-lg font-medium">Check Result </p>
-                            <img 
-                                src="/images/back-button.svg" 
-                                alt="View results" 
-                                className="w-6 h-6 rotate-180"
-                            />
-                        </div>
-                    </Link>
-                ))}
+
+                {results.map((result, index) => {
+                    const firstCourse = result.courses?.[0];
+                    if (!firstCourse) return null;
+
+                    return (
+                        <Link
+                            key={`${result.semester}-${index}`}
+                            to={`/student/result/${firstCourse.student}?level=${firstCourse.level}&semester=${result.semester}`}
+                            className="block p-4 border-2 rounded-2xl hover:bg-gray-100 transition-colors"
+                        >
+                            <h3 className="text-xl font-bold">{firstCourse.level}</h3>
+                            <p className="text-lg font-semibold mb-2">{result.semester}</p>
+                            <div className="flex items-center justify-between mt-2">
+                                <p className="text-lg font-medium">Check Result</p>
+                                <img 
+                                    src="/images/back-button.svg" 
+                                    alt="View results" 
+                                    className="w-6 h-6 rotate-180"
+                                />
+                            </div>
+                        </Link>
+                    );
+                })}
             </div>
         </div>
     );

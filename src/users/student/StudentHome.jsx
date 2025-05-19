@@ -174,26 +174,26 @@ export default function StudentHome() {
             {isMobile && (
                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 mb-5 mt-4">
                     <Link to="/student/registered-courses"
-                        className="flex justify-start shadow-md rounded-2xl p-2 items-center gap-2 hover:opacity-0.8 transition-all duration-200 ease-in-out mb-4">
+                        className="flex justify-start shadow-md rounded-2xl p-2 items-center gap-2 hover:opacity-0.8 transition-all duration-200 ease-in-out mb-4 mx-4">
                         <img src="/images/courses.svg" alt="courses"
                             className="w-6 h-6" />
                         <p>Registered Courses</p>
                     </Link>
                     <Link to="/student/carry-over"
-                        className="flex justify-start shadow-md rounded-2xl p-2 items-center gap-2 hover:opacity-0.8 transition-all duration-200 ease-in-out mb-4">
+                        className="flex justify-start shadow-md rounded-2xl p-2 items-center gap-2 hover:opacity-0.8 transition-all duration-200 ease-in-out mb-4 mx-4">
                         <img src="/images/courses.svg" alt="carry over"
                             className="w-6 h-6" />
                         <p>Carry Over Courses</p>
                     </Link>
                     <Link to="/student/results"
-                        className="flex justify-start shadow-md rounded-2xl p-2 items-center gap-2 hover:opacity-0.8 transition-all duration-200 ease-in-out mb-4">
+                        className="flex justify-start shadow-md rounded-2xl p-2 items-center gap-2 hover:opacity-0.8 transition-all duration-200 ease-in-out mb-4 mx-4">
                         <img src="/images/result.svg" alt="results"
                             className="w-6 h-6" />
                         <p>Results</p>
                     </Link>
                     <button
                         onClick={handleLogout}
-                        className="w-full font-semibold rounded-xl p-4 bg-red-300 shadow-lg hover:cursor-pointer hover:opacity-0.8 transition-all duration-200 ease-in-out">
+                        className="font-semibold mb-4 mx-4 rounded-xl p-4 bg-red-300 shadow-lg hover:cursor-pointer hover:opacity-0.8 transition-all duration-200 ease-in-out">
                         <p>Logout</p>
                     </button>
                 </div>

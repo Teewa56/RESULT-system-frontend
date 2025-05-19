@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const deployURL = 'https://result-system-backend.onrender.com/api';
+//const deployURL = 'https://result-system-backend.onrender.com/api';
 const localURL = 'http://localhost:5000/api';
-const apiURL = deployURL || localURL;
+const apiURL = /*deployURL || */localURL;
 
 const studentApi = axios.create({
     baseURL: apiURL,
@@ -32,7 +32,7 @@ export const allResults  = async(id) => {
     return studentApi.get(`/student/results/${id}`)
 }
 export const getResult = async(id, data) => {
-    return studentApi.get(`/student/result/${id}`, data)
+    return studentApi.post(`/student/result/${id}`, data)
 }
 export const getGpa = async(id) => {
     return studentApi.get(`/student/gpa/${id}`)
