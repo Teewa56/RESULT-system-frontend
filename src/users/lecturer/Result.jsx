@@ -44,7 +44,7 @@ export default function ResultL(){
                 const status = err.response.status;
 
                 if (status === 404) {
-                    setError("No results found for this course.");
+                    setError("Course is not for current semester.");
                 } else if (status === 500) {
                     setError("Server error. Please try again later.");
                 } else {

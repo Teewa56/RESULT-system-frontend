@@ -6,7 +6,7 @@ const Toast = ({ text, color }) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setVisible(false); 
-        }, 3000);
+        }, 2000);
 
         return () => clearTimeout(timer); 
     }, []);
