@@ -9,7 +9,7 @@ export default function CoursesL() {
     const [courses, setCourses] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    const [selectedCourseKey, setSelectedCourseKey] = useState("");
+    const [selectedCourseCode, setSelectedCourseCode] = useState("");
     const [courseInfo, setCourseInfo] = useState({});
     const [courseLoading, setCourseLoading] = useState(false);
     const [resultAlreadyUploaded, setResultAlreadyUploaded] = useState(false);
@@ -23,7 +23,7 @@ export default function CoursesL() {
             setError(null);
             try {
                 const res = await getCoursesTaking(userId);
-                const uniqueCourses = filterDuplicateCourses(res.data.courses || []);
+                const uniqueCourses = filterDuplicateCoursesByCode(res.data.courses || []);
                 setCourses(uniqueCourses);
             } catch (err) {
                 handleApiError(err, setError, "An unexpected error occurred");
@@ -34,23 +34,22 @@ export default function CoursesL() {
         fetchCourses();
     }, [userId]);
 
-    const filterDuplicateCourses = (coursesList) => {
-        const seen = new Set();
+    const filterDuplicateCoursesByCode = (coursesList) => {
+        const seenCodes = new Set();
         return coursesList.filter(course => {
-            const key = `${course['Course-Code']}-${course.Semester}`;
-            if (seen.has(key)) return false;
-            seen.add(key);
+            const code = course['Course-Code'];
+            if (seenCodes.has(code)) return false;
+            seenCodes.add(code);
             return true;
         });
     };
 
-    async function handleCourseClick(courseCode, semester) {
-        const courseKey = `${courseCode}-${semester}`;
-        setSelectedCourseKey(courseKey);
+    async function handleCourseClick(courseCode) {
+        setSelectedCourseCode(courseCode);
         setCourseInfo(null);
         setCourseLoading(true);
         try {
-            const res = await getCourse(courseCode); // Optionally pass semester if needed
+            const res = await getCourse(courseCode);
             setCourseInfo(res.data.course);
             setResultAlreadyUploaded(res.data.uploaded);
             setIsClosed(res.data.isClosed);
@@ -81,12 +80,12 @@ export default function CoursesL() {
                 {courses.length === 0 && !loading && <div>No courses found.</div>}
 
                 {courses.map(course => {
-                    const courseKey = `${course['Course-Code']}-${course.Semester}`;
+                    const courseCode = course['Course-Code'];
                     return (
                         <div
-                            key={courseKey}
-                            className={`p-4 border rounded cursor-pointer hover:bg-gray-100 ${selectedCourseKey === courseKey ? "bg-gray-50" : ""}`}
-                            onClick={() => handleCourseClick(course['Course-Code'], course.Semester)}
+                            key={courseCode}
+                            className={`p-4 border rounded cursor-pointer hover:bg-gray-100 ${selectedCourseCode === courseCode ? "bg-gray-50" : ""}`}
+                            onClick={() => handleCourseClick(courseCode)}
                         >
                             <div className="flex items-center justify-between">
                                 <div>
@@ -96,7 +95,7 @@ export default function CoursesL() {
                                 <img src="/images/dropdown.svg" alt="dropdown" className="w-8 h-8" />
                             </div>
 
-                            {selectedCourseKey === courseKey && (
+                            {selectedCourseCode === courseCode && (
                                 <div className="mt-2">
                                     {courseLoading && <Loading />}
                                     {courseInfo && (
