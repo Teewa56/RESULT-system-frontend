@@ -97,7 +97,7 @@ const Navbar = () => {
                 )}
                 <button 
                     onClick={handleLogout}
-                    className="absolute w-1/4 bottom-5 left-0 rounded-2xl p-4 shadow-md hover:cursor-pointer hover:opacity-0.8 transition-all duration-200 ease-in-out " >
+                    className="w-full rounded-2xl p-4 shadow-md hover:cursor-pointer hover:opacity-0.8 transition-all duration-200 ease-in-out " >
                     <p>Logout</p>
                 </button>
             </nav>

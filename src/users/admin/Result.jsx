@@ -34,7 +34,6 @@ export default function Result() {
         });
         const fetchedResults = res.data.results;
         setResults(fetchedResults);
-        console.log(fetchedResults);
         if (fetchedResults.length === 0) {
           setError("No results found.");
         }
@@ -63,7 +62,7 @@ export default function Result() {
       }
       if (confirmType === 2) {
           response = await releaseResults();
-          if (response.data.message !== 'Results released successfully') {
+          if (response.data.message !== 'Results released and GPA/CGPA calculated successfully') {
             setError('Failed to release results');
           }
       }
@@ -98,8 +97,8 @@ export default function Result() {
             {`Are you sure you want to ${confirmType === 1 ? 'close submission for this semester' : 'release last semester\'s results'}`}
           </p>
           <div className="flex items-center justify-center gap-5">
-            <button className="w-1/2 p-2 bg-gray-900 rounded-2xl" onClick={HandleSubmitOperation}>Yes</button>
-            <button className="w-1/2 p-2 bg-gray-900 rounded-2xl" onClick={() => { setShowConfirmation(false); setConfirmType(0); }}>No</button>
+            <button className="w-1/2 p-2 bg-gray-900 rounded-2xl" disabled={loading} onClick={HandleSubmitOperation}>{loading ? "Loading..." :  "Yes"}</button>
+            <button className="w-1/2 p-2 bg-gray-900 rounded-2xl" disabled={loading} onClick={() => { setShowConfirmation(false); setConfirmType(0); }}>{loading ? "Loading..." : "No"}</button>
           </div>
         </div>
       )}
@@ -215,7 +214,13 @@ export default function Result() {
                                 </tr>
                               ))}
                             </tbody>
-                            <p className='text-xs text-red-400'>Note: Grades are at default until result is released</p>
+                            <tfoot>
+                              <tr className="bg-gray-100">
+                                <td colSpan="7" className="border border-gray-300 px-3 py-1 text-center">
+                                  <p className='text-xs text-red-400'>Note: Grades are at default until result is released</p>
+                                </td>
+                              </tr>
+                            </tfoot>
                           </table>
                         </div>
                       </td>
