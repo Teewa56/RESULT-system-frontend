@@ -54,7 +54,7 @@ export default function CoursesL(){
             <div className="flex items-center justify-start gap-4 mb-4">
                 <img src="/images/back-button.svg" className="md:hidden w-8 h-8" 
                     onClick={() => navigate(-1)}/>
-                <h3 className="text-3xl font-bold">Courses</h3>
+                <h3 className="text-3xl font-bold">Courses for this semester</h3>
             </div>
             {loading && <Loading />}
             {error && <Toast text={error} color="red" />}
