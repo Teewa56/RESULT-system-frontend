@@ -71,8 +71,6 @@ export default function CoursesL(){
                                 <p className="font-semibold">{course['Course-Code']}</p>
                                 <img src="/images/dropdown.svg" alt="" className="w-8 h-8"/>
                             </div>
-                            <p>{course['Course-Title']}</p>
-                            <p>{course['Course-Units']}</p>
                             <p>{course['Semester']}</p>
                        </div>
                         {selectedCourse === course['Course-Code'] && (
