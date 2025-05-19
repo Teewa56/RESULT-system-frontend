@@ -133,7 +133,7 @@ export default function UploadResult(){
                         </tbody>
                     </table>
                 </div>
-                {students.length === 0 && (
+                {students.length === 0 && !loading && (
                     <div className="my-5">
                         <img src="/images/error.svg" alt="" className="w-10 h-10 mx-auto m-2"/>
                         <p className="text-center">No Students Found for this course</p>

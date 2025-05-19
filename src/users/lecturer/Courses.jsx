@@ -23,15 +23,29 @@ export default function CoursesL(){
             setError(null);
             try {
                 const res = await getCoursesTaking(userId);
-                setCourses(res.data.courses || []);
+                const uniqueCourses = filterDuplicateCourses(res.data.courses || []);
+                setCourses(uniqueCourses);
             } catch (err) {
-                handleApiError(err, setError, "An unexpected error occuured")
+                handleApiError(err, setError, "An unexpected error occurred")
             } finally {
                 setLoading(false);
             }
         }
         fetchCourses();
     }, [userId]);
+
+    const filterDuplicateCourses = (coursesList) => {
+        const uniqueCoursesMap = new Map();
+        
+        coursesList.forEach(course => {
+            const key = `${course['Course-Code']}-${course.Semester}`;
+            
+            if (!uniqueCoursesMap.has(key)) {
+                uniqueCoursesMap.set(key, course);
+            }
+        });
+        return Array.from(uniqueCoursesMap.values());
+    };
 
     async function handleCourseClick(courseCode) {
         setSelectedCourse(courseCode);
@@ -63,13 +77,16 @@ export default function CoursesL(){
                 {courses.length === 0 && !loading && <div>No courses found.</div>}
                 {courses.map(course => (
                     <div
-                        key={course['Course-Code']}
+                        key={`${course['Course-Code']}-${course.Semester}`}
                         className={`p-4 border rounded cursor-pointer hover:bg-gray-100 ${selectedCourse === course['Course-Code'] ? "bg-gray-50" : ""}`}
                         onClick={() => handleCourseClick(course['Course-Code'])}
                     >
                        <div>
                             <div className="flex items-center justify-between">
-                                <p className="font-semibold">{course['Course-Code']}</p>
+                                <div>
+                                    <p className="font-semibold">{course['Course-Code']}</p>
+                                    <p className="text-sm text-gray-500">{course.Semester}</p>
+                                </div>
                                 <img src="/images/dropdown.svg" alt="" className="w-8 h-8"/>
                             </div>
                        </div>
@@ -89,6 +106,10 @@ export default function CoursesL(){
                                         <div className="flex items-center gap-2 my-2 ">
                                             <strong>Unit:</strong> 
                                             <p>{courseInfo['Course-Units']}</p>
+                                        </div>
+                                        <div className="flex items-center gap-2 my-2 ">
+                                            <strong>Semester:</strong> 
+                                            <p>{course.Semester}</p>
                                         </div>
                                         <div className="flex items-center justify-around">
                                             {isClosed ? 
