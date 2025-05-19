@@ -1,21 +1,21 @@
-import { useState, useEffect } from "react"
-import Toast from '../../components/Toast'
-import Loading from '../../components/Loaidng'
-import { getCoursesTaking, getCourse } from "../../api/lecturerApi"
-import { Link, useNavigate } from "react-router-dom"
-import handleApiError from "../../utils/HandleAPIERROR"
+import { useState, useEffect } from "react";
+import Toast from '../../components/Toast';
+import Loading from '../../components/Loaidng';
+import { getCoursesTaking, getCourse } from "../../api/lecturerApi";
+import { Link, useNavigate } from "react-router-dom";
+import handleApiError from "../../utils/HandleAPIERROR";
 
-export default function CoursesL(){
+export default function CoursesL() {
     const [courses, setCourses] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    const [selectedCourse, setSelectedCourse] = useState(null);
+    const [selectedCourseKey, setSelectedCourseKey] = useState("");
     const [courseInfo, setCourseInfo] = useState({});
     const [courseLoading, setCourseLoading] = useState(false);
-    const userId = localStorage.getItem('userId');
-    const [resulAlreadyUploaded, setResultAlreadyUploaded] = useState(false);
+    const [resultAlreadyUploaded, setResultAlreadyUploaded] = useState(false);
     const [isClosed, setIsClosed] = useState(false);
     const navigate = useNavigate();
+    const userId = localStorage.getItem('userId');
 
     useEffect(() => {
         async function fetchCourses() {
@@ -26,7 +26,7 @@ export default function CoursesL(){
                 const uniqueCourses = filterDuplicateCourses(res.data.courses || []);
                 setCourses(uniqueCourses);
             } catch (err) {
-                handleApiError(err, setError, "An unexpected error occurred")
+                handleApiError(err, setError, "An unexpected error occurred");
             } finally {
                 setLoading(false);
             }
@@ -35,24 +35,22 @@ export default function CoursesL(){
     }, [userId]);
 
     const filterDuplicateCourses = (coursesList) => {
-        const uniqueCoursesMap = new Map();
-        
-        coursesList.forEach(course => {
+        const seen = new Set();
+        return coursesList.filter(course => {
             const key = `${course['Course-Code']}-${course.Semester}`;
-            
-            if (!uniqueCoursesMap.has(key)) {
-                uniqueCoursesMap.set(key, course);
-            }
+            if (seen.has(key)) return false;
+            seen.add(key);
+            return true;
         });
-        return Array.from(uniqueCoursesMap.values());
     };
 
-    async function handleCourseClick(courseCode) {
-        setSelectedCourse(courseCode);
+    async function handleCourseClick(courseCode, semester) {
+        const courseKey = `${courseCode}-${semester}`;
+        setSelectedCourseKey(courseKey);
         setCourseInfo(null);
         setCourseLoading(true);
         try {
-            const res = await getCourse(courseCode);
+            const res = await getCourse(courseCode); // Optionally pass semester if needed
             setCourseInfo(res.data.course);
             setResultAlreadyUploaded(res.data.uploaded);
             setIsClosed(res.data.isClosed);
@@ -64,79 +62,93 @@ export default function CoursesL(){
         }
     }
 
-    return(
+    return (
         <div className="mx-auto max-w-md py-2">
             <div className="flex items-center justify-start gap-4 mb-4">
-                <img src="/images/back-button.svg" className="md:hidden w-8 h-8" 
-                    onClick={() => navigate(-1)}/>
+                <img
+                    src="/images/back-button.svg"
+                    className="md:hidden w-8 h-8"
+                    onClick={() => navigate(-1)}
+                    alt="Back"
+                />
                 <h3 className="text-xl font-bold">Courses</h3>
             </div>
+
             {loading && <Loading />}
             {error && <Toast text={error} color="red" />}
+
             <div className="space-y-4">
                 {courses.length === 0 && !loading && <div>No courses found.</div>}
-                {courses.map(course => (
-                    <div
-                        key={`${course['Course-Code']}-${course.Semester}`}
-                        className={`p-4 border rounded cursor-pointer hover:bg-gray-100 ${selectedCourse === course['Course-Code'] ? "bg-gray-50" : ""}`}
-                        onClick={() => handleCourseClick(course['Course-Code'])}
-                    >
-                       <div>
+
+                {courses.map(course => {
+                    const courseKey = `${course['Course-Code']}-${course.Semester}`;
+                    return (
+                        <div
+                            key={courseKey}
+                            className={`p-4 border rounded cursor-pointer hover:bg-gray-100 ${selectedCourseKey === courseKey ? "bg-gray-50" : ""}`}
+                            onClick={() => handleCourseClick(course['Course-Code'], course.Semester)}
+                        >
                             <div className="flex items-center justify-between">
                                 <div>
                                     <p className="font-semibold">{course['Course-Code']}</p>
                                     <p className="text-sm text-gray-500">{course.Semester}</p>
                                 </div>
-                                <img src="/images/dropdown.svg" alt="" className="w-8 h-8"/>
+                                <img src="/images/dropdown.svg" alt="dropdown" className="w-8 h-8" />
                             </div>
-                       </div>
-                        {selectedCourse === course['Course-Code'] && (
-                            <div className="mt-2">
-                                {courseLoading && <Loading />}
-                                {courseInfo && (
-                                    <div>
-                                        <div className="flex items-center gap-2 my-2 ">
-                                            <strong>Title:</strong>
-                                            <p>{courseInfo['Course-Title']}</p>
+
+                            {selectedCourseKey === courseKey && (
+                                <div className="mt-2">
+                                    {courseLoading && <Loading />}
+                                    {courseInfo && (
+                                        <div>
+                                            <div className="flex items-center gap-2 my-2">
+                                                <strong>Title:</strong>
+                                                <p>{courseInfo['Course-Title']}</p>
+                                            </div>
+                                            <div className="flex items-center gap-2 my-2">
+                                                <strong>Code:</strong>
+                                                <p>{courseInfo['Course-Code']}</p>
+                                            </div>
+                                            <div className="flex items-center gap-2 my-2">
+                                                <strong>Unit:</strong>
+                                                <p>{courseInfo['Course-Units']}</p>
+                                            </div>
+                                            <div className="flex items-center gap-2 my-2">
+                                                <strong>Semester:</strong>
+                                                <p>{course.Semester}</p>
+                                            </div>
+
+                                            <div className="flex items-center justify-around">
+                                                {isClosed ? (
+                                                    <div className="p-4 border rounded bg-gray-500">
+                                                        <strong className="text-gray-200">
+                                                            Result Submission for course is closed
+                                                        </strong>
+                                                    </div>
+                                                ) : !resultAlreadyUploaded ? (
+                                                    <Link
+                                                        to={`/lecturer/uploadresult/${courseInfo['Course-Code']}`}
+                                                        className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                                                    >
+                                                        Compute Result
+                                                    </Link>
+                                                ) : (
+                                                    <Link
+                                                        to={`/lecturer/editResults/${courseInfo['Course-Code']}`}
+                                                        className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                                                    >
+                                                        Edit Result
+                                                    </Link>
+                                                )}
+                                            </div>
                                         </div>
-                                        <div className="flex items-center gap-2 my-2 ">
-                                            <strong>Code:</strong>
-                                            <p>{courseInfo['Course-Code']}</p>
-                                        </div>
-                                        <div className="flex items-center gap-2 my-2 ">
-                                            <strong>Unit:</strong> 
-                                            <p>{courseInfo['Course-Units']}</p>
-                                        </div>
-                                        <div className="flex items-center gap-2 my-2 ">
-                                            <strong>Semester:</strong> 
-                                            <p>{course.Semester}</p>
-                                        </div>
-                                        <div className="flex items-center justify-around">
-                                            {isClosed ? 
-                                            <div className="p-4 border rounded bg-gray-500 ">
-                                                <strong className="text-gray-200">Result Submission for course is closed</strong>
-                                            </div> :
-                                             !resulAlreadyUploaded ? 
-                                            <Link
-                                                to={`/lecturer/uploadresult/${courseInfo['Course-Code']}`}
-                                                className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-                                            >
-                                                Compute Result
-                                            </Link>:
-                                            <Link
-                                                to={`/lecturer/editResults/${courseInfo['Course-Code']}`}
-                                                className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-                                            >
-                                                Edit Result
-                                            </Link>}
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-                        )}
-                    </div>
-                ))}
+                                    )}
+                                </div>
+                            )}
+                        </div>
+                    );
+                })}
             </div>
         </div>
-    )
+    );
 }
