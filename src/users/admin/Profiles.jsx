@@ -123,8 +123,8 @@ export default function Profiles() {
                                 <Link 
                                     to={`/admin/profile/${result._id}`}
                                     key={result._id}
-                                    className="flex items-center justify-start gap-5 rounded-3xl w-full border-2 bg-gray-500">
-                                    <img src={result.profilePic} alt="profile" className="w-1/5 my-2 h-15 rounded-2xl"/>
+                                    className="flex items-center justify-start gap-5 rounded-3xl w-full border-black p-2 bg-gray-500">
+                                    <img src={result.profilePic} alt="profile" className="w-1/5 my-2 mx-2 h-15 rounded-2xl"/>
                                     <div className="flex flex-col w-4/5">
                                         <p>{result.fullName}</p>
                                         <p>{result.matricNo || result.registrationId}</p>
