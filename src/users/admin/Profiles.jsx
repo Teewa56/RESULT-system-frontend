@@ -117,13 +117,13 @@ export default function Profiles() {
                             placeholder={`Enter search here `}
                             onChange={(e) => setSearch(e.target.value)}
                         />
-                        <div className="absolute top-8 bg-gray-500 w-full flex flex-col items-start justify-start mt-2">
+                        <div className="absolute top-10 bg-gray-300 w-full flex flex-col items-start justify-start p-2">
                         {searchResult && searchResult.length > 0 && (
                             searchResult.map((result) => (
                                 <Link 
                                     to={`/admin/profile/${result._id}`}
                                     key={result._id}
-                                    className="flex items-center justify-start gap-5 w-full">
+                                    className="flex items-center justify-start gap-5 rounded-3xl w-full border-2 bg-gray-500">
                                     <img src={result.profilePic} alt="profile" className="w-1/5 my-2 h-15 rounded-2xl"/>
                                     <div className="flex flex-col w-4/5">
                                         <p>{result.fullName}</p>
