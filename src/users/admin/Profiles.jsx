@@ -114,13 +114,13 @@ export default function Profiles() {
                             placeholder={`Enter search here `}
                             onChange={(e) => setSearch(e.target.value)}
                         />
-                        <div className={`absolute top-13 bg-gray-300 w-full flex flex-col items-start justify-start ${searchResult && searchResult.length > 0 ? 'p-2' : 'p-0'} transition-all duration-300 overflow-hidden`}>
+                        <div className={`absolute -bottom-5 rounded-2xl bg-gray-300 w-full flex flex-col items-start justify-start ${searchResult && searchResult.length > 0 ? 'p-2' : 'p-0'} transition-all duration-300 overflow-hidden`}>
                         {searchResult && searchResult.length > 0 && (
                             searchResult.map((result) => (
                                 <Link 
                                     to={`/admin/profile/${result._id}`}
                                     key={result._id}
-                                    className="flex items-center justify-start gap-5 rounded-3xl w-full border-black my-2 bg-gray-500 m-2">
+                                    className="flex items-center justify-start gap-5 rounded-3xl w-full border-black my-2 bg-gray-500">
                                     <img src={result.profilePic} alt="profile" className="w-1/5 my-2 mx-2 h-15 rounded-2xl"/>
                                     <div className="flex flex-col w-4/5">
                                         <p>{result.fullName}</p>
