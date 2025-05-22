@@ -117,7 +117,7 @@ export default function Profiles() {
                             placeholder={`Enter search here `}
                             onChange={(e) => setSearch(e.target.value)}
                         />
-                        <div className="absolute top-5 w-full flex flex-col items-start justify-start mt-2">
+                        <div className="absolute top-8 bg-gray-500 w-full flex flex-col items-start justify-start mt-2">
                         {searchResult && searchResult.length > 0 && (
                             searchResult.map((result) => (
                                 <Link 
