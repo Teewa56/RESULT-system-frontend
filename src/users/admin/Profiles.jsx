@@ -114,7 +114,7 @@ export default function Profiles() {
                             placeholder={`Enter search here `}
                             onChange={(e) => setSearch(e.target.value)}
                         />
-                        <div className="absolute top-13 bg-gray-300 w-full flex flex-col items-start justify-start">
+                        <div className={`absolute top-13 bg-gray-300 w-full flex flex-col items-start justify-start ${searchResult && searchResult.length > 0 ? 'p-2' : 'p-0'} transition-all duration-300 overflow-hidden`}>
                         {searchResult && searchResult.length > 0 && (
                             searchResult.map((result) => (
                                 <Link 
