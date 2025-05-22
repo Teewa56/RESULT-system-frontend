@@ -106,15 +106,15 @@ export default function Profiles() {
 
             {(current === 1 || current === 2) && (
                 <div className="flex flex-col w-full p-6">
-                    <div className="relative w-full flex flex-col items-start justify-start">
+                    <div className="w-full flex flex-col items-start justify-start">
                         <input 
                             type="text"
-                            className="bg-gray-300 rounded-2xl p-4 w-full"
+                            className="relative bg-gray-300 rounded-2xl p-4 w-full"
                             value={search}
                             placeholder={`Enter search here `}
                             onChange={(e) => setSearch(e.target.value)}
                         />
-                        <div className={`absolute top-40 rounded-2xl bg-gray-300 w-full flex flex-col items-start justify-start ${searchResult && searchResult.length > 0 ? 'p-2' : 'p-0'} transition-all duration-300 overflow-hidden`}>
+                        <div className={`absolute -bottom-5 rounded-2xl bg-gray-300 w-full flex flex-col items-start justify-start ${searchResult && searchResult.length > 0 ? 'p-2' : 'p-0'} transition-all duration-300 overflow-hidden`}>
                         {searchResult && searchResult.length > 0 && (
                             searchResult.map((result) => (
                                 <Link 
