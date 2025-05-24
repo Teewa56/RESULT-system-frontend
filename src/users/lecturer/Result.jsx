@@ -26,7 +26,6 @@ export default function ResultL(){
                     seen.add(course['Course-Code']);
                     return true;
                 });
-                console.log("courses : ",uniqueCourses);
                 setCourses(uniqueCourses || []);
             } catch (err) {
                 console.log(err.message);
@@ -52,7 +51,7 @@ export default function ResultL(){
                 const status = err.response.status;
 
                 if (status === 404) {
-                    setError("Course is not for current semester.");
+                    setError("No results found.");
                 } else if (status === 500) {
                     setError("Server error. Please try again later.");
                 } else {
