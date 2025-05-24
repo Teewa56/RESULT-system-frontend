@@ -21,6 +21,7 @@ export default function ResultL(){
             try {
                 const res = await getCoursesTaking(lecturerId);
                 const newCourses = new Set(res.data.courses.map(course => course['Course-Code']));
+                console.log("courses : ",newCourses);
                 setCourses(newCourses || []);
             } catch (err) {
                 console.log(err.message);
@@ -34,6 +35,7 @@ export default function ResultL(){
 
     async function handleCourseClick(courseCode) {
         setSelectedCourse(courseCode);
+        console.log("Selected course:", courseCode);
         setResultLoading(true);
         setResults([]);
         setError(null);
