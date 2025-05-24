@@ -20,9 +20,14 @@ export default function ResultL(){
             setError(null);
             try {
                 const res = await getCoursesTaking(lecturerId);
-                const newCourses = new Set(res.data.courses.map(course => course['Course-Code']));
-                console.log("courses : ",newCourses);
-                setCourses(newCourses || []);
+                const seen = new Set();
+                const uniqueCourses = res.data.courses.filter(course => {
+                    if (seen.has(course['Course-Code'])) return false;
+                    seen.add(course['Course-Code']);
+                    return true;
+                });
+                console.log("courses : ",uniqueCourses);
+                setCourses(uniqueCourses || []);
             } catch (err) {
                 console.log(err.message);
                 setError("Failed to fetch courses.");
@@ -82,11 +87,11 @@ export default function ResultL(){
                 {courses.length === 0 && !loading && <div>No courses found.</div>}
                 {courses.map(course => (
                     <div
-                        key={course.value}
-                        className={`p-4 border rounded cursor-pointer hover:bg-gray-100 ${selectedCourse === course.value ? "bg-gray-50" : ""}`}
-                        onClick={() => handleCourseClick(course.value)}
+                        key={course['Course-Code']}
+                        className={`p-4 border rounded cursor-pointer hover:bg-gray-100 ${selectedCourse === course['Course-Code'] ? "bg-gray-50" : ""}`}
+                        onClick={() => handleCourseClick(course['Course-Code'])}
                     >
-                        <div className="font-semibold">{course.value}</div>
+                        <div className="font-semibold">{course['Course-Code']}</div>
                     </div>
                 ))}
             </div>
