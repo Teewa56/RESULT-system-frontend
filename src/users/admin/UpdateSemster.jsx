@@ -9,7 +9,7 @@ export default function UpdateSemester(){
     const [showConfirmation, setShowConfirmation] = useState(false)
     const [error, setError] = useState(null);
     const [loading,setLoading] = useState(false);
-    const [currentSemester, setCurrentSemester] = useState('First Semster')
+    const [currentSemester, setCurrentSemester] = useState('First Semester')
     const navigate = useNavigate();
     async function handleOperation() {
         try {
@@ -52,9 +52,11 @@ export default function UpdateSemester(){
                     <p className="text-center text-red-500 font-semibold">Are You sure you want to update the semester</p>
                     <div className="flex items-center justify-center gap-5">
                         <button className="w-1/2 p-2 bg-gray-900 rounded-2xl"
-                        onClick={handleOperation}>Yes</button>
+                        disabled={loading}
+                        onClick={handleOperation}>{loading ? "Loading..." : "Yes" }</button>
                         <button className="w-1/2 p-2 bg-gray-900 rounded-2xl"
-                        onClick={() => setShowConfirmation(false)}>No</button>
+                        disabled={loading}
+                        onClick={() => setShowConfirmation(false)}>{loading ? "Loading..." : "No" }</button>
                     </div>
                 </div>
             )}
