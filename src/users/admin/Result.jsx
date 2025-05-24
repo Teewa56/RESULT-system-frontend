@@ -92,7 +92,7 @@ export default function Result() {
       {error && <Toast text={error} color="red" />}
       {loading && <Loading />}
       {showConfirmation && (
-        <div className="p-5 rounded-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/3 h-fit bg-gray-600">
+        <div className={`p-5 rounded-3xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${window.innerWidth > 768 ? "w-1/3" : "w-4/5" } h-fit bg-gray-600`}>
           <p className="text-center text-red-500 font-semibold">
             {`Are you sure you want to ${confirmType === 1 ? 'close submission for this semester' : 'release last semester\'s results'}`}
           </p>
