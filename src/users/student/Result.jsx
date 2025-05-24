@@ -61,8 +61,8 @@ export default function ResultS() {
                     <div className="mb-4 space-y-2">
                         <div><span className="font-bold">Full Name:</span> {student.fullName}</div>
                         <div><span className="font-bold">Matric Number:</span> {student.matricNo}</div>
-                        <div><span className="font-bold">Semester:</span> {student.currentSemester}</div>
-                        <div><span className="font-bold">Level:</span> {student.currentLevel}</div>
+                        <div><span className="font-bold">Semester:</span> {result[0].semester}</div>
+                        <div><span className="font-bold">Level:</span> {result[0].level}</div>
                         <div><span className="font-bold">Department:</span> {student.department}</div>
                     </div>
 

@@ -159,7 +159,7 @@ export default function Result() {
               <tr className="bg-gray-200">
                 <th className="border border-gray-400 px-4 py-2">Full Name</th>
                 <th className="border border-gray-400 px-4 py-2">Matric No</th>
-                <th className="border border-gray-400 px-4 py-2">Student ID</th>
+                <th className="border border-gray-400 px-4 py-2">CGPA</th>
                 <th className="border border-gray-400 px-4 py-2">Actions</th>
               </tr>
             </thead>
@@ -169,7 +169,7 @@ export default function Result() {
                   <tr key={student.studentId} className="text-center">
                     <td className="border border-gray-400 px-4 py-2">{student.fullName}</td>
                     <td className="border border-gray-400 px-4 py-2">{student.matricNo}</td>
-                    <td className="border border-gray-400 px-4 py-2">{student.studentId}</td>
+                    <td className="border border-gray-400 px-4 py-2">{student.cgpa}</td>
                     <td className="border border-gray-400 px-4 py-2">
                       <button 
                         onClick={() => toggleStudentDetails(student.studentId)}
