@@ -50,16 +50,12 @@ export default function CoursesL() {
         setCourseLoading(true);
         try {
             const res = await getCourse(courseCode);
-            if (!res.data.course) {
-                setError("No students registered for this course");
-                return;
-            }
             setCourseInfo(res.data.course);
             setResultAlreadyUploaded(res.data.uploaded);
             setIsClosed(res.data.isClosed);
         } catch (err) {
             console.error(err);
-            setError("Course is not for current semester");
+            setError("No registered students for this course");
         } finally {
             setCourseLoading(false);
         }

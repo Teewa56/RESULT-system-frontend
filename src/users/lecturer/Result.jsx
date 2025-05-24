@@ -39,7 +39,6 @@ export default function ResultL(){
 
     async function handleCourseClick(courseCode) {
         setSelectedCourse(courseCode);
-        console.log("Selected course:", courseCode);
         setResultLoading(true);
         setResults([]);
         setError(null);
@@ -49,7 +48,6 @@ export default function ResultL(){
         } catch (err) {
             if (err.response) {
                 const status = err.response.status;
-
                 if (status === 404) {
                     setError("No results found.");
                 } else if (status === 500) {
