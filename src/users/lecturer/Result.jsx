@@ -82,11 +82,11 @@ export default function ResultL(){
                 {courses.length === 0 && !loading && <div>No courses found.</div>}
                 {courses.map(course => (
                     <div
-                        key={course}
-                        className={`p-4 border rounded cursor-pointer hover:bg-gray-100 ${selectedCourse === course ? "bg-gray-50" : ""}`}
-                        onClick={() => handleCourseClick(course)}
+                        key={course.value}
+                        className={`p-4 border rounded cursor-pointer hover:bg-gray-100 ${selectedCourse === course.value ? "bg-gray-50" : ""}`}
+                        onClick={() => handleCourseClick(course.value)}
                     >
-                        <div className="font-semibold">{course}</div>
+                        <div className="font-semibold">{course.value}</div>
                     </div>
                 ))}
             </div>
