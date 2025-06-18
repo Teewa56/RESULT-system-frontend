@@ -129,12 +129,6 @@ export default function ResultL(){
                                     <p style={{fontSize: '15px'}} className="text-red-300 print:hidden">Note: Grade remains unchanged until results are released</p>
                                 </div>
                             </div>
-                            <Link
-                                to={`/lecturer/editResults/${selectedCourse}`}
-                                className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 print:hidden"
-                            >
-                                Edit Result
-                            </Link>
                             <button
                                 type="button"
                                 onClick={handlePrint}
